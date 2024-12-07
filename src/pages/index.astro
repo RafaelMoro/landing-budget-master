@@ -1,4 +1,5 @@
 ---
+import Logo from "../components/Logo.astro";
 import Layout from "../layouts/Layout.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -6,6 +7,10 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Budget Master">
-  <h1 class="logo">Budget master</h1>
-  <p>mas texto</p>
+  <main
+    class="max-w-7xl mx-auto flex flex-col justify-center items-center mt-12"
+  >
+    <Logo />
+    <p>mas texto</p>
+  </main>
 </Layout>
