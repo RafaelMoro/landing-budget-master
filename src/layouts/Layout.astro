@@ -1,16 +1,27 @@
 ---
 import "@fontsource/roboto";
 import "@fontsource/russo-one";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <!-- TODO: Add meta description -->
+    <meta
+      name="description"
+      content="Budget Master: Toma control de tus finanzas hoy."
+    />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Budget Master</title>
+    <title>{title}</title>
   </head>
   <body>
     <slot />
