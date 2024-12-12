@@ -1,7 +1,9 @@
 ---
+import AnchorButton from "@components/AnchorButton.astro";
 import Button from "@components/Button.astro";
 import Logo from "@components/Logo.astro";
 import Layout from "@layouts/Layout.astro";
+import Header from "@templates/Header.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -11,8 +13,8 @@ import Layout from "@layouts/Layout.astro";
   <main
     class="max-w-7xl mx-auto flex flex-col justify-center items-center mt-12"
   >
-    <Logo />
+    <Header />
     <p>mas texto</p>
-    <Button text="Empieza ahora" />
+    <AnchorButton text="Empieza ahora" hrefSrc="#" />
   </main>
 </Layout>

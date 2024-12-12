@@ -1,0 +1,20 @@
+---
+import {
+  BUDGET_MASTER_LOGIN_ROUTE,
+  BUDGET_MASTER_REGISTER_ROUTE,
+} from "@constants";
+import AnchorButton from "@components/AnchorButton.astro";
+import Logo from "@components/Logo.astro";
+---
+
+<header class="w-full flex justify-between">
+  <Logo />
+  <div class="flex gap-4">
+    <AnchorButton text="Inicia sesión" hrefSrc={BUDGET_MASTER_LOGIN_ROUTE} />
+    <AnchorButton
+      text="Regístrate"
+      variant="secondary"
+      hrefSrc={BUDGET_MASTER_REGISTER_ROUTE}
+    />
+  </div>
+</header>
