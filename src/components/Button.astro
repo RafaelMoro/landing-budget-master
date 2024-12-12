@@ -1,13 +1,21 @@
 ---
 export interface Props {
   text: string;
+  variant?: "primary" | "secondary";
 }
 
-const { text } = Astro.props;
+const { text, variant = "primary" } = Astro.props;
 ---
 
 <button
-  class="bg-primary text-p-white uppercase px-4 py-2 rounded font-semibold"
+  class:list={[
+    "uppercase px-4 py-2 rounded font-semibold",
+    {
+      "bg-primary text-p-white": variant === "primary",
+      "bg-p-white text-primary border-solid border border-primary":
+        variant === "secondary",
+    },
+  ]}
 >
   {text}
 </button>
