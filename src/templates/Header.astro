@@ -4,6 +4,7 @@ import {
   BUDGET_MASTER_REGISTER_ROUTE,
 } from "@constants";
 import Logo from "@components/Logo.astro";
+import HamburguerMenuICon from "@components/icons/HamburguerMenuICon.astro";
 ---
 
 <header class="w-full max-h-24 p-3 flex justify-between">
@@ -15,6 +16,9 @@ import Logo from "@components/Logo.astro";
     <a class="h-7 text-lg text-p-white" href={BUDGET_MASTER_REGISTER_ROUTE}
       >Registrate</a
     >
+    <span class="text-p-white mr-3">
+      <HamburguerMenuICon />
+    </span>
   </div>
 </header>
 
