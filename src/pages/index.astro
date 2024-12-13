@@ -35,16 +35,16 @@ import Header from "@templates/Header.astro";
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
-  @media (mind-width: 768px) {
+  @media (min-width: 768px) {
     .bg {
       background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        image-set(url("./img/main-banner-tablet.webp", type="image/webp"));
+        image-set(url("./img/main-banner-tablet.webp"));
     }
   }
-  @media (mind-width: 1024px) {
+  @media (min-width: 1024px) {
     .bg {
       background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        image-set(url("./img/main-banner-desktop.webp", type="image/webp"));
+        image-set(url("./img/main-banner-desktop.webp"));
     }
   }
 </style>
