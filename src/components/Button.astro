@@ -13,7 +13,7 @@ const { text, variant = "primary" } = Astro.props;
     {
       "bg-primary text-p-white hover:bg-primary-dark transition-colors duration-300":
         variant === "primary",
-      "bg-p-white text-primary border-solid border border-primary":
+      "bg-p-white text-primary border-solid border border-primary hover:bg-main-analogous hover:text-p-white transition-colors duration-300":
         variant === "secondary",
     },
   ]}
