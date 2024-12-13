@@ -6,17 +6,20 @@ import Header from "@templates/Header.astro";
 
 <Layout title="Budget Master">
   <div class="bg">
-    <main
-      class="max-w-7xl mx-auto flex flex-col justify-center items-center h-[800px]"
-    >
+    <main class="flex flex-col max-w-7xl mx-auto h-[800px]">
       <Header />
-      <h2 class="text-xl mb-5 text-center text-p-white">
-        ¿Estás cansado de perder el control de tu dinero? ¿Te sientes abrumado
-        por las deudas y los gastos? ¡Budget Master es la solución que
-        necesitas!
-      </h2>
-      <AnchorButton text="Empieza ahora" hrefSrc="#" />
+      <div class="h-full flex flex-col items-center justify-center gap-6">
+        <h2 class="text-xl mb-5 text-center text-p-white">
+          ¿Estás cansado de perder el control de tu dinero? ¿Te sientes abrumado
+          por las deudas y los gastos? ¡Budget Master es la solución que
+          necesitas!
+        </h2>
+        <AnchorButton text="Empieza ahora" hrefSrc="#" />
+      </div>
     </main>
+  </div>
+  <div class="h-[800px]">
+    <h1>mas texto</h1>
   </div>
 </Layout>
 
