@@ -6,6 +6,8 @@ export default {
 			colors: {
 				primary: '#B16841',
 				'primary-dark': '#66440D',
+				'main-analogous': '#b14152',
+				'secondary-analogous': '#b1a041',
 				'p-white': '#fbfbfb',
   			'p-black': '#1D1305',
 				secondary: '#592418'
