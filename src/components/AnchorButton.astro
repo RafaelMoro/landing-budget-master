@@ -12,7 +12,8 @@ const { text, hrefSrc, variant = "primary" } = Astro.props;
   class:list={[
     "uppercase px-4 py-2 rounded font-semibold",
     {
-      "bg-primary text-p-white": variant === "primary",
+      "bg-primary text-p-white hover:bg-primary-dark transition-colors duration-300":
+        variant === "primary",
       "bg-p-white text-primary border-solid border border-primary":
         variant === "secondary",
     },
