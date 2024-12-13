@@ -10,5 +10,16 @@ import { Image } from "astro:assets";
     width={70}
     height={70}
   />
-  <h1 class="logo text-2xl text-p-black">Budget Master</h1>
+  <h1 class="logo text-2xl text-p-white">Budget Master</h1>
 </div>
+
+<style>
+  h1 {
+    display: none;
+  }
+  @media (min-width: 1024px) {
+    h1 {
+      display: block;
+    }
+  }
+</style>
