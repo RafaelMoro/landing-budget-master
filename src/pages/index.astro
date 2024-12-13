@@ -47,4 +47,16 @@ import Header from "@templates/Header.astro";
         image-set(url("./img/main-banner-desktop.webp"));
     }
   }
+  @media (min-width: 1536px) {
+    .bg {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        image-set(url("./img/main-banner-extra-large.webp"));
+      background-position: center;
+    }
+  }
+  @media (min-width: 2500px) {
+    .bg {
+      background-position: 50% 80%;
+    }
+  }
 </style>
