@@ -1,20 +1,44 @@
 ---
 import AnchorButton from "@components/AnchorButton.astro";
-import Button from "@components/Button.astro";
-import Logo from "@components/Logo.astro";
 import Layout from "@layouts/Layout.astro";
 import Header from "@templates/Header.astro";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout title="Budget Master">
-  <main
-    class="max-w-7xl mx-auto flex flex-col justify-center items-center mt-12"
-  >
-    <Header />
-    <p>mas texto</p>
-    <AnchorButton text="Empieza ahora" hrefSrc="#" />
-  </main>
+  <div class="bg">
+    <main
+      class="max-w-7xl mx-auto flex flex-col justify-center items-center h-[800px]"
+    >
+      <Header />
+      <h2 class="text-xl mb-5 text-center text-p-white">
+        ¿Estás cansado de perder el control de tu dinero? ¿Te sientes abrumado
+        por las deudas y los gastos? ¡Budget Master es la solución que
+        necesitas!
+      </h2>
+      <AnchorButton text="Empieza ahora" hrefSrc="#" />
+    </main>
+  </div>
 </Layout>
+
+<style>
+  .bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      image-set(url("/img/banner-tablet.webp"));
+    background-position: center right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  @media (mind-width: 768px) {
+    .bg {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        image-set(url("./img/banner-tablet.webp", type="image/webp"));
+    }
+  }
+  @media (mind-width: 1024px) {
+    .bg {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        image-set(url("./img/banner-desktop.webp", type="image/webp"));
+    }
+  }
+</style>
