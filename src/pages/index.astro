@@ -25,23 +25,22 @@ import Header from "@templates/Header.astro";
 
 <style>
   .bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      image-set(url("/img/banner-tablet.webp"));
-    background-position: center right;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      image-set(url("/img/main-banner-tablet.webp"));
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
   @media (mind-width: 768px) {
     .bg {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        image-set(url("./img/banner-tablet.webp", type="image/webp"));
+      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        image-set(url("./img/main-banner-tablet.webp", type="image/webp"));
     }
   }
   @media (mind-width: 1024px) {
     .bg {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        image-set(url("./img/banner-desktop.webp", type="image/webp"));
+      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        image-set(url("./img/main-banner-desktop.webp", type="image/webp"));
     }
   }
 </style>
