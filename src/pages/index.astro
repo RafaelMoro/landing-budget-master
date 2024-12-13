@@ -1,5 +1,6 @@
 ---
 import AnchorButton from "@components/AnchorButton.astro";
+import { BUDGET_MASTER_DASHBOARD_ROUTE } from "@constants";
 import Layout from "@layouts/Layout.astro";
 import Header from "@templates/Header.astro";
 ---
@@ -14,7 +15,10 @@ import Header from "@templates/Header.astro";
           por las deudas y los gastos? ¡Budget Master es la solución que
           necesitas!
         </h2>
-        <AnchorButton text="Empieza ahora" hrefSrc="#" />
+        <AnchorButton
+          text="Probar ahora"
+          hrefSrc={BUDGET_MASTER_DASHBOARD_ROUTE}
+        />
       </div>
     </main>
   </div>
