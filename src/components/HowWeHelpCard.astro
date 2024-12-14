@@ -11,7 +11,9 @@ export interface Props {
 const { title, description, imgSrc, hasMinthHeightTitle } = Astro.props;
 ---
 
-<article class="mt-8 flex flex-col gap-4 max-w-[300px] fade-in-up">
+<article
+  class="mt-8 flex flex-col gap-4 max-w-[300px] opacity-0 how-we-help-card"
+>
   <Image src={imgSrc} alt="Persona gastando dinero" width="300" height="300" />
   <h4
     class:list={[
@@ -23,23 +25,3 @@ const { title, description, imgSrc, hasMinthHeightTitle } = Astro.props;
   </h4>
   <p class="text-gray-600 text-lg">{description}</p>
 </article>
-
-<style>
-  article {
-    opacity: 0;
-  }
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translate3d(0, 100%, 0);
-    }
-    100% {
-      opacity: 1;
-      transform: none;
-    }
-  }
-  .fade-in-up {
-    animation: fadeInUp linear forwards;
-    animation-duration: 0.5s;
-  }
-</style>
