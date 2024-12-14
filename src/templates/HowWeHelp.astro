@@ -3,30 +3,32 @@ import HowWeHelpCard from "@components/HowWeHelpCard.astro";
 import { Image } from "astro:assets";
 ---
 
-<section class="mt-20 p-2 gap-4">
+<section class="mt-20 p-2">
   <!-- TODO: Checar en cambiar el bg por los analogos -->
   <span class="uppercase font-light text-sm text-p-white bg-primary rounded-full p-2">¿A quién ayudamos?</span>
-  <h3 class="my-2 text-2xl font-bold text-center">Ayudamos a las personas a tomar control de sus finanzas personales y de sus tarjetas de crédito.</h3>
-  <p class="mt-2 text-gray-500 text-lg">Con Budget Master sabrás en donde gastas, y que has pagado</p>
+  <h3 class="my-2 text-2xl font-bold">Ayudamos a las personas a tomar control de sus finanzas personales y de sus tarjetas de crédito.</h3>
+  <p class="mt-4 text-gray-500 text-lg">Con Budget Master sabrás en donde gastas, y que has pagado</p>
 
-  <HowWeHelpCard
-    imgSrc="/img/how-we-help/rastrear-gastos.webp"
-    title="Rastear gastos"
-    description="Mantén un registro detallado de tus gastos diarios, semanales y mensuales junto con estadísticas"
-  />
-  <HowWeHelpCard
-    imgSrc="/img/how-we-help/presupuestar-dinero.webp"
-    title="Presupuesta tu dinero"
-    description="Crea presupuestos personalizados para diferentes categorías de gastos."
-  />
-  <HowWeHelpCard
-    imgSrc="/img/how-we-help/compartir-dinero-familia.webp"
-    title="Comparte tus finanzas con tus familiares y amigos"
-    description="Colabora con tus familiares y amigos cuando realicen compras en conjunto."
-  />
-  <HowWeHelpCard
-    imgSrc="/img/how-we-help/agrega-detalles-transacciones.webp"
-    title="Agrega detalles a tus gastos"
-    description="Categoriza tus gastos y agregar todo el detalle que necesites."
-  />
+  <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+    <HowWeHelpCard
+      imgSrc="/img/how-we-help/rastrear-gastos.webp"
+      title="Rastear gastos"
+      description="Mantén un registro detallado de tus gastos diarios, semanales y mensuales junto con estadísticas"
+    />
+    <HowWeHelpCard
+      imgSrc="/img/how-we-help/presupuestar-dinero.webp"
+      title="Presupuesta tu dinero"
+      description="Crea presupuestos personalizados para diferentes categorías de gastos."
+    />
+    <HowWeHelpCard
+      imgSrc="/img/how-we-help/compartir-dinero-familia.webp"
+      title="Comparte tus finanzas con tus familiares y amigos"
+      description="Colabora con tus familiares y amigos cuando realicen compras en conjunto."
+    />
+    <HowWeHelpCard
+      imgSrc="/img/how-we-help/agrega-detalles-transacciones.webp"
+      title="Agrega detalles a tus gastos"
+      description="Categoriza tus gastos y agregar todo el detalle que necesites."
+    />
+  </div>
 </section>
