@@ -1,0 +1,56 @@
+---
+import {
+  BUDGET_MASTER_LOGIN_ROUTE,
+  BUDGET_MASTER_REGISTER_ROUTE,
+} from "@constants";
+import Logo from "@components/Logo.astro";
+import HamburguerMenuIcon from "@components/icons/HamburguerMenuIcon.astro";
+---
+
+<header class="w-full max-h-24 p-3 flex justify-between">
+  <Logo />
+  <div class="w-full flex justify-end items-center gap-4">
+    <a class="h-7 text-lg text-p-white" href={BUDGET_MASTER_LOGIN_ROUTE}
+      >Iniciar sesión</a
+    >
+    <a class="h-7 text-lg text-p-white" href={BUDGET_MASTER_REGISTER_ROUTE}
+      >Registrate</a
+    >
+    <span class="text-p-white mr-3">
+      <HamburguerMenuIcon />
+    </span>
+  </div>
+</header>
+
+<style>
+  a {
+    transition: all 0.4s ease-in-out 0s;
+    position: relative;
+    display: none;
+  }
+  a:hover {
+    transform: translateY(-3px);
+  }
+  a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--white);
+    transition:
+      width 0.3s ease,
+      left 0.3s ease;
+  }
+
+  a:hover::after {
+    width: 100%;
+    left: 0;
+  }
+  @media (min-width: 1024px) {
+    a {
+      display: block;
+    }
+  }
+</style>

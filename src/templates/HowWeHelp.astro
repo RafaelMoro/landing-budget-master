@@ -1,0 +1,52 @@
+---
+import HowWeHelpCard from "@components/HowWeHelpCard.astro";
+---
+
+<section class="mt-20 p-2 grid grid-cols-1 justify-items-center">
+  <div>
+    <span
+      class="uppercase font-light text-sm text-p-white bg-complementary rounded-full p-2"
+      >¿A quién ayudamos?</span
+    >
+  </div>
+  <h3 class="my-2 text-2xl font-bold text-center">
+    Ayudamos a quienes buscan organizar sus finanzas y evitar sorpresas con sus
+    tarjetas de crédito.
+  </h3>
+  <p class="mt-2 text-gray-500 text-lg text-center">
+    Simplifica tu vida financiera y deja que nosotros hagamos los números por ti
+  </p>
+
+  <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+    <HowWeHelpCard
+      imgSrc="/img/how-we-help/rastrear-gastos.webp"
+      title="Rastear gastos"
+      description="Mantén un registro detallado de tus gastos diarios, semanales y mensuales junto con estadísticas"
+    />
+    <HowWeHelpCard
+      imgSrc="/img/how-we-help/presupuestar-dinero.webp"
+      title="Presupuesta tu dinero"
+      description="Crea presupuestos personalizados para diferentes categorías de gastos."
+    />
+    <HowWeHelpCard
+      imgSrc="/img/how-we-help/compartir-dinero-familia.webp"
+      title="Comparte tus finanzas con tus familiares y amigos"
+      description="Colabora con tus familiares y amigos cuando realicen compras en conjunto."
+    />
+    <HowWeHelpCard
+      imgSrc="/img/how-we-help/agrega-detalles-transacciones.webp"
+      title="Agrega detalles a tus gastos"
+      description="Categoriza tus gastos y agregar todo el detalle que necesites."
+      hasMinthHeightTitle
+    />
+  </div>
+</section>
+
+<script>
+  import { observeElement } from "@helpers/observeElement";
+
+  const $cards = document.querySelectorAll(".how-we-help-card");
+  if ($cards) {
+    observeElement({ elements: $cards, cssClasses: ["fade-in-up"] });
+  }
+</script>

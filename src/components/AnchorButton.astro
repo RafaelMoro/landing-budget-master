@@ -1,0 +1,24 @@
+---
+export interface Props {
+  text: string;
+  hrefSrc: string;
+  variant?: "primary" | "secondary";
+}
+
+const { text, hrefSrc, variant = "primary" } = Astro.props;
+---
+
+<a
+  class:list={[
+    "uppercase px-4 py-2 rounded font-semibold",
+    {
+      "bg-primary text-p-white hover:bg-primary-dark transition-colors duration-300":
+        variant === "primary",
+      "bg-p-white text-primary border-solid border border-primary hover:bg-main-analogous hover:text-p-white transition-colors duration-300":
+        variant === "secondary",
+    },
+  ]}
+  href={hrefSrc}
+>
+  {text}
+</a>

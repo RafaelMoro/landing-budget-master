@@ -33,6 +33,10 @@ const { title } = Astro.props;
     min-width: 0;
     font: inherit;
   }
+  :root {
+    --color-primary: #b16841;
+    --white: #fbfbfb;
+  }
   *,
   *::before,
   *::after {
@@ -119,5 +123,20 @@ const { title } = Astro.props;
   }
   p {
     text-wrap: pretty;
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  .fade-in-up {
+    animation: fadeInUp linear forwards;
+    animation-duration: 0.5s;
   }
 </style>

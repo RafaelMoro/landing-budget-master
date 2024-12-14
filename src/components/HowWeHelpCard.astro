@@ -1,0 +1,27 @@
+---
+import { Image } from "astro:assets";
+
+export interface Props {
+  title: string;
+  description: string;
+  imgSrc: string;
+  hasMinthHeightTitle?: boolean;
+}
+
+const { title, description, imgSrc, hasMinthHeightTitle } = Astro.props;
+---
+
+<article
+  class="mt-8 flex flex-col gap-4 max-w-[300px] opacity-0 how-we-help-card"
+>
+  <Image src={imgSrc} alt="Persona gastando dinero" width="300" height="300" />
+  <h4
+    class:list={[
+      "text-xl font-semibold text-center",
+      { "md:min-h-14": hasMinthHeightTitle },
+    ]}
+  >
+    {title}
+  </h4>
+  <p class="text-gray-600 text-lg">{description}</p>
+</article>
