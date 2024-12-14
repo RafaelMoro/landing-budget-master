@@ -13,6 +13,35 @@ const { title, description, imgSrc, hasMinthHeightTitle } = Astro.props;
 
 <article class="mt-8 flex flex-col gap-4 max-w-[300px]">
   <Image src={imgSrc} alt="Persona gastando dinero" width="300" height="300" />
-  <h4 class:list={["text-xl font-semibold text-center", { "md:min-h-14": hasMinthHeightTitle }]}>{title}</h4>
+  <h4
+    class:list={[
+      "text-xl font-semibold text-center",
+      { "md:min-h-14": hasMinthHeightTitle },
+    ]}
+  >
+    {title}
+  </h4>
   <p class="text-gray-600 text-lg">{description}</p>
 </article>
+
+<style>
+  @keyframes fade-in {
+    to {
+      scale: 1;
+      opacity: 1;
+    }
+  }
+  article {
+    opacity: 0;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+      article {
+        scale: 0.5;
+        animation: fade-in linear forwards;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+      }
+    }
+  }
+</style>
