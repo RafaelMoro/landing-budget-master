@@ -3,11 +3,13 @@ import HowWeHelpCard from "@components/HowWeHelpCard.astro";
 import { Image } from "astro:assets";
 ---
 
-<section class="mt-20 p-2">
+<section class="mt-20 p-2 flex flex-col items-center">
   <!-- TODO: Checar en cambiar el bg por los analogos -->
-  <span class="uppercase font-light text-sm text-p-white bg-primary rounded-full p-2">¿A quién ayudamos?</span>
-  <h3 class="my-2 text-2xl font-bold">Ayudamos a las personas a tomar control de sus finanzas personales y de sus tarjetas de crédito.</h3>
-  <p class="mt-4 text-gray-500 text-lg">Con Budget Master sabrás en donde gastas, y que has pagado</p>
+   <div>
+     <span class="uppercase font-light text-sm text-p-white bg-primary rounded-full p-2">¿A quién ayudamos?</span>
+   </div>
+  <h3 class="my-2 text-2xl font-bold text-center">Ayudamos a quienes buscan organizar sus finanzas y evitar sorpresas con sus tarjetas de crédito.</h3>
+  <p class="mt-2 text-gray-500 text-lg text-center">Simplifica tu vida financiera y deja que nosotros hagamos los números por ti</p>
 
   <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
     <HowWeHelpCard
