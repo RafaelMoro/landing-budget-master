@@ -1,3 +1,9 @@
+## v0.2.1 (2024-12-14)
+
+### Pull Requests
+[#3](https://github.com/RafaelMoro/landing-budget-master/pull/3) | Fix background image not showing on desktop
+
+
 ## v0.2.0 (2024-12-14)
 
 ### Pull Requests
