@@ -1,4 +1,5 @@
 ---
+import HowWeHelpCard from "@components/HowWeHelpCard.astro";
 import { Image } from "astro:assets";
 ---
 
@@ -8,9 +9,9 @@ import { Image } from "astro:assets";
   <h3 class="my-2 text-2xl font-bold uppercase">Ayudamos a las personas a tomar control de sus finanzas personales y de sus tarjetas de crédito.</h3>
   <p class="mt-2 text-gray-500 text-lg">Con Budget Master sabrás en donde gastas, y que has pagado</p>
 
-  <article class="mt-8 flex flex-col items-center gap-4">
-    <Image src="/img/main-banner-mobile.webp" alt="Persona gastando dinero" width="300" height="300" />
-    <h4 class="text-xl font-semibold">Rastear gastos</h4>
-    <p class="text-gray-600 text-lg">Mantén un registro detallado de tus gastos diarios, semanales y mensuales junto con estadísticas</p>
-  </article>
+  <HowWeHelpCard
+    imgSrc="/img/main-banner-mobile.webp"
+    title="Rastear gastos"
+    description="Mantén un registro detallado de tus gastos diarios, semanales y mensuales junto con estadísticas"
+  />
 </section>
