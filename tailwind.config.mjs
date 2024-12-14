@@ -8,6 +8,7 @@ export default {
 				'primary-dark': '#66440D',
 				'main-analogous': '#b14152',
 				'secondary-analogous': '#b1a041',
+				complementary: '#418ab1',
 				'p-white': '#fbfbfb',
   			'p-black': '#1D1305',
 				secondary: '#592418'
