@@ -1,3 +1,9 @@
+## v0.2.2 (2024-12-15)
+
+### Pull Requests
+[#5](https://github.com/RafaelMoro/landing-budget-master/pull/5) | Fix the cards and images shown in How we help template
+
+
 ## v0.2.1 (2024-12-14)
 
 ### Pull Requests
