@@ -5,7 +5,7 @@ import { Image } from "astro:assets";
 
 <section class="mt-20 p-2 grid grid-cols-1 justify-items-center">
   <Tag text="¿Qué hacemos?" />
-  <h4 class="my-2 text-2xl font-bold text-center">
+  <h4 class="my-2 text-3xl font-bold text-center">
     Un buen control financiero te deja enfocarte en lo que realmente importa
   </h4>
   <p class="mt-2 text-gray-500 text-lg text-center">
@@ -13,14 +13,19 @@ import { Image } from "astro:assets";
     personales de manera fácil y efectiva.
   </p>
   <div>
-    <article class="flex flex-col gap-4 max-w-[300px]">
+    <article
+      class="grid grid-cols-1 md:grid-cols-2 gap-4 justify-items-center lg:max-w-[600px]"
+    >
       <Image
         src="/img/solution/statistics-showcase.webp"
         alt="Persona gastando dinero"
-        width="500"
-        height="500"
+        width="250"
+        class="md:row-span-2 lg:justify-self-end"
+        height="250"
       />
-      <h5 class="text-xl font-semibold text-center">Rastrear tus gastos</h5>
+      <h5 class="text-2xl text-primary-dark font-semibold md:self-end">
+        Rastrear tus gastos
+      </h5>
       <p class="text-gray-600 text-lg">
         Mantén un registro detallado de tus gastos diarios, semanales y
         mensuales junto con estadísticas.
