@@ -28,24 +28,12 @@ import { Image } from "astro:assets";
       imgAlt="Budgets feature"
       size="450"
     />
-
-    <article
-      class="grid grid-cols-1 md:grid-cols-2 gap-4 justify-items-center items-center"
-    >
-      <Image
-        src="/img/solution/share-shopping-showcase.webp"
-        alt="Persona gastando dinero"
-        width="450"
-        class="md:row-span-2 lg:justify-self-end"
-        height="450"
-      />
-      <h5 class="text-2xl text-primary-dark font-semibold md:self-end">
-        Comparte tus finanzas con tus familiares y amigos
-      </h5>
-      <p class="text-gray-600 text-lg self-start">
-        Colabora con tus familiares y amigos cuando realicen compras en
-        conjunto.
-      </p>
-    </article>
+    <SolutionCard
+      title="Comparte tus finanzas con tus familiares y amigos"
+      description="Colabora con tus familiares y amigos cuando realicen compras en conjunto."
+      imgSrc="/img/solution/share-shopping-showcase.webp"
+      imgAlt="Share expenses feature"
+      size="450"
+    />
   </div>
 </section>
