@@ -1,0 +1,31 @@
+---
+import { Image } from "astro:assets";
+
+export interface Props {
+  title: string;
+  description: string;
+  imgSrc: string;
+  imgAlt: string;
+  size: "250" | "450";
+}
+
+const { title, description, imgSrc, size, imgAlt } = Astro.props;
+---
+
+<article
+  class="grid grid-cols-1 md:grid-cols-2 gap-4 justify-items-center lg:max-w-[600px]"
+>
+  <Image
+    src={imgSrc}
+    alt={imgAlt}
+    width={size}
+    class="md:row-span-2 lg:justify-self-end"
+    height={size}
+  />
+  <h5 class="text-2xl text-primary-dark font-semibold md:self-end">
+    {title}
+  </h5>
+  <p class="text-gray-600 text-lg">
+    {description}
+  </p>
+</article>
