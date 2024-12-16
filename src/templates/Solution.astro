@@ -12,7 +12,7 @@ import { Image } from "astro:assets";
     Budget Master es una aplicación web que te ayuda a administrar tus finanzas
     personales de manera fácil y efectiva.
   </p>
-  <div>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 justify-items-center">
     <article
       class="grid grid-cols-1 md:grid-cols-2 gap-4 justify-items-center lg:max-w-[600px]"
     >
@@ -29,6 +29,24 @@ import { Image } from "astro:assets";
       <p class="text-gray-600 text-lg">
         Mantén un registro detallado de tus gastos diarios, semanales y
         mensuales junto con estadísticas.
+      </p>
+    </article>
+
+    <article
+      class="grid grid-cols-1 md:grid-cols-2 gap-4 justify-items-center items-center lg:max-w-[600px]"
+    >
+      <Image
+        src="/img/solution/budgets-showcase.webp"
+        alt="Persona gastando dinero"
+        width="350"
+        class="md:row-span-2 lg:justify-self-end"
+        height="350"
+      />
+      <h5 class="text-2xl text-primary-dark font-semibold md:self-end">
+        Presupuesta tu dinero
+      </h5>
+      <p class="text-gray-600 text-lg self-start">
+        Crea presupuestos personalizados para diferentes categorías de gastos.
       </p>
     </article>
   </div>
