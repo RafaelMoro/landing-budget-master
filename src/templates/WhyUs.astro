@@ -9,8 +9,8 @@ import AnchorButton from "@components/AnchorButton.astro";
 import { BUDGET_MASTER_DASHBOARD_ROUTE } from "@constants";
 ---
 
-<div class="bg py-6 my-6">
-  <section class="mt-20 p-2 grid grid-cols-1 justify-items-center">
+<div class="bg">
+  <section class="mt-10 p-2 grid grid-cols-1 justify-items-center">
     <Tag text="¿Por qué nosotros?" alternativeStyle />
     <h3 class="my-2 text-3xl font-bold text-center text-p-white">
       Nuestro compromiso es sólido: contigo y con tus finanzas personales
@@ -62,22 +62,24 @@ import { BUDGET_MASTER_DASHBOARD_ROUTE } from "@constants";
     background-color: var(--main-analogous);
     position: relative;
     overflow: hidden;
+    margin: 100px 0;
+    padding: 100px 0;
   }
   .bg::before,
   .bg::after {
-    background-color: var(--white);
+    background-color: white;
     content: "";
-    height: 2rem;
+    height: 200px;
     width: 120%;
     position: absolute;
   }
   .bg::before {
-    top: -0.75rem;
+    top: -100px;
     left: 0;
     transform: rotate(4deg);
   }
   .bg::after {
-    bottom: -0.75rem;
+    bottom: -100px;
     right: 0;
     transform: rotate(4deg);
   }
