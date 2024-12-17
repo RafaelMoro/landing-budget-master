@@ -1,0 +1,30 @@
+---
+import LockHeartIcon from "@components/icons/LockHeartIcon.astro";
+import Tag from "@components/Tag.astro";
+---
+
+<section class="mt-20 p-2 grid grid-cols-1 justify-items-center">
+  <Tag text="¿A quién ayudamos?" />
+  <h3 class="my-2 text-3xl font-bold text-center">
+    Nuestro compromiso es sólido: contigo y con tus finanzas personales
+  </h3>
+  <p class="mt-2 text-gray-500 text-lg text-center mb-20">
+    ¡Empieza a probar ahora totalmente gratis y toma control sobre tus finanzas
+    ya!
+  </p>
+
+  <div class="grid grid-cols-1 gap-4 justify-items-center">
+    <article class="grid grid-cols-1 gap-4 justify-items-center max-w-[300px]">
+      <span>
+        <LockHeartIcon />
+      </span>
+      <h4 class="text-2xl text-center lg:text-start text-p-black font-semibold">
+        Confidencialidad
+      </h4>
+      <p class="text-gray-600 text-lg">
+        No pedimos ningún inicio de sesión de tu banca, ni información sensible
+        de tu tarjeta o cuenta. Solamente ingresa un alias.
+      </p>
+    </article>
+  </div>
+</section>
