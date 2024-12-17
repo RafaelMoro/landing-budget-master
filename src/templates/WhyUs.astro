@@ -1,11 +1,14 @@
 ---
 import LockHeartIcon from "@components/icons/LockHeartIcon.astro";
+import AccessibleIcon from "@components/icons/AccessibleIcon.astro";
+import SupportIcon from "@components/icons/SupportIcon.astro";
+import TendingUp from "@components/icons/TendingUp.astro";
 import Tag from "@components/Tag.astro";
 import WhyUsCard from "@components/WhyUsCard.astro";
 ---
 
 <section class="mt-20 p-2 grid grid-cols-1 justify-items-center">
-  <Tag text="¿A quién ayudamos?" />
+  <Tag text="¿Por qué nosotros?" />
   <h3 class="my-2 text-3xl font-bold text-center">
     Nuestro compromiso es sólido: contigo y con tus finanzas personales
   </h3>
@@ -20,6 +23,24 @@ import WhyUsCard from "@components/WhyUsCard.astro";
       description="No pedimos ningún inicio de sesión de tu banca, ni información sensible de tu tarjeta o cuenta. Solamente ingresa un alias."
     >
       <LockHeartIcon />
+    </WhyUsCard>
+    <WhyUsCard
+      title="Accesibilidad y simplicidad"
+      description="Nuestra plataforma intuitiva está diseñada para todos, sin importar tu experiencia con herramientas financieras."
+    >
+      <AccessibleIcon />
+    </WhyUsCard>
+    <WhyUsCard
+      title="Soporte personalizado"
+      description="Te acompañamos en cada paso con atención y recursos que simplifican la gestión de tus finanzas."
+    >
+      <SupportIcon />
+    </WhyUsCard>
+    <WhyUsCard
+      title="Mejora continua"
+      description="La aplicación continúa desarrollando nuevas funcionalidades solo para hacerte la vida más fácil."
+    >
+      <TendingUp />
     </WhyUsCard>
   </div>
 </section>
