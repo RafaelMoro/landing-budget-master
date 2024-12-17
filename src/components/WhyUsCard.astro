@@ -2,12 +2,18 @@
 export interface Props {
   title: string;
   description: string;
+  marginBottom?: boolean;
 }
 
-const { title, description } = Astro.props;
+const { title, description, marginBottom = false } = Astro.props;
 ---
 
-<article class="grid grid-cols-1 gap-4 justify-items-center max-w-[300px]">
+<article
+  class:list={[
+    "grid grid-cols-1 gap-4 justify-items-center max-w-[300px]",
+    { "mb-12": marginBottom },
+  ]}
+>
   <span class="text-p-white">
     <slot />
   </span>
