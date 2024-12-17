@@ -3,9 +3,10 @@ export interface Props {
   text: string;
   hrefSrc: string;
   variant?: "primary" | "secondary";
+  className?: string;
 }
 
-const { text, hrefSrc, variant = "primary" } = Astro.props;
+const { text, hrefSrc, variant = "primary", className = "" } = Astro.props;
 ---
 
 <a
@@ -17,6 +18,7 @@ const { text, hrefSrc, variant = "primary" } = Astro.props;
       "bg-p-white text-primary border-solid border border-primary hover:bg-main-analogous hover:text-p-white transition-colors duration-300":
         variant === "secondary",
     },
+    className,
   ]}
   href={hrefSrc}
 >
