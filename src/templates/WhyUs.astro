@@ -1,0 +1,86 @@
+---
+import LockHeartIcon from "@components/icons/LockHeartIcon.astro";
+import AccessibleIcon from "@components/icons/AccessibleIcon.astro";
+import SupportIcon from "@components/icons/SupportIcon.astro";
+import TendingUp from "@components/icons/TendingUp.astro";
+import Tag from "@components/Tag.astro";
+import WhyUsCard from "@components/WhyUsCard.astro";
+import AnchorButton from "@components/AnchorButton.astro";
+import { BUDGET_MASTER_DASHBOARD_ROUTE } from "@constants";
+---
+
+<div class="bg">
+  <section class="mt-10 p-2 grid grid-cols-1 justify-items-center">
+    <Tag text="¿Por qué nosotros?" alternativeStyle />
+    <h3 class="my-2 text-3xl font-bold text-center text-p-white">
+      Nuestro compromiso es sólido: contigo y con tus finanzas personales
+    </h3>
+    <p class="mt-2 text-gray-200 text-lg text-center">
+      ¡Empieza a probar ahora totalmente gratis y toma control sobre tus
+      finanzas ya!
+    </p>
+    <AnchorButton
+      text="Empezar ahora"
+      className="mt-4 mb-20"
+      hrefSrc={BUDGET_MASTER_DASHBOARD_ROUTE}
+      variant="secondary"
+    />
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 justify-items-center">
+      <WhyUsCard
+        title="Confidencialidad"
+        description="No pedimos ningún inicio de sesión de tu banca, ni información sensible de tu tarjeta o cuenta. Solamente ingresa un alias."
+      >
+        <LockHeartIcon />
+      </WhyUsCard>
+      <WhyUsCard
+        title="Accesibilidad y simplicidad"
+        description="Nuestra plataforma intuitiva está diseñada para todos, sin importar tu experiencia con herramientas financieras."
+      >
+        <AccessibleIcon />
+      </WhyUsCard>
+      <WhyUsCard
+        title="Soporte personalizado"
+        description="Te acompañamos en cada paso con atención y recursos que simplifican la gestión de tus finanzas."
+        className="md:mb-12"
+      >
+        <SupportIcon />
+      </WhyUsCard>
+      <WhyUsCard
+        title="Mejora continua"
+        description="La aplicación continúa desarrollando nuevas funcionalidades solo para hacerte la vida más fácil."
+        className="mb-12"
+      >
+        <TendingUp />
+      </WhyUsCard>
+    </div>
+  </section>
+</div>
+
+<style>
+  .bg {
+    background-color: var(--main-analogous);
+    position: relative;
+    overflow: hidden;
+    margin: 6rem 0;
+    padding: 6rem 0;
+  }
+  .bg::before,
+  .bg::after {
+    background-color: white;
+    content: "";
+    height: 12rem;
+    width: 120%;
+    position: absolute;
+  }
+  .bg::before {
+    top: -6rem;
+    left: 0;
+    transform: rotate(4deg);
+  }
+  .bg::after {
+    bottom: -6rem;
+    right: 0;
+    transform: rotate(4deg);
+  }
+</style>
