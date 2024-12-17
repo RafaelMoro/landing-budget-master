@@ -5,6 +5,8 @@ import SupportIcon from "@components/icons/SupportIcon.astro";
 import TendingUp from "@components/icons/TendingUp.astro";
 import Tag from "@components/Tag.astro";
 import WhyUsCard from "@components/WhyUsCard.astro";
+import AnchorButton from "@components/AnchorButton.astro";
+import { BUDGET_MASTER_DASHBOARD_ROUTE } from "@constants";
 ---
 
 <section class="mt-20 p-2 grid grid-cols-1 justify-items-center">
@@ -12,10 +14,15 @@ import WhyUsCard from "@components/WhyUsCard.astro";
   <h3 class="my-2 text-3xl font-bold text-center">
     Nuestro compromiso es sólido: contigo y con tus finanzas personales
   </h3>
-  <p class="mt-2 text-gray-500 text-lg text-center mb-20">
+  <p class="mt-2 text-gray-500 text-lg text-center">
     ¡Empieza a probar ahora totalmente gratis y toma control sobre tus finanzas
     ya!
   </p>
+  <AnchorButton
+    text="Empezar ahora"
+    className="mt-4 mb-20"
+    hrefSrc={BUDGET_MASTER_DASHBOARD_ROUTE}
+  />
 
   <div class="grid grid-cols-1 gap-4 justify-items-center">
     <WhyUsCard
