@@ -26,7 +26,7 @@ import { BUDGET_MASTER_DASHBOARD_ROUTE } from "@constants";
       variant="secondary"
     />
 
-    <div class="grid grid-cols-1 gap-4 justify-items-center">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 justify-items-center">
       <WhyUsCard
         title="Confidencialidad"
         description="No pedimos ningún inicio de sesión de tu banca, ni información sensible de tu tarjeta o cuenta. Solamente ingresa un alias."
@@ -42,13 +42,14 @@ import { BUDGET_MASTER_DASHBOARD_ROUTE } from "@constants";
       <WhyUsCard
         title="Soporte personalizado"
         description="Te acompañamos en cada paso con atención y recursos que simplifican la gestión de tus finanzas."
+        className="md:mb-12"
       >
         <SupportIcon />
       </WhyUsCard>
       <WhyUsCard
         title="Mejora continua"
         description="La aplicación continúa desarrollando nuevas funcionalidades solo para hacerte la vida más fácil."
-        marginBottom
+        className="mb-12"
       >
         <TendingUp />
       </WhyUsCard>
