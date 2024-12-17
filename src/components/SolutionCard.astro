@@ -7,25 +7,40 @@ export interface Props {
   imgSrc: string;
   imgAlt: string;
   size: "250" | "450";
+  reverseOrder?: boolean;
 }
 
-const { title, description, imgSrc, size, imgAlt } = Astro.props;
+const {
+  title,
+  description,
+  imgSrc,
+  size,
+  imgAlt,
+  reverseOrder = false,
+} = Astro.props;
 ---
 
+<!-- TODO: Falta agregar opacity-0 -->
 <article
-  class="grid grid-cols-1 md:grid-cols-2 gap-4 justify-items-center lg:max-w-[600px] opacity-0 solution-card"
+  class:list={[
+    "grid grid-cols-1 md:grid-cols-2 gap-4 justify-items-center lg:max-w-[600px] solution-card",
+    { order: !reverseOrder },
+    { "reverse-order": reverseOrder },
+  ]}
 >
   <Image
     src={imgSrc}
     alt={imgAlt}
     width={size}
-    class="md:row-span-2 lg:justify-self-end self-center"
+    class="md:row-span-2 lg:justify-self-end self-center image"
     height={size}
   />
-  <h5 class="text-2xl text-primary-dark font-semibold md:self-end">
+  <h5
+    class="text-2xl text-center lg:text-start text-primary-dark font-semibold md:self-end title"
+  >
     {title}
   </h5>
-  <p class="text-gray-600 text-lg">
+  <p class="text-gray-600 text-lg description">
     {description}
   </p>
 </article>
@@ -33,5 +48,26 @@ const { title, description, imgSrc, size, imgAlt } = Astro.props;
 <style>
   img {
     mask-image: linear-gradient(black 95%, transparent 100%);
+  }
+  @media (min-width: 768px) {
+    .order {
+      grid-template-areas:
+        "image title"
+        "image description";
+    }
+    .reverse-order {
+      grid-template-areas:
+        "title image"
+        "description image";
+    }
+    .image {
+      grid-area: image;
+    }
+    .title {
+      grid-area: title;
+    }
+    .description {
+      grid-area: description;
+    }
   }
 </style>

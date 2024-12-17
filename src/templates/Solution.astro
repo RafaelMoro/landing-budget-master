@@ -20,6 +20,7 @@ import { Image } from "astro:assets";
       imgSrc="/img/solution/statistics-showcase.webp"
       imgAlt="Statistics feature"
       size="250"
+      reverseOrder
     />
     <SolutionCard
       title="Presupuesta tu dinero"
@@ -34,6 +35,7 @@ import { Image } from "astro:assets";
       imgSrc="/img/solution/share-shopping-showcase.webp"
       imgAlt="Share expenses feature"
       size="450"
+      reverseOrder
     />
     <SolutionCard
       title="Agrega detalles a tus gastos"
@@ -48,6 +50,7 @@ import { Image } from "astro:assets";
       imgSrc="/img/solution/transfer-details-showcase.webp"
       imgAlt="Do transfers between accounts feature"
       size="450"
+      reverseOrder
     />
     <SolutionCard
       title="Accede a tu cuenta desde cualquier dispositivo"
@@ -59,7 +62,7 @@ import { Image } from "astro:assets";
   </div>
 </section>
 
-<script>
+<!-- <script>
   import { observeElement } from "@helpers/observeElement";
 
   const $solutionCards = document.querySelectorAll(".solution-card");
@@ -72,4 +75,4 @@ import { Image } from "astro:assets";
       observeElement({ element: card, cssClasses: ["fade-in-right"] });
     });
   }
-</script>
+</script> -->
