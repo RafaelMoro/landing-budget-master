@@ -58,3 +58,18 @@ import { Image } from "astro:assets";
     />
   </div>
 </section>
+
+<script>
+  import { observeElement } from "@helpers/observeElement";
+
+  const $solutionCards = document.querySelectorAll(".solution-card");
+  if ($solutionCards) {
+    $solutionCards.forEach((card, index) => {
+      if (index % 2 === 0) {
+        observeElement({ element: card, cssClasses: ["fade-in-left"] });
+        return;
+      }
+      observeElement({ element: card, cssClasses: ["fade-in-right"] });
+    });
+  }
+</script>
