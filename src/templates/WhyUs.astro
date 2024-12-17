@@ -1,6 +1,7 @@
 ---
 import LockHeartIcon from "@components/icons/LockHeartIcon.astro";
 import Tag from "@components/Tag.astro";
+import WhyUsCard from "@components/WhyUsCard.astro";
 ---
 
 <section class="mt-20 p-2 grid grid-cols-1 justify-items-center">
@@ -14,17 +15,11 @@ import Tag from "@components/Tag.astro";
   </p>
 
   <div class="grid grid-cols-1 gap-4 justify-items-center">
-    <article class="grid grid-cols-1 gap-4 justify-items-center max-w-[300px]">
-      <span>
-        <LockHeartIcon />
-      </span>
-      <h4 class="text-2xl text-center lg:text-start text-p-black font-semibold">
-        Confidencialidad
-      </h4>
-      <p class="text-gray-600 text-lg">
-        No pedimos ningún inicio de sesión de tu banca, ni información sensible
-        de tu tarjeta o cuenta. Solamente ingresa un alias.
-      </p>
-    </article>
+    <WhyUsCard
+      title="Confidencialidad"
+      description="No pedimos ningún inicio de sesión de tu banca, ni información sensible de tu tarjeta o cuenta. Solamente ingresa un alias."
+    >
+      <LockHeartIcon />
+    </WhyUsCard>
   </div>
 </section>
