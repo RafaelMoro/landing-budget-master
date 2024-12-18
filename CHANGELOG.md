@@ -1,3 +1,9 @@
+## v0.4.1 (2024-12-18)
+
+### Pull Requests
+[#8](https://github.com/RafaelMoro/landing-budget-master/pull/8) | Add open graph and fix margins
+
+
 ## v0.4.0 (2024-12-17)
 
 ### Pull Requests
