@@ -8,16 +8,8 @@ import Tag from "@components/Tag.astro";
 <section class="p-2 grid grid-cols-1 justify-items-center">
   <Tag text="¿Tienes una duda?" />
   <h4 class="mt-2 text-3xl font-bold text-center">Preguntas frecuentes</h4>
-  <p class="mt-8 text-gray-500 text-lg text-center mb-4">
-    ¿Tu duda no aparece aquí?
-  </p>
-  <!-- TODO: Cambiar email -->
-  <AnchorButton
-    text="Envíanos tu pregunta"
-    hrefSrc="mailto:hola@budgetmaster.space"
-  />
 
-  <div class="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-5 mb-40">
+  <div class="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-5">
     <FAQItem title="¿Cómo funciona la versión gratuita?">
       <FAQContent
         text="Puedes usar la versión gratuita en un solo dispositivo. La conexión a internet no es necesaria para la versión gratuita. Tienes acceso a todas las funcionalidades de crear cuentas, crear registros y ver tus estadísticas."
@@ -47,4 +39,14 @@ import Tag from "@components/Tag.astro";
       />
     </FAQItem>
   </div>
+
+  <p class="mt-16 text-gray-500 text-lg text-center mb-4">
+    ¿Tu duda no aparece aquí?
+  </p>
+  <!-- TODO: Cambiar email -->
+  <AnchorButton
+    text="Envíanos tu pregunta"
+    hrefSrc="mailto:hola@budgetmaster.space"
+    className="mb-40"
+  />
 </section>
