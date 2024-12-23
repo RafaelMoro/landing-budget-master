@@ -10,28 +10,26 @@ import WhyUs from "@templates/WhyUs.astro";
 ---
 
 <Layout title="Budget Master">
-  <div class="relative">
-    <div id="banner" class="bg">
-      <section class="flex flex-col max-w-7xl mx-auto h-[800px]">
-        <Header />
-        <article class="h-full flex flex-col items-center justify-center gap-6">
-          <h2 class="text-xl mb-5 text-center text-p-white">
-            ¿Estás cansado de perder el control de tu dinero? ¿Te sientes abrumado
-            por las deudas y los gastos? ¡Budget Master es la solución que
-            necesitas!
-          </h2>
-          <AnchorButton
-            text="Probar ahora"
-            hrefSrc={BUDGET_MASTER_DASHBOARD_ROUTE}
-          />
-        </article>
-      </section>
-    </div>
-    <HowWeHelp />
-    <Solution />
-    <WhyUs />
-    <FAQs />
+  <div class="bg">
+    <section class="flex flex-col max-w-7xl mx-auto h-[800px]">
+      <Header />
+      <article class="h-full flex flex-col items-center justify-center gap-6">
+        <h2 class="text-xl mb-5 text-center text-p-white">
+          ¿Estás cansado de perder el control de tu dinero? ¿Te sientes abrumado
+          por las deudas y los gastos? ¡Budget Master es la solución que
+          necesitas!
+        </h2>
+        <AnchorButton
+          text="Probar ahora"
+          hrefSrc={BUDGET_MASTER_DASHBOARD_ROUTE}
+        />
+      </article>
+    </section>
   </div>
+  <HowWeHelp />
+  <Solution />
+  <WhyUs />
+  <FAQs />>
 </Layout>
 
 <style>
