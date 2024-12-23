@@ -1,3 +1,9 @@
+## v0.5.1 (2024-12-23)
+
+### Pull Requests
+[#11](https://github.com/RafaelMoro/landing-budget-master/pull/11) | Change FAQ section and remove animations on mobile
+
+
 ## v0.5.0 (2024-12-23)
 
 ### Pull Requests
