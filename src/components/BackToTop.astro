@@ -2,8 +2,34 @@
 import ChevronUpIcon from "./icons/ChevronUpIcon.astro";
 ---
 
-<div class="fixed bottom-2 left-2 z-10">
+<div id="back-to-top" class="fixed bottom-2 left-2 z-10">
   <button class="text-p-white rounded-full p-3 bg-primary border border-solid border-slate-400">
     <ChevronUpIcon />
   </button>
 </div>
+
+<script>
+  const backToTop = document.querySelector("#back-to-top");
+  const banner = document.querySelector("#banner");
+
+  if (backToTop && banner) {
+    const animateElement = (entry: IntersectionObserverEntry) => {
+      if (entry.isIntersecting) {
+        backToTop.classList.add("hide");
+        backToTop.classList.remove("fixed");
+      } else {
+        backToTop.classList.remove("hide");
+        backToTop.classList.add("fixed");
+      }
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(animateElement);
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(banner);
+  }
+</script>
