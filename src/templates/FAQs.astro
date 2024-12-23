@@ -32,16 +32,10 @@ import Tag from "@components/Tag.astro";
       </p>
     </FAQItem>
 
-    <details class="max-w-xl">
-      <summary class="text-xl font-semibold text-main-analogous"
-        >¿Cuentan con número telefónico para contactar soporte?</summary
-      >
-      <!-- TODO: Cambiar email -->
-      <p class="my-4 pl-4 text-lg text-gray-700 text-pretty">
-        No contamos en este momento con soporte vía telefónica. Nos puedes
-        contactar enviando un correo a X y nos pondremos en contacto contigo en
-        menos de 24 horas.
-      </p>
-    </details>
+    <FAQItem title="¿Cuentan con número telefónico para contactar soporte?">
+      <FAQContent
+        text="No contamos en este momento con soporte vía telefónica. Nos puedes contactar enviando un correo a X y nos pondremos en contacto contigo en menos de 24 horas."
+      />
+    </FAQItem>
   </div>
 </section>
