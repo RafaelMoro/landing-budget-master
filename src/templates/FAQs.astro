@@ -16,23 +16,98 @@ import Tag from "@components/Tag.astro";
   />
 
   <div class="mt-10 grid grid-cols-1 justify-items-center mb-40">
-    <details>
-      <summary class="text-xl font-semibold text-main-analogous"
-        >¿Cómo funciona la versión gratuita?</summary
+    <div
+      id="accordion-example"
+      data-accordion-2
+      data-accordion-type="single"
+      class="space-y-2"
+    >
+      <div
+        data-accordion-item
+        data-accordion-value="accordion-1"
+        class="rounded-md bg-secondary-analogous border border-zinc-200/30 fx-open:bg-primary-dark fx-open:b-zinc-200/50"
       >
-      <div class="content">
-        <p class="my-4 pl-4 text-lg text-gray-700 text-pretty">
-          Puedes usar la versión gratuita en un solo dispositivo. La conexión a
-          internet no es necesaria para la versión gratuita. Tienes acceso a
-          todas las funcionalidades de crear cuentas, crear registros y ver tus
-          estadísticas.
-        </p>
-        <p class="text-lg pl-4 text-gray-700 text-pretty">
-          Tus datos se guardan de manera local en tu navegador. Si limpias los
-          datos de tu navegador, asimismo tus datos de la aplicación se
-          eliminarán
-        </p>
+        <button
+          data-accordion-trigger
+          aria-label="toggle button"
+          class="px-4 w-full flex justify-between items-center py-2 text-zinc-800 dark:text-zinc-200 font-medium text-lg ease-linear hover:bg-zinc-200/50 dark:hover:bg-zinc-800/40 rounded-md focus:outline-blue-600 group"
+        >
+          ¿Cómo funciona la versión gratuita?
+          <svg
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="size-5 ease-linear duration-300 group:aria-expanded:rotate-180"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+        <div
+          aria-hidden="true"
+          data-accordion-content
+          class="text-zinc-700 dark:text-zinc-300 duration-200 ease-linear max-h-0 overflow-hidden"
+        >
+          <p class="my-4 pl-4 text-lg text-p-white text-pretty">
+            Puedes usar la versión gratuita en un solo dispositivo. La conexión
+            a internet no es necesaria para la versión gratuita. Tienes acceso a
+            todas las funcionalidades de crear cuentas, crear registros y ver
+            tus estadísticas.
+          </p>
+          <p class="text-lg pl-4 text-p-white text-pretty">
+            Tus datos se guardan de manera local en tu navegador. Si limpias los
+            datos de tu navegador, asimismo tus datos de la aplicación se
+            eliminarán
+          </p>
+        </div>
       </div>
-    </details>
+      <div
+        data-accordion-item
+        data-accordion-value="accordion-2"
+        class="rounded-md bg-secondary-analogous border border-zinc-200/30 fx-open:bg-primary-dark fx-open:b-zinc-200/50"
+      >
+        <button
+          data-accordion-trigger
+          aria-label="toggle button"
+          class="px-4 w-full flex justify-between items-center py-2 text-zinc-800 dark:text-zinc-200 font-medium text-lg ease-linear hover:bg-zinc-200/50 dark:hover:bg-zinc-800/40 rounded-md focus:outline-blue-600 group"
+        >
+          ¿Cuentan con número telefónico para contactar soporte?
+          <svg
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="size-5 ease-linear duration-300 group:aria-expanded:rotate-180"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+        <div
+          aria-hidden="true"
+          data-accordion-content
+          class="text-zinc-700 dark:text-zinc-300 duration-200 ease-linear max-h-0 overflow-hidden"
+        >
+          <p class="my-4 pl-4 text-lg text-p-white text-pretty">
+            No contamos en este momento con soporte vía telefónica. Nos puedes
+            contactar enviando un correo a X y nos pondremos en contacto contigo
+            en menos de 24 horas.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
+
+<script>
+  import { Accordion } from "@flexilla/accordion";
+
+  const accordion = new Accordion("#accordion-example", {
+    // options here
+  });
+</script>
