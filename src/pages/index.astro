@@ -1,5 +1,6 @@
 ---
 import AnchorButton from "@components/AnchorButton.astro";
+import BackToTop from "@components/BackToTop.astro";
 import { BUDGET_MASTER_DASHBOARD_ROUTE } from "@constants";
 import Layout from "@layouts/Layout.astro";
 import FAQs from "@templates/FAQs.astro";
@@ -10,26 +11,29 @@ import WhyUs from "@templates/WhyUs.astro";
 ---
 
 <Layout title="Budget Master">
-  <div class="bg">
-    <section class="flex flex-col max-w-7xl mx-auto h-[800px]">
-      <Header />
-      <article class="h-full flex flex-col items-center justify-center gap-6">
-        <h2 class="text-xl mb-5 text-center text-p-white">
-          ¿Estás cansado de perder el control de tu dinero? ¿Te sientes abrumado
-          por las deudas y los gastos? ¡Budget Master es la solución que
-          necesitas!
-        </h2>
-        <AnchorButton
-          text="Probar ahora"
-          hrefSrc={BUDGET_MASTER_DASHBOARD_ROUTE}
-        />
-      </article>
-    </section>
+  <div class="relative">
+    <BackToTop />
+    <div class="bg">
+      <section class="flex flex-col max-w-7xl mx-auto h-[800px]">
+        <Header />
+        <article class="h-full flex flex-col items-center justify-center gap-6">
+          <h2 class="text-xl mb-5 text-center text-p-white">
+            ¿Estás cansado de perder el control de tu dinero? ¿Te sientes abrumado
+            por las deudas y los gastos? ¡Budget Master es la solución que
+            necesitas!
+          </h2>
+          <AnchorButton
+            text="Probar ahora"
+            hrefSrc={BUDGET_MASTER_DASHBOARD_ROUTE}
+          />
+        </article>
+      </section>
+    </div>
+    <HowWeHelp />
+    <Solution />
+    <WhyUs />
+    <FAQs />
   </div>
-  <HowWeHelp />
-  <Solution />
-  <WhyUs />
-  <FAQs />
 </Layout>
 
 <style>
