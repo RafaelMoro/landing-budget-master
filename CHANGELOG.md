@@ -1,3 +1,9 @@
+## v0.5.0 (2024-12-23)
+
+### Pull Requests
+[#9](https://github.com/RafaelMoro/landing-budget-master/pull/9) | Add FAQs section
+
+
 ## v0.4.1 (2024-12-18)
 
 ### Pull Requests
