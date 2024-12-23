@@ -15,24 +15,37 @@ import Tag from "@components/Tag.astro";
     hrefSrc="mailto:hola@budgetmaster.space"
   />
 
-  <div class="mt-10 grid grid-cols-1 justify-items-center mb-40">
-    <details>
+  <div class="mt-10 grid grid-cols-1 gap-5 mb-40">
+    <details class="max-w-xl">
       <summary class="text-xl font-semibold text-main-analogous"
         >¿Cómo funciona la versión gratuita?</summary
       >
-      <div class="content">
-        <p class="my-4 pl-4 text-lg text-gray-700 text-pretty">
-          Puedes usar la versión gratuita en un solo dispositivo. La conexión a
-          internet no es necesaria para la versión gratuita. Tienes acceso a
-          todas las funcionalidades de crear cuentas, crear registros y ver tus
-          estadísticas.
-        </p>
-        <p class="text-lg pl-4 text-gray-700 text-pretty">
-          Tus datos se guardan de manera local en tu navegador. Si limpias los
-          datos de tu navegador, asimismo tus datos de la aplicación se
-          eliminarán
-        </p>
-      </div>
+      <p class="my-4 pl-4 text-lg text-gray-700 text-pretty">
+        Puedes usar la versión gratuita en un solo dispositivo. La conexión a
+        internet no es necesaria para la versión gratuita. Tienes acceso a todas
+        las funcionalidades de crear cuentas, crear registros y ver tus
+        estadísticas.
+      </p>
+      <p class="text-lg pl-4 font-bold text-gray-700 text-pretty">
+        Tus datos se guardan de manera local en tu navegador. <span
+          class="text-red-700"
+        >
+          Si limpias los datos de tu navegador, asimismo tus datos de la
+          aplicación se eliminarán
+        </span>
+      </p>
+    </details>
+
+    <details class="max-w-xl">
+      <summary class="text-xl font-semibold text-main-analogous"
+        >¿Cuentan con número telefónico para contactar soporte?</summary
+      >
+      <!-- TODO: Cambiar email -->
+      <p class="my-4 pl-4 text-lg text-gray-700 text-pretty">
+        No contamos en este momento con soporte vía telefónica. Nos puedes
+        contactar enviando un correo a X y nos pondremos en contacto contigo en
+        menos de 24 horas.
+      </p>
     </details>
   </div>
 </section>
