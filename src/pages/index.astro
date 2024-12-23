@@ -10,7 +10,7 @@ import WhyUs from "@templates/WhyUs.astro";
 ---
 
 <Layout title="Budget Master">
-  <div class="bg">
+  <div id="banner" class="bg-black">
     <section class="flex flex-col max-w-7xl mx-auto h-[800px]">
       <Header />
       <article class="h-full flex flex-col items-center justify-center gap-6">
@@ -40,12 +40,6 @@ import WhyUs from "@templates/WhyUs.astro";
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
-  @media (min-width: 768px) {
-    .bg {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        image-set(url("/img/main-banner-tablet.webp"));
-    }
-  }
   @media (min-width: 1024px) {
     .bg {
       background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
@@ -65,3 +59,13 @@ import WhyUs from "@templates/WhyUs.astro";
     }
   }
 </style>
+
+<script>
+  const banner = document.getElementById("banner");
+
+  if (banner) {
+    setTimeout(() => {
+      banner.classList.add("fadeInImage");
+    }, 500);
+  }
+</script>
