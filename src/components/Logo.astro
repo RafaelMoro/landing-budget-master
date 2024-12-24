@@ -1,8 +1,19 @@
 ---
 import { Image } from "astro:assets";
+
+export interface Props {
+  isFooter?: boolean;
+}
+
+const { isFooter = false } = Astro.props;
 ---
 
-<div class="w-full flex items-center gap-4">
+<div
+  class:list={[
+    "w-full flex items-center gap-4",
+    { "justify-center": isFooter },
+  ]}
+>
   <Image
     class="rounded-full"
     src="/img/logo.webp"
@@ -10,16 +21,12 @@ import { Image } from "astro:assets";
     width={70}
     height={70}
   />
-  <h1 class="logo text-2xl text-p-white">Budget Master</h1>
+  <h1
+    class:list={[
+      "logo text-2xl text-p-white",
+      { "hidden md:block": !isFooter },
+    ]}
+  >
+    Budget Master
+  </h1>
 </div>
-
-<style>
-  h1 {
-    display: none;
-  }
-  @media (min-width: 1024px) {
-    h1 {
-      display: block;
-    }
-  }
-</style>
