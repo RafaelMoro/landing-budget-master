@@ -4,21 +4,19 @@ import {
   BUDGET_MASTER_REGISTER_ROUTE,
 } from "@constants";
 import Logo from "@components/Logo.astro";
-import HamburguerMenuIcon from "@components/icons/HamburguerMenuIcon.astro";
 ---
 
-<header class="w-full max-h-24 p-3 flex justify-between">
+<header class="w-full max-h-32 px-5 py-6 md:p-3 flex justify-between">
   <Logo />
-  <div class="w-full flex justify-end items-center gap-4">
+  <div
+    class="w-full flex flex-col items-end gap-4 md:flex-row md:justify-end md:items-center md:gap-6"
+  >
     <a class="h-7 text-lg text-p-white" href={BUDGET_MASTER_LOGIN_ROUTE}
       >Iniciar sesión</a
     >
     <a class="h-7 text-lg text-p-white" href={BUDGET_MASTER_REGISTER_ROUTE}
       >Registrate</a
     >
-    <span class="text-p-white mr-3">
-      <HamburguerMenuIcon />
-    </span>
   </div>
 </header>
 
@@ -26,7 +24,6 @@ import HamburguerMenuIcon from "@components/icons/HamburguerMenuIcon.astro";
   a {
     transition: all 0.4s ease-in-out 0s;
     position: relative;
-    display: none;
   }
   a:hover {
     transform: translateY(-3px);
@@ -47,10 +44,5 @@ import HamburguerMenuIcon from "@components/icons/HamburguerMenuIcon.astro";
   a:hover::after {
     width: 100%;
     left: 0;
-  }
-  @media (min-width: 1024px) {
-    a {
-      display: block;
-    }
   }
 </style>
