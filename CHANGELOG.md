@@ -1,3 +1,9 @@
+## v0.7.1 (2024-12-24)
+
+### Pull Requests
+[#14](https://github.com/RafaelMoro/landing-budget-master/pull/14) | Add custom domain email addresses
+
+
 ## v0.7.0 (2024-12-24)
 
 ### Pull Requests
