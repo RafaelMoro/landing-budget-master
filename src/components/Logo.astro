@@ -9,13 +9,10 @@ const { isFooter = false } = Astro.props;
 ---
 
 <div
-  class:list={[
-    "w-full flex items-center gap-4",
-    { "justify-center": isFooter },
-  ]}
+  class:list={["w-full flex items-center gap-4", { "justify-start": isFooter }]}
 >
   <Image
-    class="rounded-full"
+    class:list={["rounded-full", { "hidden md:block": isFooter }]}
     src="/img/logo.webp"
     alt="Logo budget master"
     width={70}
