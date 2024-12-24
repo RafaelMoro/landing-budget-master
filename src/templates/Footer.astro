@@ -1,7 +1,18 @@
 ---
+import EmailIcon from "@components/icons/EmailIcon.astro";
 import Logo from "@components/Logo.astro";
+import { BUDGET_MASTER_EMAIL, BUDGET_MASTER_SEND_EMAIL } from "@constants";
 ---
 
-<footer class="w-full py-4 bg-secondary-analogous">
+<footer class="w-full p-4 bg-secondary-analogous grid grid-cols-2 items-center">
   <Logo isFooter />
+  <div class="text-p-white inline-flex gap-2 justify-self-end">
+    <a
+      href={BUDGET_MASTER_SEND_EMAIL}
+      title=`Enviar correo electrónico al equipo de ayuda de Budget Master al correo ${BUDGET_MASTER_EMAIL}`
+    >
+      <EmailIcon />
+    </a>
+    <p class="hidden md:block">{BUDGET_MASTER_EMAIL}</p>
+  </div>
 </footer>
