@@ -3,6 +3,7 @@ import AnchorButton from "@components/AnchorButton.astro";
 import FAQContent from "@components/FAQContent.astro";
 import FAQItem from "@components/FAQItem.astro";
 import Tag from "@components/Tag.astro";
+import { BUDGET_MASTER_EMAIL } from "@constants";
 ---
 
 <section class="p-2 grid grid-cols-1 justify-items-center">
@@ -35,7 +36,7 @@ import Tag from "@components/Tag.astro";
 
     <FAQItem title="¿Cuentan con número telefónico para contactar soporte?">
       <FAQContent
-        text="No contamos en este momento con soporte vía telefónica. Nos puedes contactar enviando un correo a X y nos pondremos en contacto contigo en menos de 24 horas."
+        text={`No contamos en este momento con soporte vía telefónica. Nos puedes contactar enviando un correo a ${BUDGET_MASTER_EMAIL} y nos pondremos en contacto contigo en menos de 24 horas.`}
       />
     </FAQItem>
   </div>
