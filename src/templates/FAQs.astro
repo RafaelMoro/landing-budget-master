@@ -3,7 +3,7 @@ import AnchorButton from "@components/AnchorButton.astro";
 import FAQContent from "@components/FAQContent.astro";
 import FAQItem from "@components/FAQItem.astro";
 import Tag from "@components/Tag.astro";
-import { BUDGET_MASTER_EMAIL } from "@constants";
+import { BUDGET_MASTER_EMAIL, BUDGET_MASTER_SEND_EMAIL } from "@constants";
 ---
 
 <section class="p-2 grid grid-cols-1 justify-items-center">
@@ -35,9 +35,17 @@ import { BUDGET_MASTER_EMAIL } from "@constants";
     </FAQItem>
 
     <FAQItem title="¿Cuentan con número telefónico para contactar soporte?">
-      <FAQContent
-        text={`No contamos en este momento con soporte vía telefónica. Nos puedes contactar enviando un correo a ${BUDGET_MASTER_EMAIL} y nos pondremos en contacto contigo en menos de 24 horas.`}
-      />
+      <p class="text-lg pl-4 text-gray-700 text-pretty mt-2">
+        No contamos en este momento con soporte vía telefónica. Nos puedes
+        contactar enviando un correo a <a
+          href={BUDGET_MASTER_SEND_EMAIL}
+          class="inline text-blue-700"
+          title=`Enviar correo electrónico al equipo de soporte de Budget Master al correo ${BUDGET_MASTER_EMAIL}`
+        >
+          {BUDGET_MASTER_EMAIL}
+        </a>
+        y nos pondremos en contacto contigo en menos de 24 horas.
+      </p>
     </FAQItem>
   </div>
 
