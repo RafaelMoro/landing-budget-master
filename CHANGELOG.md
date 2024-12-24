@@ -1,3 +1,9 @@
+## v0.7.0 (2024-12-24)
+
+### Pull Requests
+[#13](https://github.com/RafaelMoro/landing-budget-master/pull/13) | Fix header on mobile and banner verbiage title
+
+
 ## v0.6.0 (2024-12-24)
 
 ### Pull Requests
