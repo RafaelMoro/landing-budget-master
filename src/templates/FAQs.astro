@@ -1,0 +1,60 @@
+---
+import AnchorButton from "@components/AnchorButton.astro";
+import FAQContent from "@components/FAQContent.astro";
+import FAQItem from "@components/FAQItem.astro";
+import Tag from "@components/Tag.astro";
+import { BUDGET_MASTER_EMAIL, BUDGET_MASTER_SEND_EMAIL } from "@constants";
+---
+
+<section class="p-2 grid grid-cols-1 justify-items-center">
+  <Tag text="¿Tienes una duda?" />
+  <h4 class="mt-2 text-3xl font-bold text-center">Preguntas frecuentes</h4>
+
+  <div class="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-5">
+    <FAQItem title="¿Cómo funciona la versión gratuita?">
+      <FAQContent
+        text="Puedes usar la versión gratuita en un solo dispositivo. La conexión a internet no es necesaria para la versión gratuita. Tienes acceso a todas las funcionalidades de crear cuentas, crear registros y ver tus estadísticas."
+      />
+    </FAQItem>
+
+    <FAQItem title="¿Cómo se guardan mis datos en la versión gratuita?">
+      <p class="text-lg pl-4 font-bold text-gray-700 text-pretty">
+        Tus datos se guardan de manera local en tu navegador. <span
+          class="text-red-700"
+        >
+          Si limpias los datos de tu navegador, tus datos de la aplicación se
+          eliminarán. No hay forma de recuperarlos.
+        </span>
+      </p>
+    </FAQItem>
+
+    <FAQItem title="¿Cómo se guardan mis datos en la versión de pago?">
+      <FAQContent
+        text="Los datos se guardan de manera segura en nuestro servidor. Tendrás acceso desde cualquier dispositivo usando tus credenciales de correo electrónico y contraseña."
+      />
+    </FAQItem>
+
+    <FAQItem title="¿Cuentan con número telefónico para contactar soporte?">
+      <p class="text-lg pl-4 text-gray-700 text-pretty mt-2">
+        No contamos en este momento con soporte vía telefónica. Nos puedes
+        contactar enviando un correo a <a
+          href={BUDGET_MASTER_SEND_EMAIL}
+          class="inline text-blue-700"
+          title=`Enviar correo electrónico al equipo de soporte de Budget Master al correo ${BUDGET_MASTER_EMAIL}`
+        >
+          {BUDGET_MASTER_EMAIL}
+        </a>
+        y nos pondremos en contacto contigo en menos de 24 horas.
+      </p>
+    </FAQItem>
+  </div>
+
+  <p class="mt-16 text-gray-500 text-lg text-center mb-4">
+    ¿Tu duda no aparece aquí?
+  </p>
+  <AnchorButton
+    text="Envíanos tu pregunta"
+    hrefSrc="mailto:sugerencias-quejas@budget-master.space"
+    className="mb-40"
+  />
+</section>

@@ -1,0 +1,55 @@
+---
+import {
+  BUDGET_MASTER_LOGIN_ROUTE,
+  BUDGET_MASTER_REGISTER_ROUTE,
+} from "@constants";
+import Logo from "@components/Logo.astro";
+---
+
+<header class="w-full max-h-32 px-5 py-6 md:p-3 grid grid-cols-[30%,70%]">
+  <Logo />
+  <nav
+    class="w-full justify-items-end flex items-center gap-6 justify-end"
+  >
+    <a class="h-7 text-lg text-p-white" href={BUDGET_MASTER_LOGIN_ROUTE}
+      >Iniciar sesión</a
+    >
+    <a class="h-7 text-lg text-p-white" href={BUDGET_MASTER_REGISTER_ROUTE}
+      >Registrate</a
+    >
+  </nav>
+</header>
+
+<style>
+  a {
+    transition: all 0.4s ease-in-out 0s;
+    position: relative;
+    border-bottom: 2px solid var(--white);
+    white-space: nowrap;
+  }
+  a:hover {
+    transform: translateY(-3px);
+  }
+  a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--white);
+    transition:
+      width 0.3s ease,
+      left 0.3s ease;
+  }
+
+  a:hover::after {
+    width: 100%;
+    left: 0;
+  }
+  @media (min-width: 1024px) {
+    a {
+      border-bottom: none;
+    }
+  }
+</style>

@@ -1,0 +1,18 @@
+---
+export interface Props {
+  text: string;
+  alternativeStyle?: boolean;
+}
+
+const { text, alternativeStyle = false } = Astro.props;
+---
+
+<div>
+  <span
+    class:list={[
+      "uppercase font-light text-sm rounded-full p-2",
+      { "text-p-white bg-complementary": !alternativeStyle },
+      { "text-primary-dark bg-p-white": alternativeStyle },
+    ]}>{text}</span
+  >
+</div>

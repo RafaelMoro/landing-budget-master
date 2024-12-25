@@ -1,0 +1,79 @@
+---
+import SolutionCard from "@components/SolutionCard.astro";
+import Tag from "@components/Tag.astro";
+---
+
+<section
+  class="mt-24 p-2 grid grid-cols-1 justify-items-center overflow-hidden mb-20"
+>
+  <Tag text="¿Qué hacemos?" />
+  <h4 class="my-2 text-3xl font-bold text-center">
+    Un buen control financiero te deja enfocarte en lo que realmente importa
+  </h4>
+  <p class="mt-2 text-gray-500 text-lg text-center mb-20">
+    Budget Master es una aplicación web que te ayuda a administrar tus finanzas
+    personales de manera fácil y efectiva.
+  </p>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 justify-items-center">
+    <SolutionCard
+      title="Rastrear tus gastos"
+      description="Mantén un registro detallado de tus gastos diarios, semanales y mensuales junto con estadísticas."
+      imgSrc="/img/solution/statistics-showcase.webp"
+      imgAlt="Statistics feature"
+      size="250"
+      reverseOrder
+    />
+    <SolutionCard
+      title="Presupuesta tu dinero"
+      description="Crea presupuestos personalizados para diferentes categorías de gastos."
+      imgSrc="/img/solution/budgets-showcase.webp"
+      imgAlt="Budgets feature"
+      size="450"
+    />
+    <SolutionCard
+      title="Comparte tus finanzas con tus familiares y amigos"
+      description="Colabora con tus familiares y amigos cuando realicen compras en conjunto."
+      imgSrc="/img/solution/share-shopping-showcase.webp"
+      imgAlt="Share expenses feature"
+      size="450"
+      reverseOrder
+    />
+    <SolutionCard
+      title="Agrega detalles a tus gastos"
+      description="Categoriza tus gastos y agregar todo el detalle que necesites."
+      imgSrc="/img/solution/expense-detail-showcase.webp"
+      imgAlt="See expense detail feature"
+      size="250"
+    />
+    <SolutionCard
+      title="Realiza transferencias entre cuentas"
+      description="Realiza pagos desde tus cuentas de debito a tus tarjetas de crédito para saber que has pagado."
+      imgSrc="/img/solution/transfer-details-showcase.webp"
+      imgAlt="Do transfers between accounts feature"
+      size="450"
+      reverseOrder
+    />
+    <SolutionCard
+      title="Accede a tu cuenta desde cualquier dispositivo"
+      description="Accede a tus datos desde cualquier dispositivo, ya sea móvil, tablet o de escritorio."
+      imgSrc="/img/solution/access-anywhere-showcase.webp"
+      imgAlt="Access anywhere feature"
+      size="450"
+    />
+  </div>
+</section>
+
+<script>
+  import { observeElement } from "@helpers/observeElement";
+
+  const $solutionCards = document.querySelectorAll(".solution-card");
+  if ($solutionCards) {
+    $solutionCards.forEach((card, index) => {
+      if (index % 2 === 0) {
+        observeElement({ element: card, cssClasses: ["fade-in-left"] });
+        return;
+      }
+      observeElement({ element: card, cssClasses: ["fade-in-right"] });
+    });
+  }
+</script>
