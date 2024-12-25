@@ -1,3 +1,9 @@
+## v1.0.1 (2024-12-25)
+
+### Pull Requests
+[#17](https://github.com/RafaelMoro/landing-budget-master/pull/17) | Change style of links shown in mobile
+
+
 ## v1.0.0 (2024-12-25)
 
 ### Pull Requests
