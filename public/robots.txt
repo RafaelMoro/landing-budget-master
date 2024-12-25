@@ -3,6 +3,3 @@ Allow: /
 
 # Host
 Host: https://budget-master.space
-
-# Sitemaps
-Sitemap: https://budget-master.space/sitemap-index.xml
