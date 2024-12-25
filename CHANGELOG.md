@@ -1,3 +1,9 @@
+## v1.0.0 (2024-12-25)
+
+### Pull Requests
+[#16](https://github.com/RafaelMoro/landing-budget-master/pull/16) | Add robots txt and change metadata
+
+
 ## v0.7.1 (2024-12-24)
 
 ### Pull Requests
