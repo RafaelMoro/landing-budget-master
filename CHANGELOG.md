@@ -1,3 +1,9 @@
+## v1.0.3 (2024-12-28)
+
+### Pull Requests
+[#20](https://github.com/RafaelMoro/landing-budget-master/pull/20) | Change subdomain and add Google Analytics
+
+
 ## v1.0.2 (2024-12-25)
 
 ### Pull Requests
