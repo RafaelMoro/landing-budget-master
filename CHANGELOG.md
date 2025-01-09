@@ -1,3 +1,9 @@
+## v1.0.4 (2025-01-09)
+
+### Pull Requests
+[#22](https://github.com/RafaelMoro/landing-budget-master/pull/22) | Fix route of budget master app login
+
+
 ## v1.0.3 (2024-12-28)
 
 ### Pull Requests
