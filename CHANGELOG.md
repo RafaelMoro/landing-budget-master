@@ -1,3 +1,9 @@
+## v1.0.5 (2025-02-09)
+
+### Pull Requests
+[#24](https://github.com/RafaelMoro/landing-budget-master/pull/24) | Add email signature
+
+
 ## v1.0.4 (2025-01-09)
 
 ### Pull Requests
