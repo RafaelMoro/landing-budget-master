@@ -3,7 +3,10 @@ import AnchorButton from "@components/AnchorButton.astro";
 import FAQContent from "@components/FAQContent.astro";
 import FAQItem from "@components/FAQItem.astro";
 import Tag from "@components/Tag.astro";
-import { BUDGET_MASTER_EMAIL, BUDGET_MASTER_SEND_EMAIL } from "@constants";
+import {
+  BUDGET_MASTER_SUPPORT_EMAIL,
+  BUDGET_MASTER_SEND_EMAIL_SUPPORT,
+} from "@constants";
 ---
 
 <section class="p-2 grid grid-cols-1 justify-items-center">
@@ -38,11 +41,11 @@ import { BUDGET_MASTER_EMAIL, BUDGET_MASTER_SEND_EMAIL } from "@constants";
       <p class="text-lg pl-4 text-gray-700 text-pretty mt-2">
         No contamos en este momento con soporte vía telefónica. Nos puedes
         contactar enviando un correo a <a
-          href={BUDGET_MASTER_SEND_EMAIL}
+          href={BUDGET_MASTER_SEND_EMAIL_SUPPORT}
           class="inline text-blue-700"
-          title=`Enviar correo electrónico al equipo de soporte de Budget Master al correo ${BUDGET_MASTER_EMAIL}`
+          title=`Enviar correo electrónico al equipo de soporte de Budget Master al correo ${BUDGET_MASTER_SUPPORT_EMAIL}`
         >
-          {BUDGET_MASTER_EMAIL}
+          {BUDGET_MASTER_SUPPORT_EMAIL}
         </a>
         y nos pondremos en contacto contigo en menos de 24 horas.
       </p>
@@ -54,7 +57,7 @@ import { BUDGET_MASTER_EMAIL, BUDGET_MASTER_SEND_EMAIL } from "@constants";
   </p>
   <AnchorButton
     text="Envíanos tu pregunta"
-    hrefSrc="mailto:sugerencias-quejas@budget-master.space"
+    hrefSrc={BUDGET_MASTER_SEND_EMAIL_SUPPORT}
     className="mb-40"
   />
 </section>

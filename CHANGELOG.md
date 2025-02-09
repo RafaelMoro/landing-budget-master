@@ -1,3 +1,9 @@
+## v1.0.7 (2025-02-09)
+
+### Pull Requests
+[#27](https://github.com/RafaelMoro/landing-budget-master/pull/27) | Change support email
+
+
 ## v1.0.6 (2025-02-09)
 
 ### Pull Requests
