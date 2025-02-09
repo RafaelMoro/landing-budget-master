@@ -21,6 +21,14 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <meta name="generator" content={Astro.generator} />
+    <link
+      rel="preload"
+      slot="preload-image"
+      fetchpriority="high"
+      as="image"
+      href="/img/main-banner-tablet.webp"
+      type="image/webp"
+    />
     <meta
       name="keywords"
       content="app finanzas, finanzas personales, organizador finanzas"
