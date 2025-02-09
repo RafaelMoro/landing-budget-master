@@ -1,3 +1,9 @@
+## v1.0.6 (2025-02-09)
+
+### Pull Requests
+[#25](https://github.com/RafaelMoro/landing-budget-master/pull/25) | Add image banner with high fetch priority
+
+
 ## v1.0.5 (2025-02-09)
 
 ### Pull Requests
