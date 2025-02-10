@@ -1,6 +1,7 @@
 ---
 import {
   BLOG_ROUTE,
+  HOME_ROUTE,
   BUDGET_MASTER_LOGIN_ROUTE,
   BUDGET_MASTER_REGISTER_ROUTE,
 } from "@constants";
@@ -11,6 +12,13 @@ export interface Props {
 }
 
 const { isBlog = false } = Astro.props;
+const links = {
+  blogHome: {
+    text: isBlog ? "Inicio" : "Blog",
+    href: isBlog ? HOME_ROUTE : BLOG_ROUTE,
+    title: isBlog ? "Ir al inicio" : "Navegar al blog de Budget Master",
+  },
+};
 ---
 
 <header class="w-full max-h-32 px-5 py-6 md:p-3 grid grid-cols-[30%,70%]">
@@ -18,18 +26,18 @@ const { isBlog = false } = Astro.props;
   <nav class="w-full justify-items-end flex items-center gap-6 justify-end">
     <a
       title="Inicia sesión en Budget Master"
-      class="h-7 text-lg text-p-white"
+      class:list={["h-7 text-lg text-p-white", { "text-p-black": isBlog }]}
       href={BUDGET_MASTER_LOGIN_ROUTE}>Iniciar sesión</a
     >
     <a
       title="Registrate en Budget Master"
-      class="h-7 text-lg text-p-white"
+      class:list={["h-7 text-lg text-p-white", { "text-p-black": isBlog }]}
       href={BUDGET_MASTER_REGISTER_ROUTE}>Registrate</a
     >
     <a
-      title="Navegar al blog de Budget Master"
-      class="h-7 text-lg text-p-white"
-      href={BLOG_ROUTE}>Blog</a
+      title={links.blogHome.title}
+      class:list={["h-7 text-lg text-p-white", { "text-p-black": isBlog }]}
+      href={links.blogHome.href}>{links.blogHome.text}</a
     >
   </nav>
 </header>

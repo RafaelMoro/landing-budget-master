@@ -6,5 +6,7 @@ export const BUDGET_MASTER_DASHBOARD_ROUTE = `${BUDGET_MASTER_APP_URL}/dashboard
 export const BUDGET_MASTER_SUPPORT_EMAIL = 'soporte@budget-master.space'
 export const BUDGET_MASTER_SEND_EMAIL_SUPPORT = `mailto:${BUDGET_MASTER_SUPPORT_EMAIL}`
 
+export const HOME_ROUTE = '/'
+
 // Blog
 export const BLOG_ROUTE = '/blog'
