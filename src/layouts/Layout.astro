@@ -5,19 +5,18 @@ import { GoogleAnalytics } from "@astrolib/analytics";
 
 interface Props {
   title: string;
+  metaDescription: string;
+  metaOgDescription: string;
 }
 
-const { title } = Astro.props;
+const { title, metaDescription, metaOgDescription } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="Con budget Master, organiza tus tarjetas de crédito, monitorea cada pago y lleva un registro claro de quién te debe en tus compras grupales. Simplifica tu vida financiera y deja que nosotros hagamos los números por ti. ¡La tranquilidad financiera está a un click de distancia!"
-    />
+    <meta name="description" content={metaDescription} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <meta name="generator" content={Astro.generator} />
@@ -34,10 +33,7 @@ const { title } = Astro.props;
       content="app finanzas, finanzas personales, organizador finanzas"
     />
     <meta property="og:title" content="Budget Master" />
-    <meta
-      property="og:description"
-      content="Budget Master: es una aplicación web que te ayuda a administrar tus finanzas personales de manera fácil y efectiva."
-    />
+    <meta property="og:description" content={metaOgDescription} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://budget-master.space/" />
     <meta property="og:locale" content="es_ES" />
