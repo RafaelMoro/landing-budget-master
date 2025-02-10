@@ -1,0 +1,54 @@
+---
+export interface Props {
+  title: string;
+  href: string;
+  text: string;
+  isBlog: boolean;
+}
+
+const { title, href, text, isBlog } = Astro.props;
+---
+
+<a
+  title={title}
+  class:list={[
+    "h-7 text-lg",
+    { "text-p-black": isBlog },
+    { "text-p-white": !isBlog },
+  ]}
+  href={href}>{text}</a
+>
+
+<style>
+  a {
+    transition: all 0.4s ease-in-out 0s;
+    position: relative;
+    border-bottom: 2px solid var(--white);
+    white-space: nowrap;
+  }
+  a:hover {
+    transform: translateY(-3px);
+  }
+  a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--white);
+    transition:
+      width 0.3s ease,
+      left 0.3s ease;
+  }
+
+  a:hover::after {
+    width: 100%;
+    left: 0;
+  }
+  @media (min-width: 1024px) {
+    a {
+      border-bottom: none;
+    }
+  }
+</style>
