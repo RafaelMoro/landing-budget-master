@@ -1,6 +1,12 @@
 ---
-import { BLOG_ALIAS_COMPLETE_ROUTE } from "@constants";
+import AnchorButton from "@components/AnchorButton.astro";
+import {
+  BLOG_ALIAS_COMPLETE_ROUTE,
+  BUDGET_MASTER_TRY_APP_ROUTE,
+} from "@constants";
 import Layout from "@layouts/Layout.astro";
+import Footer from "@templates/Footer.astro";
+import Header from "@templates/Header.astro";
 
 const metaKeywords =
   "cual es el alias de una tarjeta, alias de la tarjeta, que alias de la tarjeta, que es alias de la tarjeta, que es alias de la tarjeta bancoppel, que significa alias de la tarjeta, que significa alias de la tarjeta en cfe, que significa alias de la tarjeta ejemplo, que quiere decir alias de la tarjeta";
@@ -14,95 +20,108 @@ const metaKeywords =
   ogURL={BLOG_ALIAS_COMPLETE_ROUTE}
   ogDescription="Descubre qué es el alias de la tarjeta, para qué sirve y cómo configurarlo fácilmente. Conoce su significado con ejemplos. ¡Aprende más aquí!"
 >
-  <main class="flex flex-col items-center max-w-7xl mx-auto">
-    <section>
+  <Header isBlog />
+  <main class="flex flex-col items-center gap-16 max-w-7xl mx-auto">
+    <section class="max-w-[75ch] grid grid-cols-1 gap-7">
       <h1 class="text-3xl font-bold mb-5 text-center text-p-black">
         Alias de la Tarjeta: Qué Es, Para Qué Sirve y Cómo Usarlo
       </h1>
-      <p>
+      <p class="text-lg text-pretty">
         Se refiere típicamente a un sobrenombre o etiqueta que se le da a una
         tarjeta o cuenta bancaria para identificarla fácilmente y distinguirla
         de otras. Por ejemplo:
       </p>
-      <ul>
-        <li>Tarjeta para financiamiento</li>
-        <li>Tarjeta de Meses sin intereses</li>
-        <li>Cuenta de ahorros.</li>
-        <li>Tarjeta de crédito principal.</li>
+      <ul class="pl-6">
+        <li class="list-disc text-lg text-gray-600">
+          Tarjeta para financiamiento
+        </li>
+        <li class="list-disc text-lg text-gray-600">
+          Tarjeta de Meses sin intereses
+        </li>
+        <li class="list-disc text-lg text-gray-600">Cuenta de ahorros.</li>
+        <li class="list-disc text-lg text-gray-600">
+          Tarjeta de crédito principal.
+        </li>
       </ul>
-      <p>
+      <p class="text-lg text-pretty">
         Al hacerlo, es más difícil equivocarse o confundirse de tarjeta. Y lo
         mejor es que no tienes que aprenderte números de tarjeta o los nombres
         de los productos financieros. Solo eliges el nombre de la tarjeta.
       </p>
     </section>
 
-    <section>
-      <h2>Beneficios y seguridad al usar un alias en tu tarjeta</h2>
-      <p>
+    <section class="max-w-[75ch] grid grid-cols-1 gap-7">
+      <h2 class="text-2xl font-semibold mb-5 text-center text-p-black">
+        Beneficios y seguridad al usar un alias en tu tarjeta
+      </h2>
+      <p class="text-lg text-pretty">
         Es muy útil cuando se tienen muchas tarjetas del mismo banco. También,
         cuando es el mismo producto financiero o tarjeta, pero se usa para
         diferentes propósitos como gastos personales, gastos de la empresa,
         compras financiadas a meses sin intereses, etc.
       </p>
-      <p>Puntos clave:</p>
-      <ol>
-        <li>
-          Mejora en la seguridad: Usar un alias protege los números de tu
-          tarjeta de ser expuesta reduciendo el riesgo de fraude o uso no
-          autorizado.
+      <p class="text-xl text-pretty text-center font-semibold">Puntos clave:</p>
+      <ol class="pl-6 grid grid-cols-1 gap-5">
+        <li class="list-decimal text-lg text-pretty">
+          <span class="font-semibold">Mejora en la seguridad:</span> Usar un alias
+          protege los números de tu tarjeta de ser expuesta reduciendo el riesgo
+          de fraude o uso no autorizado.
         </li>
-        <li>
-          Carteras digitales y tokenización. Muchas carteras digitales y
-          sistemas de pago usan alias como parte de su proceso llamado
-          tokenización. Este proceso, los números de la tarjeta son reemplazados
-          con un alias para ser usado posteriormente en pagos sin ser revelado
-          los detalles sensibles de tu tarjeta.
+        <li class="list-decimal text-lg text-pretty">
+          <span class="font-semibold">Carteras digitales y tokenización.</span> Muchas
+          carteras digitales y sistemas de pago usan alias como parte de su proceso
+          llamado tokenización. Este proceso, los números de la tarjeta son reemplazados
+          con un alias para ser usado posteriormente en pagos sin ser revelado los
+          detalles sensibles de tu tarjeta.
         </li>
-        <li>
-          Conveniencia: Los alias son más fáciles de recordar para manejar
-          múltiples tarjetas, y como se van usando, se recuerdan más fácilmente
-          los nombres en vez de las terminaciones de las tarjetas.
+        <li class="list-decimal text-lg text-pretty">
+          <span class="font-semibold">Conveniencia:</span> Los alias son más fáciles
+          de recordar para manejar múltiples tarjetas, y como se van usando, se recuerdan
+          más fácilmente los nombres en vez de las terminaciones de las tarjetas.
         </li>
-        <li>
-          Uso en transacciones en línea: Cuando se realizan compras en línea o
-          se configuran pagos recurrentes, los usuarios pueden elegir la opción
-          usualmente de usar un alias en vez de la terminación de tu tarjeta, lo
-          que mejora la seguridad
+        <li class="list-decimal text-lg text-pretty">
+          <span class="font-semibold">Uso en transacciones en línea:</span> Cuando
+          se realizan compras en línea o se configuran pagos recurrentes, los usuarios
+          pueden elegir la opción usualmente de usar un alias en vez de la terminación
+          de tu tarjeta, lo que mejora la seguridad
         </li>
       </ol>
     </section>
 
-    <section>
-      <h3>Ejemplos de alias efectivos y cuáles evitar</h3>
-      <p>
+    <section class="max-w-[75ch] grid grid-cols-1 gap-7">
+      <h3 class="text-2xl font-semibold mb-5 text-center text-p-black">
+        Ejemplos de alias efectivos y cuáles evitar
+      </h3>
+      <p class="text-lg text-pretty">
         Elegir el alias puede parecer cosa de nada, pero podría marcar la
         diferencia entre una gestión financiera organizada y un autentico
         desastre. El punto es no crear confusión, no quieres pagar la cena con
         tu pareja con “Tarjeta de desastre” en lugar de la que querías usar en
         realidad.
       </p>
-      <p>Ejemplos de alias efectivos:</p>
-      <ul>
-        <li>Crédito compras</li>
-        <li>Débito personal</li>
-        <li>Ahorro viajes</li>
-        <li>Tarjeta negocios</li>
+      <p class="text-lg text-pretty">Ejemplos de alias efectivos:</p>
+      <ul class="pl-6">
+        <li class="list-disc text-lg text-gray-600">Crédito compras</li>
+        <li class="list-disc text-lg text-gray-600">Débito personal</li>
+        <li class="list-disc text-lg text-gray-600">Ahorro viajes</li>
+        <li class="list-disc text-lg text-gray-600">Tarjeta negocios</li>
       </ul>
     </section>
 
-    <section>
-      <h4>Errores comunes al elegir un alias y cómo evitarlos</h4>
-      <p>
+    <section class="max-w-[75ch] grid grid-cols-1 gap-7">
+      <h4 class="text-2xl font-semibold mb-5 text-center text-p-black">
+        Errores comunes al elegir un alias y cómo evitarlos
+      </h4>
+      <p class="text-lg text-pretty">
         Deben ser alias que permitan identificar su propósito evitando errores
         al pagar con la tarjeta errónea. Evita usar alias como:
       </p>
-      <ul>
-        <li>Tarjeta millonaria</li>
-        <li>Nunca gastar</li>
-        <li>Tarjeta 1</li>
+      <ul class="pl-6">
+        <li class="list-disc text-lg text-gray-600">Tarjeta millonaria</li>
+        <li class="list-disc text-lg text-gray-600">Nunca gastar</li>
+        <li class="list-disc text-lg text-gray-600">Tarjeta 1</li>
       </ul>
-      <p>
+      <p class="text-lg text-pretty">
         Evita nombres genéricos y pocos descriptivos que solo podrían
         confundirte más. Y por favor, no uses nombres comprometedores como
         “tarjeta del table” porque no sabes quién podría verlo. ¡Se inteligente
@@ -110,25 +129,40 @@ const metaKeywords =
       </p>
     </section>
 
-    <section>
-      <h5>Conclusión</h5>
-      <p>Un buen alias te ayudara a:</p>
-      <ul>
-        <li>Ahorrar dolores de cabeza</li>
-        <li>Manejar mejor tus finanzas</li>
-        <li>Evitar momentos incomodos o frustrantes</li>
-        <li>Proteger información sensible.</li>
-        <li>Simplificar transacciones manteniendo la seguridad</li>
+    <section class="max-w-[75ch] grid grid-cols-1 gap-7 mb-12">
+      <h5 class="text-2xl font-semibold mb-5 text-center text-p-black">
+        Conclusión
+      </h5>
+      <p class="text-lg text-pretty">Un buen alias te ayudara a:</p>
+      <ul class="pl-6">
+        <li class="list-disc text-lg text-gray-600">
+          Ahorrar dolores de cabeza
+        </li>
+        <li class="list-disc text-lg text-gray-600">
+          Manejar mejor tus finanzas
+        </li>
+        <li class="list-disc text-lg text-gray-600">
+          Evitar momentos incomodos o frustrantes
+        </li>
+        <li class="list-disc text-lg text-gray-600">
+          Proteger información sensible.
+        </li>
+        <li class="list-disc text-lg text-gray-600">
+          Simplificar transacciones manteniendo la seguridad
+        </li>
       </ul>
-      <p>
+      <p class="text-lg text-pretty">
         Con ingenio y organización, gestiona tus tarjetas de manera fácil y
-        segura.
+        segura. La mejor forma de organizar tus finanzas es con Budget Master.
+        Comienza tu prueba gratis de 1 mes sin ingresar tus datos bancarios.
       </p>
-      <p>
-        La mejor forma de organizar tus finanzas es con Budget Master. Comienza
-        tu prueba gratis de 1 mes sin ingresar tus datos bancarios.
-      </p>
-      <button>¡Empezar Ahora!</button>
+      <div class="flex justify-center">
+        <AnchorButton
+          text="¡Empezar Ahora!"
+          hrefSrc={BUDGET_MASTER_TRY_APP_ROUTE}
+        />
+      </div>
     </section>
   </main>
+  <Footer />
 </Layout>
