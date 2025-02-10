@@ -1,5 +1,6 @@
 ---
 import {
+  BLOG_ROUTE,
   BUDGET_MASTER_LOGIN_ROUTE,
   BUDGET_MASTER_REGISTER_ROUTE,
 } from "@constants";
@@ -8,14 +9,21 @@ import Logo from "@components/Logo.astro";
 
 <header class="w-full max-h-32 px-5 py-6 md:p-3 grid grid-cols-[30%,70%]">
   <Logo />
-  <nav
-    class="w-full justify-items-end flex items-center gap-6 justify-end"
-  >
-    <a class="h-7 text-lg text-p-white" href={BUDGET_MASTER_LOGIN_ROUTE}
-      >Iniciar sesión</a
+  <nav class="w-full justify-items-end flex items-center gap-6 justify-end">
+    <a
+      title="Inicia sesión en Budget Master"
+      class="h-7 text-lg text-p-white"
+      href={BUDGET_MASTER_LOGIN_ROUTE}>Iniciar sesión</a
     >
-    <a class="h-7 text-lg text-p-white" href={BUDGET_MASTER_REGISTER_ROUTE}
-      >Registrate</a
+    <a
+      title="Registrate en Budget Master"
+      class="h-7 text-lg text-p-white"
+      href={BUDGET_MASTER_REGISTER_ROUTE}>Registrate</a
+    >
+    <a
+      title="Navegar al blog de Budget Master"
+      class="h-7 text-lg text-p-white"
+      href={BLOG_ROUTE}>Blog</a
     >
   </nav>
 </header>
