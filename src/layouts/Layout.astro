@@ -24,14 +24,7 @@ const { title, ogTitle, metaDescription, metaKeywords, ogDescription, ogURL } =
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <meta name="generator" content={Astro.generator} />
-    <link
-      rel="preload"
-      slot="preload-image"
-      fetchpriority="high"
-      as="image"
-      href="/img/main-banner-tablet.webp"
-      type="image/webp"
-    />
+    <slot name="preload-image" />
     <meta name="keywords" content={metaKeywords} />
     <meta property="og:title" content={ogTitle} />
     <meta property="og:description" content={ogDescription} />

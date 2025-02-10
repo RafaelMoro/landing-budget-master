@@ -9,6 +9,14 @@ import Solution from "@templates/Solution.astro";
 import WhyUs from "@templates/WhyUs.astro";
 ---
 
+<link
+  rel="preload"
+  slot="preload-image"
+  fetchpriority="high"
+  as="image"
+  href="/img/main-banner-tablet.webp"
+  type="image/webp"
+/>
 <Layout
   title="Budget Master"
   metaDescription="Organiza tus tarjetas de crédito, monitorea cada pago y lleva un registro de quién te debe en tus compras grupales. ¡Simplifica tu vida financiera ahora!"
