@@ -3,9 +3,10 @@ import { Image } from "astro:assets";
 
 export interface Props {
   isFooter?: boolean;
+  isBlog?: boolean;
 }
 
-const { isFooter = false } = Astro.props;
+const { isFooter = false, isBlog = false } = Astro.props;
 ---
 
 <div
@@ -21,6 +22,7 @@ const { isFooter = false } = Astro.props;
   <h1
     class:list={[
       "logo text-2xl text-p-white",
+      { "text-primary": isBlog },
       { "hidden md:block": !isFooter },
     ]}
   >
