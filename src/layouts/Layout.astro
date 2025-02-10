@@ -6,10 +6,14 @@ import { GoogleAnalytics } from "@astrolib/analytics";
 interface Props {
   title: string;
   metaDescription: string;
-  metaOgDescription: string;
+  metaKeywords: string;
+  ogTitle: string;
+  ogDescription: string;
+  ogURL: string;
 }
 
-const { title, metaDescription, metaOgDescription } = Astro.props;
+const { title, ogTitle, metaDescription, metaKeywords, ogDescription, ogURL } =
+  Astro.props;
 ---
 
 <!doctype html>
@@ -28,14 +32,11 @@ const { title, metaDescription, metaOgDescription } = Astro.props;
       href="/img/main-banner-tablet.webp"
       type="image/webp"
     />
-    <meta
-      name="keywords"
-      content="app finanzas, finanzas personales, organizador finanzas"
-    />
-    <meta property="og:title" content="Budget Master" />
-    <meta property="og:description" content={metaOgDescription} />
+    <meta name="keywords" content={metaKeywords} />
+    <meta property="og:title" content={ogTitle} />
+    <meta property="og:description" content={ogDescription} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://budget-master.space/" />
+    <meta property="og:url" content={ogURL} />
     <meta property="og:locale" content="es_ES" />
     <meta name="robots" content="index, follow" />
     <meta name="googlebot" content="index, follow" />
