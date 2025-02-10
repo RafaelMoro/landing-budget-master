@@ -1,4 +1,5 @@
 ---
+import { BUDGET_MASTER_LANDING_URL } from "@constants";
 import Layout from "@layouts/Layout.astro";
 import FAQs from "@templates/FAQs.astro";
 import Footer from "@templates/Footer.astro";
@@ -14,7 +15,7 @@ import WhyUs from "@templates/WhyUs.astro";
   metaKeywords="app finanzas, finanzas personales, organizador finanzas"
   ogTitle="Budget Master | Home"
   ogDescription="Budget Master: es una aplicación web que te ayuda a administrar tus finanzas personales de manera fácil y efectiva."
-  ogURL="https://budget-master.space/"
+  ogURL={BUDGET_MASTER_LANDING_URL}
 >
   <MainBanner />
   <HowWeHelp />
