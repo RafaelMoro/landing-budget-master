@@ -26,17 +26,29 @@ const links = {
   <nav class="w-full justify-items-end flex items-center gap-6 justify-end">
     <a
       title="Inicia sesión en Budget Master"
-      class:list={["h-7 text-lg text-p-white", { "text-p-black": isBlog }]}
+      class:list={[
+        "h-7 text-lg",
+        { "text-p-black": isBlog },
+        { "text-p-white": !isBlog },
+      ]}
       href={BUDGET_MASTER_LOGIN_ROUTE}>Iniciar sesión</a
     >
     <a
       title="Registrate en Budget Master"
-      class:list={["h-7 text-lg text-p-white", { "text-p-black": isBlog }]}
+      class:list={[
+        "h-7 text-lg",
+        { "text-p-black": isBlog },
+        { "text-p-white": !isBlog },
+      ]}
       href={BUDGET_MASTER_REGISTER_ROUTE}>Registrate</a
     >
     <a
       title={links.blogHome.title}
-      class:list={["h-7 text-lg text-p-white", { "text-p-black": isBlog }]}
+      class:list={[
+        "h-7 text-lg",
+        { "text-p-black": isBlog },
+        { "text-p-white": !isBlog },
+      ]}
       href={links.blogHome.href}>{links.blogHome.text}</a
     >
   </nav>
