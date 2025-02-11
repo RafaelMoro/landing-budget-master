@@ -7,6 +7,7 @@ import {
   BLOG_ALIAS_COMPLETE_ROUTE,
   BUDGET_MASTER_TRY_APP_ROUTE,
 } from "@constants";
+import Article from "@components/Blog/Article.astro";
 import Layout from "@layouts/Layout.astro";
 import Footer from "@templates/Footer.astro";
 import Header from "@templates/Header/Header.astro";
@@ -31,9 +32,7 @@ const metaKeywords =
   <main
     class="flex flex-col items-center gap-12 max-w-7xl mx-auto px-3 md:px-0"
   >
-    <section
-      class="max-w-[75ch] grid grid-cols-1 gap-7 mt-8 justify-items-center"
-    >
+    <Article class="mt-8 justify-items-center">
       <h1 class="text-3xl font-bold mb-5 text-center text-p-black">
         Alias de la Tarjeta: Qué Es, Para Qué Sirve y Cómo Usarlo
       </h1>
@@ -59,9 +58,9 @@ const metaKeywords =
         mejor es que no tienes que aprenderte números de tarjeta o los nombres
         de los productos financieros. Solo eliges el nombre de la tarjeta.
       </p>
-    </section>
+    </Article>
 
-    <section class="max-w-[75ch] grid grid-cols-1 gap-7">
+    <Article>
       <h2 class="text-2xl font-semibold text-center text-p-black">
         Beneficios y seguridad al usar un alias en tu tarjeta
       </h2>
@@ -97,9 +96,9 @@ const metaKeywords =
           de tu tarjeta, lo que mejora la seguridad
         </li>
       </ol>
-    </section>
+    </Article>
 
-    <section class="max-w-[75ch] grid grid-cols-1 gap-7">
+    <Article>
       <h3 class="text-2xl font-semibold text-center text-p-black">
         Ejemplos de alias efectivos y cuáles evitar
       </h3>
@@ -117,9 +116,9 @@ const metaKeywords =
         <li class="list-disc text-lg">Ahorro viajes</li>
         <li class="list-disc text-lg">Tarjeta negocios</li>
       </ul>
-    </section>
+    </Article>
 
-    <section class="max-w-[75ch] grid grid-cols-1 gap-7">
+    <Article>
       <h4 class="text-2xl font-semibold text-center text-p-black">
         Errores comunes al elegir un alias y cómo evitarlos
       </h4>
@@ -138,9 +137,9 @@ const metaKeywords =
         “tarjeta del table” porque no sabes quién podría verlo. ¡Se inteligente
         y dale un toque de orden a tus finanzas!
       </p>
-    </section>
+    </Article>
 
-    <section class="max-w-[75ch] grid grid-cols-1 gap-7 mb-12">
+    <Article class="mb-12">
       <h5 class="text-2xl font-semibold text-center text-p-black">
         Conclusión
       </h5>
@@ -167,7 +166,7 @@ const metaKeywords =
           hrefSrc={BUDGET_MASTER_TRY_APP_ROUTE}
         />
       </div>
-    </section>
+    </Article>
   </main>
   <Footer />
 </Layout>
