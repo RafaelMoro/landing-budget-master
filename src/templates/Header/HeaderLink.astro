@@ -3,21 +3,12 @@ export interface Props {
   title: string;
   href: string;
   text: string;
-  isBlog: boolean;
 }
 
-const { title, href, text, isBlog } = Astro.props;
+const { title, href, text } = Astro.props;
 ---
 
-<a
-  title={title}
-  class:list={[
-    "h-7 text-lg",
-    { "text-p-black": isBlog },
-    { "text-p-white": !isBlog },
-  ]}
-  href={href}>{text}</a
->
+<a title={title} class="h-7 text-lg text-p-white" href={href}>{text}</a>
 
 <style>
   a {
