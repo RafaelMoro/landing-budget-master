@@ -10,6 +10,9 @@ export const BUDGET_MASTER_SEND_EMAIL_SUPPORT = `mailto:${BUDGET_MASTER_SUPPORT_
 
 export const HOME_ROUTE = '/'
 
+// Images
+export const ALIAS_TARJETA_IMG = '/img/blog/alias-tarjeta.webp'
+
 // Blog
 export const BLOG_ROUTE = '/blog'
 export const BLOG_ALIAS_ROUTE = `${BLOG_ROUTE}/alias-tarjeta-significado`

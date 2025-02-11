@@ -1,11 +1,12 @@
 ---
-import { BLOG_ALIAS_ROUTE, COMPLETE_BLOG_ROUTE } from "@constants";
+import {
+  ALIAS_TARJETA_IMG,
+  BLOG_ALIAS_ROUTE,
+  COMPLETE_BLOG_ROUTE,
+} from "@constants";
 import Layout from "@layouts/Layout.astro";
 import Header from "@templates/Header/Header.astro";
 import { Image } from "astro:assets";
-
-const temporaryImageBlog1 =
-  "https://media.istockphoto.com/id/1795222044/photo/writing-text-document-online-content-book-letter-or-essay-writer-journalist-or-freelance.jpg?s=2048x2048&w=is&k=20&c=dl40Ue5x1_fuPPsmqrpgeMBAPPRmM7i2tQqbkREvQts=";
 ---
 
 <Layout
@@ -25,7 +26,7 @@ const temporaryImageBlog1 =
   <section class="mt-20 flex flex-col items-center max-w-7xl mx-auto gap-6">
     <article class="flex flex-col gap-4 max-w-[300px]">
       <Image
-        src={temporaryImageBlog1}
+        src={ALIAS_TARJETA_IMG}
         alt="Imagen previa del blog de ¿Qué es el alias de la tarjeta?"
         width="300"
         height="300"
