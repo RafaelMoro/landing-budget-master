@@ -23,13 +23,8 @@ const links = {
 };
 ---
 
-<header
-  class:list={[
-    "w-full max-h-32 px-5 py-6 md:p-3 grid grid-cols-[30%,70%]",
-    { "bg-dark-blue": hasBlueBg },
-  ]}
->
-  <Logo isBlog={isBlog} />
+<header class="w-full max-h-32 px-5 py-6 md:p-3 grid grid-cols-[30%,70%]">
+  <Logo />
   <nav class="w-full justify-items-end flex items-center gap-6 justify-end">
     <HeaderLink
       title="Inicia sesión en Budget Master"
