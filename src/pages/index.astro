@@ -9,7 +9,6 @@ import Solution from "@templates/Solution.astro";
 import WhyUs from "@templates/WhyUs.astro";
 ---
 
-<link slot="canonical" rel="”canonical”" href={BUDGET_MASTER_LANDING_URL} />
 <link
   rel="preload"
   slot="preload-image"
@@ -25,6 +24,7 @@ import WhyUs from "@templates/WhyUs.astro";
   ogTitle="Budget Master | Home"
   ogDescription="Budget Master: es una aplicación web que te ayuda a administrar tus finanzas personales de manera fácil y efectiva."
   ogURL={BUDGET_MASTER_LANDING_URL}
+  hrefCanonical={BUDGET_MASTER_LANDING_URL}
 >
   <MainBanner />
   <HowWeHelp />

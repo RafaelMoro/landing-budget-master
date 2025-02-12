@@ -11,7 +11,6 @@ import Header from "@templates/Header/Header.astro";
 import { Image } from "astro:assets";
 ---
 
-<link slot="canonical" rel="”canonical”" href={COMPLETE_BLOG_ROUTE} />
 <Layout
   title="Blog de Budget Master"
   metaDescription="Descubre los mejores consejos y estrategias para mejorar tus finanzas en el blog de Budget Master.¡Empieza a tomar el control de tu dinero hoy!"
@@ -19,6 +18,7 @@ import { Image } from "astro:assets";
   ogTitle="Budget Master | Blogs"
   ogDescription="Aquí encontrarás contenido práctico, claro y atractivo para mejorar tus finanzas y entenderlas como un experto"
   ogURL={COMPLETE_BLOG_ROUTE}
+  hrefCanonical={COMPLETE_BLOG_ROUTE}
 >
   <div class="bg-dark-blue">
     <div class="max-w-7xl mx-auto">
