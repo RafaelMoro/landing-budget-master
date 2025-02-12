@@ -3,6 +3,8 @@ import {
   ALIAS_TARJETA_IMG,
   BLOG_ALIAS_CARD_ARTICLE_ROUTE,
   COMPLETE_BLOG_ROUTE,
+  BLOG_ROUTE,
+  HOME_ROUTE,
 } from "@constants";
 import Layout from "@layouts/Layout.astro";
 import Header from "@templates/Header/Header.astro";
@@ -21,6 +23,13 @@ import { Image } from "astro:assets";
     <div class="max-w-7xl mx-auto">
       <Header isBlog />
     </div>
+  </div>
+  <div class="max-w-7xl mx-auto mt-4 pl-3 lg:pl-0">
+    <article class="inline-flex gap-2">
+      <a class="text-gray-500 hover:underline" href={HOME_ROUTE}>Inicio</a>
+      <span>></span>
+      <a class="hover:underline" href={BLOG_ROUTE}>Blog</a>
+    </article>
   </div>
   <h1 class="text-3xl font-bold my-4 text-center text-p-black">Blog</h1>
   <section class="mt-20 flex flex-col items-center max-w-7xl mx-auto gap-6">
