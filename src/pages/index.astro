@@ -1,4 +1,5 @@
 ---
+import { BUDGET_MASTER_LANDING_URL } from "@constants";
 import Layout from "@layouts/Layout.astro";
 import FAQs from "@templates/FAQs.astro";
 import Footer from "@templates/Footer.astro";
@@ -8,7 +9,22 @@ import Solution from "@templates/Solution.astro";
 import WhyUs from "@templates/WhyUs.astro";
 ---
 
-<Layout title="Budget Master">
+<link
+  rel="preload"
+  slot="preload-image"
+  fetchpriority="high"
+  as="image"
+  href="/img/main-banner-tablet.webp"
+  type="image/webp"
+/>
+<Layout
+  title="Budget Master: Controla tus gastos con la mejor app de finanzas"
+  metaDescription="Controla tus finanzas con Budget Master, la mejor app de finanzas personales gratis. Registra gastos, organiza tu dinero y ahorra fácilmente. Pruébala ahora!"
+  metaKeywords="app finanzas personales, app finanzas, app finanzas personales gratis, mi finanzas app, organizador finanzas, registro de gastos, registro de gastos personales, registro de gastos diarios"
+  ogTitle="Budget Master | Home"
+  ogDescription="Budget Master: es una aplicación web que te ayuda a administrar tus finanzas personales de manera fácil y efectiva."
+  ogURL={BUDGET_MASTER_LANDING_URL}
+>
   <MainBanner />
   <HowWeHelp />
   <Solution />

@@ -11,7 +11,8 @@ export default {
 				complementary: '#418ab1',
 				'p-white': '#fbfbfb',
   			'p-black': '#1D1305',
-				secondary: '#592418'
+				secondary: '#592418',
+				'dark-blue': '#141c2e'
 			}
 		},
 	},

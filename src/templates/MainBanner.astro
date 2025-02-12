@@ -1,6 +1,6 @@
 ---
 import AnchorButton from "@components/AnchorButton.astro";
-import Header from "./Header.astro";
+import Header from "./Header/Header.astro";
 import { BUDGET_MASTER_DASHBOARD_ROUTE } from "@constants";
 ---
 
@@ -8,10 +8,10 @@ import { BUDGET_MASTER_DASHBOARD_ROUTE } from "@constants";
   <section class="flex flex-col max-w-7xl mx-auto h-[800px]">
     <Header />
     <article class="h-full flex flex-col items-center justify-center gap-6">
-      <h2 class="text-3xl font-bold mb-5 text-center text-p-white">
+      <h1 class="text-3xl font-bold mb-5 text-center text-p-white">
         ¿Te sientes abrumado por las deudas y los gastos? ¡Toma control de tus
-        finanzas ahora!
-      </h2>
+        finanzas ahora con Budget Master!
+      </h1>
       <AnchorButton
         text="Probar ahora"
         hrefSrc={BUDGET_MASTER_DASHBOARD_ROUTE}

@@ -1,0 +1,45 @@
+---
+import {
+  BLOG_ROUTE,
+  HOME_ROUTE,
+  BUDGET_MASTER_LOGIN_ROUTE,
+  BUDGET_MASTER_REGISTER_ROUTE,
+} from "@constants";
+import Logo from "@components/Logo.astro";
+import HeaderLink from "./HeaderLink.astro";
+
+export interface Props {
+  hasBlueBg?: boolean;
+  isBlog?: boolean;
+}
+
+const { isBlog = false, hasBlueBg = false } = Astro.props;
+const links = {
+  blogHome: {
+    text: isBlog ? "Inicio" : "Blog",
+    href: isBlog ? HOME_ROUTE : BLOG_ROUTE,
+    title: isBlog ? "Ir al inicio" : "Navegar al blog de Budget Master",
+  },
+};
+---
+
+<header class="w-full max-h-32 px-5 py-6 md:p-3 grid grid-cols-[30%,70%]">
+  <Logo />
+  <nav class="w-full justify-items-end flex items-center gap-6 justify-end">
+    <HeaderLink
+      title="Inicia sesión en Budget Master"
+      href={BUDGET_MASTER_LOGIN_ROUTE}
+      text="Iniciar sesión"
+    />
+    <HeaderLink
+      title="Registrate en Budget Master"
+      href={BUDGET_MASTER_REGISTER_ROUTE}
+      text="Registrate"
+    />
+    <HeaderLink
+      title={links.blogHome.title}
+      href={links.blogHome.href}
+      text={links.blogHome.text}
+    />
+  </nav>
+</header>
