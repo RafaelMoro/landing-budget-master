@@ -1,3 +1,9 @@
+## v1.1.1 (2025-02-12)
+
+### Pull Requests
+[#31](https://github.com/RafaelMoro/landing-budget-master/pull/31) | Add canonical link tag into pages
+
+
 ## v1.1.0 (2025-02-12)
 
 ### Pull Requests
