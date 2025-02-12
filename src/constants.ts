@@ -15,8 +15,8 @@ export const ALIAS_TARJETA_IMG = '/img/blog/alias-tarjeta.webp'
 
 // Blog
 export const BLOG_ROUTE = '/blog'
-export const BLOG_ALIAS_ROUTE = `${BLOG_ROUTE}/alias-tarjeta-significado`
+export const BLOG_ALIAS_CARD_ARTICLE_ROUTE = `${BLOG_ROUTE}/alias-tarjeta-significado`
 
 // Complete routes
 export const COMPLETE_BLOG_ROUTE = `${BUDGET_MASTER_LANDING_URL}${BLOG_ROUTE}`
-export const BLOG_ALIAS_COMPLETE_ROUTE = `${COMPLETE_BLOG_ROUTE}${BLOG_ALIAS_ROUTE}`
+export const BLOG_ALIAS_CARD_ART_COMPLETE_ROUTE = `${COMPLETE_BLOG_ROUTE}${BLOG_ALIAS_CARD_ARTICLE_ROUTE}`
