@@ -1,24 +1,14 @@
 ---
-import {
-  BUDGET_MASTER_LOGIN_ROUTE,
-  BUDGET_MASTER_REGISTER_ROUTE,
-} from "@constants";
-import Logo from "@components/Logo.astro";
+export interface Props {
+  title: string;
+  href: string;
+  text: string;
+}
+
+const { title, href, text } = Astro.props;
 ---
 
-<header class="w-full max-h-32 px-5 py-6 md:p-3 grid grid-cols-[30%,70%]">
-  <Logo />
-  <nav
-    class="w-full justify-items-end flex items-center gap-6 justify-end"
-  >
-    <a class="h-7 text-lg text-p-white" href={BUDGET_MASTER_LOGIN_ROUTE}
-      >Iniciar sesión</a
-    >
-    <a class="h-7 text-lg text-p-white" href={BUDGET_MASTER_REGISTER_ROUTE}
-      >Registrate</a
-    >
-  </nav>
-</header>
+<a title={title} class="h-7 text-lg text-p-white" href={href}>{text}</a>
 
 <style>
   a {
