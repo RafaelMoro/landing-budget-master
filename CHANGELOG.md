@@ -1,3 +1,9 @@
+## v1.1.0 (2025-02-12)
+
+### Pull Requests
+[#29](https://github.com/RafaelMoro/landing-budget-master/pull/29) | Add first blog about card alias
+
+
 ## v1.0.7 (2025-02-09)
 
 ### Pull Requests
