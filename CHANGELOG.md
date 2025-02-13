@@ -1,3 +1,9 @@
+## v1.1.4 (2025-02-13)
+
+### Pull Requests
+[#36](https://github.com/RafaelMoro/landing-budget-master/pull/36) | Add sitemap
+
+
 ## v1.1.3 (2025-02-13)
 
 ### Pull Requests
