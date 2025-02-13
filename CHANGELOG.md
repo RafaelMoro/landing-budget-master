@@ -1,3 +1,9 @@
+## v1.1.2 (2025-02-13)
+
+### Pull Requests
+[#32](https://github.com/RafaelMoro/landing-budget-master/pull/32) | Fix technical SEO on Feb 12
+
+
 ## v1.1.1 (2025-02-12)
 
 ### Pull Requests
