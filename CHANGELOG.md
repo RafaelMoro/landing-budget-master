@@ -1,3 +1,9 @@
+## v1.1.3 (2025-02-13)
+
+### Pull Requests
+[#34](https://github.com/RafaelMoro/landing-budget-master/pull/34) | Fix long H1 in home page
+
+
 ## v1.1.2 (2025-02-13)
 
 ### Pull Requests
