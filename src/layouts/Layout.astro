@@ -6,22 +6,14 @@ import { GoogleAnalytics } from "@astrolib/analytics";
 interface Props {
   title: string;
   metaDescription: string;
-  metaKeywords: string;
   ogTitle: string;
   ogDescription: string;
   hrefCanonical: string;
   ogURL: string;
 }
 
-const {
-  title,
-  ogTitle,
-  metaDescription,
-  metaKeywords,
-  ogDescription,
-  ogURL,
-  hrefCanonical,
-} = Astro.props;
+const { title, ogTitle, metaDescription, ogDescription, ogURL, hrefCanonical } =
+  Astro.props;
 ---
 
 <!doctype html>
@@ -33,7 +25,6 @@ const {
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <meta name="generator" content={Astro.generator} />
     <slot name="preload-image" />
-    <meta name="keywords" content={metaKeywords} />
     <link rel="”canonical”" href={hrefCanonical} />
     <meta property="og:title" content={ogTitle} />
     <meta property="og:description" content={ogDescription} />
