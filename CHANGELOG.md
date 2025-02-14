@@ -1,3 +1,9 @@
+## v1.1.5 (2025-02-14)
+
+### Pull Requests
+[#38](https://github.com/RafaelMoro/landing-budget-master/pull/38) | Add schema to alias blog post
+
+
 ## v1.1.4 (2025-02-13)
 
 ### Pull Requests

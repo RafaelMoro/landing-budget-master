@@ -20,6 +20,7 @@ const { title, ogTitle, metaDescription, ogDescription, ogURL, hrefCanonical } =
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <slot name="schema" />
     <meta name="description" content={metaDescription} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
