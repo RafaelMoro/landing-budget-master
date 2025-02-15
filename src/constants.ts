@@ -16,8 +16,10 @@ export const CREDIT_CARDS_IMG = '/img/blog/credit-cards.webp'
 
 // Blog
 export const BLOG_ROUTE = '/blog'
-export const BLOG_ALIAS_CARD_ARTICLE_ROUTE = `${BLOG_ROUTE}/alias-tarjeta-significado`
+export const BLOG_ALIAS_CARD_ARTICLE_ROUTE = '/blog/alias-tarjeta-significado'
+export const BLOG_CONTROL_EXCEL_ROUTE = '/blog/control-gastos-excel'
 
 // Complete routes
 export const COMPLETE_BLOG_ROUTE = `${BUDGET_MASTER_LANDING_URL}${BLOG_ROUTE}`
-export const BLOG_ALIAS_CARD_ART_COMPLETE_ROUTE = `${COMPLETE_BLOG_ROUTE}${BLOG_ALIAS_CARD_ARTICLE_ROUTE}`
+export const BLOG_ALIAS_CARD_ART_COMPLETE_ROUTE = `${BUDGET_MASTER_LANDING_URL}${BLOG_ALIAS_CARD_ARTICLE_ROUTE}`
+export const BLOG_CONTROL_EXCEL_COMPLETE_ROUTE = `${BUDGET_MASTER_LANDING_URL}${BLOG_CONTROL_EXCEL_ROUTE}`

@@ -1,0 +1,37 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Header from "@templates/Header/Header.astro";
+import {
+  BLOG_CONTROL_EXCEL_COMPLETE_ROUTE,
+  BLOG_ROUTE,
+  HOME_ROUTE,
+  BLOG_CONTROL_EXCEL_ROUTE,
+} from "@constants";
+---
+
+<Layout
+  title="Control de gastos en Excel: Guía fácil para organizar tus finanzas"
+  metaDescription="Aprende cómo hacer un control de gastos en Excel fácil y rápido. Usa las plantillas para gestionar tus finanzas personales. ¡Descárgala ahora!"
+  ogTitle="Control de gastos en Excel: Guía fácil para organizar tus finanzas | Blogs de Budget Master"
+  ogURL={BLOG_CONTROL_EXCEL_COMPLETE_ROUTE}
+  ogDescription="Aprende cómo hacer un control de gastos en Excel fácil y rápido. Usa las plantillas para gestionar tus finanzas personales. ¡Descárgala ahora!"
+  hrefCanonical={BLOG_CONTROL_EXCEL_COMPLETE_ROUTE}
+>
+  <div class="bg-dark-blue">
+    <div class="max-w-7xl mx-auto">
+      <Header isBlog />
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto mt-4 pl-3 lg:pl-0">
+    <article class="inline-flex gap-2">
+      <a class="text-gray-500 hover:underline" href={HOME_ROUTE}>Inicio</a>
+      <span>></span>
+      <a class="text-gray-500 hover:underline" href={BLOG_ROUTE}>Blog</a>
+      <span>></span>
+      <a href={BLOG_CONTROL_EXCEL_ROUTE} class="hover:underline"
+        >Control de gastos en Excel: Guía completa con ejemplos y plantillas</a
+      >
+    </article>
+  </div>
+</Layout>
