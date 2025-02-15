@@ -181,6 +181,74 @@ import { Image } from "astro:assets";
           </ul>
         </section>
       </article>
+
+      <article class="flex flex-col gap-4">
+        <h4 class="text-xl font-semibold text-center text-p-black">
+          Ejemplo práctico con un ingreso de $12,000:
+        </h4>
+        <p class="text-lg text-pretty">
+          La fórmula matemática para realizar el calculo es el siguiente. Para
+          conseguir el 70%, vas a multiplicar tu sueldo neto (después de
+          impuestos) por “0.7” y guarda el resultado. Si mi sueldo es de
+          $12,000, entonces el cálculo se ve así:
+        </p>
+        <math display="block">
+          <mrow>
+            <mi class="text-md">$12,000</mi>
+            <mo class="text-md">*</mo>
+            <mi class="text-md">0.7</mi>
+            <mo class="text-md">=</mo>
+            <mi class="text-md">$8,400</mi>
+          </mrow>
+        </math>
+        <p class="text-lg text-pretty">
+          Luego nuevamente repetimos el proceso, multiplicas todo tu sueldo neto
+          por “0.2”
+        </p>
+        <math display="block">
+          <mrow>
+            <mi class="text-md">$12,000</mi>
+            <mo class="text-md">*</mo>
+            <mi class="text-md">0.2</mi>
+            <mo class="text-md">=</mo>
+            <mi class="text-md">$2,400</mi>
+          </mrow>
+        </math>
+        <p class="text-lg text-pretty">Finalmente todo tu sueldo por “0.1”.</p>
+        <math display="block">
+          <mrow>
+            <mi class="text-md">$12,000</mi>
+            <mo class="text-md">*</mo>
+            <mi class="text-md">0.1</mi>
+            <mo class="text-md">=</mo>
+            <mi class="text-md">$1,200</mi>
+          </mrow>
+        </math>
+        <p class="text-lg text-pretty">
+          Sumando estas tres cantidades, te debe de dar el 100% de tu sueldo.
+        </p>
+        <math display="block">
+          <mrow>
+            <mi class="text-md"
+              >$8,400 <span class="text-gray-600">(70%)</span></mi
+            >
+            <mo class="text-md">+</mo>
+            <mi class="text-md"
+              >$2,400 <span class="text-gray-600">(20%)</span></mi
+            >
+            <mo class="text-md">+</mo>
+            <mi class="text-md"
+              >$1,200 <span class="text-gray-600">(10%)</span></mi
+            >
+            <mo class="text-md">=</mo>
+            <mi class="text-md">$12,000</mi>
+          </mrow>
+        </math>
+        <p class="text-lg text-pretty">
+          Ahora ingresa tus datos en la plantilla que te compartimos a
+          continuación.
+        </p>
+      </article>
     </Section>
 
     <Section>
