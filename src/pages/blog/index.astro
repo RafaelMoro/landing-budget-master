@@ -5,6 +5,7 @@ import {
   COMPLETE_BLOG_ROUTE,
   BLOG_ROUTE,
   HOME_ROUTE,
+  BLOG_CONTROL_EXCEL_ROUTE,
 } from "@constants";
 import Layout from "@layouts/Layout.astro";
 import Header from "@templates/Header/Header.astro";
@@ -24,6 +25,7 @@ import { Image } from "astro:assets";
       <Header isBlog />
     </div>
   </div>
+
   <div class="max-w-7xl mx-auto mt-4 pl-3 lg:pl-0">
     <article class="inline-flex gap-2">
       <a class="text-gray-500 hover:underline" href={HOME_ROUTE}>Inicio</a>
@@ -31,6 +33,7 @@ import { Image } from "astro:assets";
       <a class="hover:underline" href={BLOG_ROUTE}>Blog</a>
     </article>
   </div>
+
   <h1 class="text-3xl font-bold my-4 text-center text-p-black">Blog</h1>
   <section class="mt-20 flex flex-col items-center max-w-7xl mx-auto gap-6">
     <article class="flex flex-col gap-4 max-w-[300px]">
@@ -50,6 +53,28 @@ import { Image } from "astro:assets";
       <p class="text-gray-600 text-lg text-pretty">
         Conoce ejemplos reales de alias. Errores comúnes y cómo evitarlos,
         consejos de seguridad y comparación con otros bancos.
+      </p>
+    </article>
+
+    <article class="flex flex-col gap-4 max-w-[300px]">
+      <Image
+        src={ALIAS_TARJETA_IMG}
+        alt="Imagen previa del blog de Control de gastos en Excel"
+        width="300"
+        height="300"
+      />
+      <a
+        href={BLOG_CONTROL_EXCEL_ROUTE}
+        title="Ir a blog: Control de gastos en Excel: Guía completa con ejemplos y plantillas"
+        class="text-xl font-semibold transition-colors duration-300 hover:text-complementary"
+      >
+        Control de gastos en Excel: Guía completa con ejemplos y plantillas
+      </a>
+      <p class="text-gray-600 text-lg text-pretty">
+        Aprende cómo hacer un control de gastos en Excel fácil y rápido.
+        Descarga 3 diferentes plantillas para gestionar tus finanzas personales
+        de forma efectiva. Conoce ejemplos reales y alternativas a las
+        plantillas.
       </p>
     </article>
   </section>
