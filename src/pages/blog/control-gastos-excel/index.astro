@@ -10,7 +10,7 @@ import {
   HOW_OBTAIN_COPY_IMG,
 } from "@constants";
 import Footer from "@templates/Footer.astro";
-import Article from "@components/Blog/Article.astro";
+import Section from "@components/Blog/Section.astro";
 import { Image } from "astro:assets";
 ---
 
@@ -28,7 +28,7 @@ import { Image } from "astro:assets";
     </div>
   </div>
 
-  <div class="max-w-7xl mx-auto mt-4 pl-3 lg:pl-0">
+  <section class="max-w-7xl mx-auto mt-4 pl-3 lg:pl-0">
     <article class="inline-flex gap-2">
       <a class="text-gray-500 hover:underline" href={HOME_ROUTE}>Inicio</a>
       <span>></span>
@@ -38,12 +38,12 @@ import { Image } from "astro:assets";
         >Control de gastos en Excel: Guía completa con ejemplos y plantillas</a
       >
     </article>
-  </div>
+  </section>
 
   <main
     class="flex flex-col items-center gap-12 max-w-7xl mx-auto px-3 md:px-0"
   >
-    <Article class="mt-8 justify-items-center">
+    <Section class="mt-8 justify-items-center">
       <h1 class="text-3xl font-bold mb-5 text-center text-p-black">
         Control de gastos en Excel: Guía completa con ejemplos y plantillas
       </h1>
@@ -83,12 +83,110 @@ import { Image } from "astro:assets";
           que tengas tu archivo localmente, no necesitas conexión a internet.
         </li>
       </ul>
-    </Article>
+    </Section>
 
-    <Article>
+    <Section>
       <h2 class="text-2xl font-semibold text-center text-p-black">
-        Descarga una plantilla gratuita para control de gastos
+        Ejemplo real: Cómo usar un control de gastos en Excel en el día a día
       </h2>
+      <p class="text-lg text-pretty">
+        La clave está en registrar los gastos en el momento. ¿Compraste un
+        chicle? ¡Anótalo! Puede parecer exagerado, pero esos pequeños gastos son
+        como hormigas que se comen tu presupuesto.
+      </p>
+
+      <article class="flex flex-col gap-4">
+        <h4 class="text-2xl font-semibold text-center text-p-black">
+          Control de gastos personales para ahorro
+        </h4>
+        <p class="text-lg text-pretty">
+          El método 70-20-10 es tan fácil de recordar. Veamos cómo implementarlo
+          en tu Excel:
+        </p>
+
+        <section class="flex flex-col gap-3">
+          <h5 class="text-xl font-semibold text-center text-p-black">
+            La magia del 70%: Necesidades básicas
+          </h5>
+          <p class="text-lg text-pretty">
+            Este es el grueso de tu presupuesto. Aquí entra:
+          </p>
+          <ul class="pl-6 justify-self-start">
+            <li class="list-disc text-lg">
+              Renta o hipoteca (ese techo que te protege de la lluvia)
+            </li>
+            <li class="list-disc text-lg">
+              Servicios básicos (porque Netflix necesita electricidad para
+              funcionar)
+            </li>
+            <li class="list-disc text-lg">
+              Alimentación (incluyendo esos vegetales que compraste con muy
+              buenas intenciones)
+            </li>
+            <li class="list-disc text-lg">
+              Transporte (sea tu fiel automóvil o el transporte público)
+            </li>
+            <li class="list-disc text-lg">
+              Seguros (porque más vale prevenir que lamentar)
+            </li>
+            <li class="list-disc text-lg">Gastos médicos básicos</li>
+          </ul>
+        </section>
+
+        <section class="flex flex-col gap-3">
+          <h5 class="text-xl font-semibold text-center text-p-black">
+            El divertido 20%: Gustos y antojos
+          </h5>
+          <p class="text-lg text-pretty">
+            ¡Aquí es donde la vida se pone interesante! Este porcentaje es para:
+          </p>
+          <ul class="pl-6 justify-self-start">
+            <li class="list-disc text-lg">
+              Salidas con amigos (porque las risas no tienen precio, pero la
+              cuenta del restaurante sí)
+            </li>
+            <li class="list-disc text-lg">
+              Ropa nueva (para esas ocasiones en que tu closet está "lleno" pero
+              no tienes "nada que ponerte")
+            </li>
+            <li class="list-disc text-lg">
+              Entretenimiento (desde tu suscripción a streaming hasta ese nuevo
+              videojuego)
+            </li>
+            <li class="list-disc text-lg">
+              Hobbies (porque necesitas algo que hacer además de mirar tu Excel
+              de gastos)
+            </li>
+          </ul>
+        </section>
+
+        <section class="flex flex-col gap-3">
+          <h5 class="text-xl font-semibold text-center text-p-black">
+            El poderoso 10%: Ahorro
+          </h5>
+          <p class="text-lg text-pretty">
+            Pequeño pero poderoso, como un chile habanero. Este porcentaje es
+            sagrado:
+          </p>
+          <ul class="pl-6 justify-self-start">
+            <li class="list-disc text-lg">
+              Fondo de emergencias (para esos momentos "¿y ahora qué hago?")
+            </li>
+            <li class="list-disc text-lg">
+              Inversiones (porque tu dinero también debe trabajar)
+            </li>
+            <li class="list-disc text-lg">
+              Metas a largo plazo (ese viaje soñado no se pagará solo)
+            </li>
+          </ul>
+        </section>
+      </article>
+    </Section>
+
+    <Section>
+      <h3 class="text-2xl font-semibold text-center text-p-black">
+        Descarga una plantilla gratuita para control de gastos
+      </h3>
       <p class="text-lg text-pretty">
         Aquí hay algunas recomendaciones de plantillas gratuitas para usarse con
         Google Sheets para que controles tus gastos de manera sencilla y
@@ -122,7 +220,7 @@ import { Image } from "astro:assets";
           height="221"
         />
       </picture>
-    </Article>
+    </Section>
   </main>
   <Footer />
 </Layout>
