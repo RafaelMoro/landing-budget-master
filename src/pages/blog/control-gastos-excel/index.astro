@@ -6,7 +6,11 @@ import {
   BLOG_ROUTE,
   HOME_ROUTE,
   BLOG_CONTROL_EXCEL_ROUTE,
+  CONTROL_EXCEL_IMG,
 } from "@constants";
+import Footer from "@templates/Footer.astro";
+import Article from "@components/Blog/Article.astro";
+import { Image } from "astro:assets";
 ---
 
 <Layout
@@ -34,4 +38,58 @@ import {
       >
     </article>
   </div>
+
+  <main
+    class="flex flex-col items-center gap-12 max-w-7xl mx-auto px-3 md:px-0"
+  >
+    <Article class="mt-8 justify-items-center">
+      <h1 class="text-3xl font-bold mb-5 text-center text-p-black">
+        Control de gastos en Excel: Guía completa con ejemplos y plantillas
+      </h1>
+      <Image
+        src={CONTROL_EXCEL_IMG}
+        alt="Imagen previa del blog: Control de gastos en Excel"
+        width="1280"
+        height="853"
+      />
+      <p class="text-lg text-pretty">
+        Si a final de mes, tu cuenta bancaria parece terreno desolado,
+        probablemente sea hora de poner orden a tus finanzas. Usar Excel puede
+        ser una gran herramienta para controlar tus gastos.
+      </p>
+      <ul class="pl-6 justify-self-start">
+        <li class="list-disc text-lg">
+          <span class="font-semibold">Es gratis (o casi):</span> Depende si tienes
+          computadora, la licencia de Excel. Puedes usar Google sheets como una opción
+          gratuita
+        </li>
+        <li class="list-disc text-lg">
+          <span class="font-semibold">Tienes más control:</span> Decides como organizar
+          tus gastos y personalizarlo a tu medida
+        </li>
+        <li class="list-disc text-lg">
+          <span class="font-semibold">Tiene formulas mágicas:</span> Son simples
+          formulares como SUMA, PROMEDIO entre otros, puedes hacer cálculos automáticos
+          y saber exactamente en qué se va tu dinero. Un par de clicks y ya lo tienes.
+        </li>
+        <li class="list-disc text-lg">
+          <span class="font-semibold">Puedes integrar gráficas:</span>
+          Agrega colores y formas fáciles de entender. No solamente “¿En qué me gasté
+          todo?”, ahora lo verás claramente.
+        </li>
+        <li class="list-disc text-lg">
+          <span class="font-semibold">Funciona sin internet: </span>En caso de
+          que tengas tu archivo localmente, no necesitas conexión a internet.
+        </li>
+      </ul>
+      <p class="text-lg text-pretty">
+        Al hacerlo, es más difícil equivocarse o confundirse de tarjeta. Y lo
+        mejor es que no tienes que aprenderte números de tarjeta o los nombres
+        de los productos financieros. <span class="font-semibold"
+          >Solo eliges el nombre de la tarjeta.</span
+        >
+      </p>
+    </Article>
+  </main>
+  <Footer />
 </Layout>
