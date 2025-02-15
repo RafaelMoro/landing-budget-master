@@ -13,6 +13,7 @@ export const HOME_ROUTE = '/'
 // Images
 export const ALIAS_TARJETA_IMG = '/img/blog/alias-tarjeta.webp'
 export const CREDIT_CARDS_IMG = '/img/blog/credit-cards.webp'
+export const CONTROL_EXCEL_IMG = '/img/blog/control-excel.webp'
 
 // Blog
 export const BLOG_ROUTE = '/blog'
