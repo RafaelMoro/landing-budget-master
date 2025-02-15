@@ -7,6 +7,7 @@ import {
   HOME_ROUTE,
   BLOG_CONTROL_EXCEL_ROUTE,
   CONTROL_EXCEL_IMG,
+  HOW_OBTAIN_COPY_IMG,
 } from "@constants";
 import Footer from "@templates/Footer.astro";
 import Article from "@components/Blog/Article.astro";
@@ -105,6 +106,22 @@ import { Image } from "astro:assets";
         >. y están en inglés. Nos tomamos la libertad de traducirlas al español
         para tu comodidad.
       </p>
+      <p class="text-xl text-pretty font-semibold">
+        ¿Cómo puedo obtener una copia?
+      </p>
+      <p class="text-lg text-pretty">
+        Una vez que abras en link, se abrirá la plantilla. Dirígete al menú
+        localizado en la parte superior izquierda. Da click en “Archivo”, luego
+        en “Hacer una copia”.
+      </p>
+      <picture class="justify-self-center">
+        <Image
+          src={HOW_OBTAIN_COPY_IMG}
+          alt="¿Cómo sacar una copia de la plantilla?"
+          width="410"
+          height="221"
+        />
+      </picture>
     </Article>
   </main>
   <Footer />
