@@ -78,22 +78,26 @@ import { Image } from "astro:assets";
             </li>
           </ol>
 
-          <li class="list-decimal text-lg text-pretty">
-            Descarga una plantilla gratuita para control de gastos
+          <li class="list-decimal text-lg text-pretty text-blue-800">
+            <a href="#download-template"
+              >Descarga una plantilla gratuita para control de gastos</a
+            >
           </li>
 
-          <ol class="pl-8 grid grid-cols-1 gap-2">
+          <ol class="pl-8 grid grid-cols-1 gap-2 text-blue-800">
             <li class="list-decimal text-base text-pretty">
-              ¿Cómo puedo obtener una copia?
+              <a href="#how-obtain-copy">¿Cómo puedo obtener una copia?</a>
             </li>
             <li class="list-decimal text-base text-pretty">
-              Presupuesto mensual.
+              <a href="#monthly-budget-template">Presupuesto mensual.</a>
             </li>
             <li class="list-decimal text-base text-pretty">
-              Presupuesto quincenal
+              <a href="#two-weekly-budget-template">Presupuesto quincenal</a>
             </li>
             <li class="list-decimal text-base text-pretty">
-              Planeador de presupuesto 70/20/10
+              <a href="#budget-70-20-10-template"
+                >Planeador de presupuesto 70/20/10</a
+              >
             </li>
           </ol>
 
@@ -343,7 +347,10 @@ import { Image } from "astro:assets";
     </Section>
 
     <Section class="gap-11">
-      <h3 class="text-3xl font-semibold text-center text-p-black">
+      <h3
+        id="download-template"
+        class="text-3xl font-semibold text-center text-p-black"
+      >
         Descarga una plantilla gratuita para control de gastos
       </h3>
       <p class="text-lg text-pretty">
@@ -363,7 +370,7 @@ import { Image } from "astro:assets";
         >. y están en inglés. Nos tomamos la libertad de traducirlas al español
         para tu comodidad.
       </p>
-      <p class="text-xl text-pretty font-semibold">
+      <p id="how-obtain-copy" class="text-xl text-pretty font-semibold">
         ¿Cómo puedo obtener una copia?
       </p>
       <p class="text-lg text-pretty">
@@ -381,7 +388,10 @@ import { Image } from "astro:assets";
       </picture>
 
       <article class="grid grid-cols-1 gap-6">
-        <h4 class="text-2xl font-semibold text-primary">
+        <h4
+          id="monthly-budget-template"
+          class="text-2xl font-semibold text-primary"
+        >
           Presupuesto mensual.
         </h4>
         <p class="text-lg text-pretty">
@@ -409,7 +419,10 @@ import { Image } from "astro:assets";
       </article>
 
       <article class="grid grid-cols-1 gap-6">
-        <h4 class="text-2xl font-semibold text-primary">
+        <h4
+          id="two-weekly-budget-template"
+          class="text-2xl font-semibold text-primary"
+        >
           Presupuesto quincenal
         </h4>
         <p class="text-lg text-pretty">
@@ -437,7 +450,10 @@ import { Image } from "astro:assets";
       </article>
 
       <article class="grid grid-cols-1 gap-6">
-        <h4 class="text-2xl font-semibold text-primary">
+        <h4
+          id="budget-70-20-10-template"
+          class="text-2xl font-semibold text-primary"
+        >
           Planeador de presupuesto 70/20/10
         </h4>
         <p class="text-lg text-pretty">
