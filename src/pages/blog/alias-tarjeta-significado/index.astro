@@ -74,11 +74,15 @@ import Header from "@templates/Header/Header.astro";
     class="flex flex-col items-center gap-12 max-w-7xl mx-auto px-3 md:px-0"
   >
     <Section class="mt-8 justify-items-center">
-      <h1 class="text-3xl font-bold mb-5 text-center text-p-black">
+      <h1
+        transition:name="title-alias-card"
+        class="text-3xl font-bold mb-5 text-center text-p-black"
+      >
         Alias de la Tarjeta: Qué Es, Para Qué Sirve y Cómo Usarlo
       </h1>
       <Image
         src={ALIAS_TARJETA_IMG}
+        transition:name="img-alias-card"
         alt="Imagen previa del blog de ¿Qué es el alias de la tarjeta?"
         width="1280"
         height="853"

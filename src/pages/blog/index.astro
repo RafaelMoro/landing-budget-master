@@ -42,6 +42,7 @@ import { Image } from "astro:assets";
     <article class="flex flex-col gap-4 max-w-[300px]">
       <Image
         src={ALIAS_TARJETA_IMG}
+        transition:name="img-alias-card"
         alt="Imagen previa del blog de ¿Qué es el alias de la tarjeta?"
         width="300"
         height="300"
@@ -49,6 +50,7 @@ import { Image } from "astro:assets";
       <a
         href={BLOG_ALIAS_CARD_ARTICLE_ROUTE}
         title="Ir a blog: Alias de la Tarjeta: Qué Es, Para Qué Sirve y Cómo Usarlo"
+        transition:name="title-alias-card"
         class="text-xl font-semibold transition-colors duration-300 hover:text-complementary"
       >
         Alias de la Tarjeta: Qué Es, Para Qué Sirve y Cómo Usarlo
