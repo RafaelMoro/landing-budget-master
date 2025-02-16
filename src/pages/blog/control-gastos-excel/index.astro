@@ -10,6 +10,7 @@ import {
   HOW_OBTAIN_COPY_IMG,
   MONTHLY_BUDGET_TEMPLATE_IMG,
   TWO_WEEK_BUDGET_TEMPLATE_IMG,
+  BUDGET_70_20_10_TEMPLATE_IMG,
 } from "@constants";
 import Footer from "@templates/Footer.astro";
 import Section from "@components/Blog/Section.astro";
@@ -356,7 +357,7 @@ import { Image } from "astro:assets";
         </picture>
       </article>
 
-      <article class="flex flex-col gap-4">
+      <article class="grid grid-cols-1 gap-8">
         <h4 class="text-xl font-semibold text-p-black">
           Planeador de presupuesto 70/20/10
         </h4>
@@ -367,10 +368,21 @@ import { Image } from "astro:assets";
           puedes visualizar si estás por encima o por debajo de los montos
           recomendados, ayudándote a mantener el equilibrio financiero.
         </p>
-        <a
-          href="https://docs.google.com/spreadsheets/d/12qInkvJ6jTaWRkYrT_G8QmjOe9si7yrWa3kTNS3pWCQ/edit?usp=sharing"
-          target="_blank">Abrir plantilla de presupuesto mensual</a
-        >
+        <div class="justify-self-center">
+          <a
+            href="https://docs.google.com/spreadsheets/d/12qInkvJ6jTaWRkYrT_G8QmjOe9si7yrWa3kTNS3pWCQ/edit?usp=sharing"
+            class="px-4 py-2 uppercase text-primary border-solid border border-primary rounded-sm"
+            target="_blank">Abrir plantilla de presupuesto 70/20/10</a
+          >
+        </div>
+        <picture class="justify-self-center">
+          <Image
+            src={BUDGET_70_20_10_TEMPLATE_IMG}
+            alt="Imagen previa de plantilla: Presupuesto Mensual"
+            width="410"
+            height="221"
+          />
+        </picture>
       </article>
     </Section>
 
