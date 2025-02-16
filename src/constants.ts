@@ -13,11 +13,18 @@ export const HOME_ROUTE = '/'
 // Images
 export const ALIAS_TARJETA_IMG = '/img/blog/alias-tarjeta.webp'
 export const CREDIT_CARDS_IMG = '/img/blog/credit-cards.webp'
+export const CONTROL_EXCEL_IMG = '/img/blog/control-excel.webp'
+export const HOW_OBTAIN_COPY_IMG = '/img/blog/how-obtain-copy-sheet.webp'
+export const MONTHLY_BUDGET_TEMPLATE_IMG = '/img/blog/monthy-budget-template.webp'
+export const TWO_WEEK_BUDGET_TEMPLATE_IMG = '/img/blog/two-week-budget-template.webp'
+export const BUDGET_70_20_10_TEMPLATE_IMG = '/img/blog/budget-70-20-10-template.webp'
 
 // Blog
 export const BLOG_ROUTE = '/blog'
-export const BLOG_ALIAS_CARD_ARTICLE_ROUTE = `${BLOG_ROUTE}/alias-tarjeta-significado`
+export const BLOG_ALIAS_CARD_ARTICLE_ROUTE = '/blog/alias-tarjeta-significado'
+export const BLOG_CONTROL_EXCEL_ROUTE = '/blog/control-gastos-excel'
 
 // Complete routes
 export const COMPLETE_BLOG_ROUTE = `${BUDGET_MASTER_LANDING_URL}${BLOG_ROUTE}`
-export const BLOG_ALIAS_CARD_ART_COMPLETE_ROUTE = `${COMPLETE_BLOG_ROUTE}${BLOG_ALIAS_CARD_ARTICLE_ROUTE}`
+export const BLOG_ALIAS_CARD_ART_COMPLETE_ROUTE = `${BUDGET_MASTER_LANDING_URL}${BLOG_ALIAS_CARD_ARTICLE_ROUTE}`
+export const BLOG_CONTROL_EXCEL_COMPLETE_ROUTE = `${BUDGET_MASTER_LANDING_URL}${BLOG_CONTROL_EXCEL_ROUTE}`
