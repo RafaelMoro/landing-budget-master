@@ -9,6 +9,7 @@ import {
   CONTROL_EXCEL_IMG,
   HOW_OBTAIN_COPY_IMG,
   MONTHLY_BUDGET_TEMPLATE_IMG,
+  TWO_WEEK_BUDGET_TEMPLATE_IMG,
 } from "@constants";
 import Footer from "@templates/Footer.astro";
 import Section from "@components/Blog/Section.astro";
@@ -327,7 +328,7 @@ import { Image } from "astro:assets";
         </picture>
       </article>
 
-      <article class="flex flex-col gap-4">
+      <article class="grid grid-cols-1 gap-8">
         <h4 class="text-xl font-semibold text-p-black">
           Presupuesto quincenal
         </h4>
@@ -338,10 +339,21 @@ import { Image } from "astro:assets";
           resumen claro de lo gastado y lo que te queda. Solo renombra la
           pestaña según el mes en curso y listo.
         </p>
-        <a
-          href="https://docs.google.com/spreadsheets/d/1wCjObUM_HAKoAItm4mBP3y1lDBNobwoigjVx1uPM8Ko/edit?usp=sharing"
-          target="_blank">Abrir plantilla de presupuesto mensual</a
-        >
+        <div class="justify-self-center">
+          <a
+            href="https://docs.google.com/spreadsheets/d/1wCjObUM_HAKoAItm4mBP3y1lDBNobwoigjVx1uPM8Ko/edit?usp=sharing"
+            class="px-4 py-2 uppercase text-primary border-solid border border-primary rounded-sm"
+            target="_blank">Abrir plantilla de presupuesto quincenal</a
+          >
+        </div>
+        <picture class="justify-self-center">
+          <Image
+            src={TWO_WEEK_BUDGET_TEMPLATE_IMG}
+            alt="Imagen previa de plantilla: Presupuesto Mensual"
+            width="410"
+            height="221"
+          />
+        </picture>
       </article>
 
       <article class="flex flex-col gap-4">
