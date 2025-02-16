@@ -1,0 +1,650 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Header from "@templates/Header/Header.astro";
+import {
+  BLOG_CONTROL_EXCEL_COMPLETE_ROUTE,
+  BLOG_ROUTE,
+  HOME_ROUTE,
+  BLOG_CONTROL_EXCEL_ROUTE,
+  CONTROL_EXCEL_IMG,
+  HOW_OBTAIN_COPY_IMG,
+  MONTHLY_BUDGET_TEMPLATE_IMG,
+  TWO_WEEK_BUDGET_TEMPLATE_IMG,
+  BUDGET_70_20_10_TEMPLATE_IMG,
+} from "@constants";
+import Footer from "@templates/Footer.astro";
+import Section from "@components/Blog/Section.astro";
+import { Image } from "astro:assets";
+---
+
+<Layout
+  title="Control de gastos en Excel: Guía fácil para organizar tus finanzas"
+  metaDescription="Aprende cómo hacer un control de gastos en Excel fácil y rápido. Usa las plantillas para gestionar tus finanzas personales. ¡Descárgala ahora!"
+  ogTitle="Control de gastos en Excel: Guía fácil para organizar tus finanzas | Blogs de Budget Master"
+  ogURL={BLOG_CONTROL_EXCEL_COMPLETE_ROUTE}
+  ogDescription="Aprende cómo hacer un control de gastos en Excel fácil y rápido. Usa las plantillas para gestionar tus finanzas personales. ¡Descárgala ahora!"
+  hrefCanonical={BLOG_CONTROL_EXCEL_COMPLETE_ROUTE}
+>
+  <div class="bg-dark-blue">
+    <div class="max-w-7xl mx-auto">
+      <Header isBlog />
+    </div>
+  </div>
+
+  <section class="max-w-7xl mx-auto mt-4 pl-3 lg:pl-0">
+    <article class="inline-flex gap-2">
+      <a class="text-gray-500 hover:underline" href={HOME_ROUTE}>Inicio</a>
+      <span>></span>
+      <a class="text-gray-500 hover:underline" href={BLOG_ROUTE}>Blog</a>
+      <span>></span>
+      <a href={BLOG_CONTROL_EXCEL_ROUTE} class="hover:underline"
+        >Control de gastos en Excel: <br class="md:hidden" /> Guía completa con ejemplos
+        y plantillas</a
+      >
+    </article>
+  </section>
+
+  <main
+    class="flex flex-col items-center gap-16 max-w-7xl mx-auto px-3 md:px-0"
+  >
+    <!-- Index -->
+    <Section class="mt-8 justify-items-center">
+      <h1
+        transition:name="title-control-excel"
+        class="text-4xl font-bold mb-5 text-center text-p-black"
+      >
+        Control de gastos en Excel: Guía completa con ejemplos y plantillas
+      </h1>
+
+      <article class="flex flex-col gap-3">
+        <p class="text-xl">Indice:</p>
+
+        <ol class="pl-6 grid grid-cols-1 gap-3">
+          <li class="list-decimal text-lg text-pretty text-blue-800">
+            <a href="#introduction">Introducción</a>
+          </li>
+          <li class="list-decimal text-lg text-pretty text-blue-800">
+            <a href="#real-example"
+              >Ejemplo real: Cómo usar un control de gastos en Excel en el día a
+              día</a
+            >
+          </li>
+
+          <ol class="pl-8 grid grid-cols-1 gap-2">
+            <li class="list-decimal text-base text-pretty text-blue-800">
+              <a href="#saving-control-expenses"
+                >Control de gastos personales para ahorro</a
+              >
+            </li>
+            <li class="list-decimal text-base text-pretty text-blue-800">
+              <a href="#practical-example"
+                >Ejemplo práctico con un ingreso de $12,000</a
+              >
+            </li>
+          </ol>
+
+          <li class="list-decimal text-lg text-pretty text-blue-800">
+            <a href="#download-template"
+              >Descarga una plantilla gratuita para control de gastos</a
+            >
+          </li>
+
+          <ol class="pl-8 grid grid-cols-1 gap-2 text-blue-800">
+            <li class="list-decimal text-base text-pretty">
+              <a href="#how-obtain-copy">¿Cómo puedo obtener una copia?</a>
+            </li>
+            <li class="list-decimal text-base text-pretty">
+              <a href="#monthly-budget-template">Presupuesto mensual.</a>
+            </li>
+            <li class="list-decimal text-base text-pretty">
+              <a href="#two-weekly-budget-template">Presupuesto quincenal</a>
+            </li>
+            <li class="list-decimal text-base text-pretty">
+              <a href="#budget-70-20-10-template"
+                >Planeador de presupuesto 70/20/10</a
+              >
+            </li>
+          </ol>
+
+          <li class="list-decimal text-lg text-pretty text-blue-800">
+            <a href="#alternatives-excel"
+              >Alternativas a Excel para gestionar gastos personales</a
+            >
+          </li>
+
+          <ol class="pl-8 grid grid-cols-1 gap-2 text-blue-800">
+            <li class="list-decimal text-base text-pretty">
+              <a href="#budget-master-option">Budget Master</a>
+            </li>
+            <li class="list-decimal text-base text-pretty">
+              <a href="#fintonic-option">Fintonic</a>
+            </li>
+            <li class="list-decimal text-base text-pretty">
+              <a href="#splitwise-option">Splitwise</a>
+            </li>
+          </ol>
+
+          <li class="list-decimal text-lg text-pretty text-blue-800">
+            <a href="#conclusion">Conclusión</a>
+          </li>
+        </ol>
+      </article>
+    </Section>
+
+    <Section>
+      <h2
+        id="introduction"
+        class="text-3xl font-semibold text-center text-p-black"
+      >
+        Introducción
+      </h2>
+      <Image
+        src={CONTROL_EXCEL_IMG}
+        alt="Imagen previa del blog: Control de gastos en Excel"
+        width="1280"
+        height="853"
+      />
+      <p class="text-lg text-pretty">
+        Si a final de mes, tu cuenta bancaria parece terreno desolado,
+        probablemente sea hora de poner orden a tus finanzas. Usar Excel puede
+        ser una gran herramienta para controlar tus gastos.
+      </p>
+      <ul class="pl-6 justify-self-start">
+        <li class="list-disc text-lg">
+          <span class="font-semibold">Es gratis (o casi):</span> Depende si tienes
+          computadora, la licencia de Excel. Puedes usar Google sheets como una opción
+          gratuita
+        </li>
+        <li class="list-disc text-lg">
+          <span class="font-semibold">Tienes más control:</span> Decides como organizar
+          tus gastos y personalizarlo a tu medida
+        </li>
+        <li class="list-disc text-lg">
+          <span class="font-semibold">Tiene formulas mágicas:</span> Son simples
+          formulares como SUMA, PROMEDIO entre otros, puedes hacer cálculos automáticos
+          y saber exactamente en qué se va tu dinero. Un par de clicks y ya lo tienes.
+        </li>
+        <li class="list-disc text-lg">
+          <span class="font-semibold">Puedes integrar gráficas:</span>
+          Agrega colores y formas fáciles de entender. No solamente “¿En qué me gasté
+          todo?”, ahora lo verás claramente.
+        </li>
+        <li class="list-disc text-lg">
+          <span class="font-semibold">Funciona sin internet: </span>En caso de
+          que tengas tu archivo localmente, no necesitas conexión a internet.
+        </li>
+      </ul>
+    </Section>
+
+    <!-- Ejemplo real: Cómo usar un control de gastos en Excel en el día a día -->
+    <Section class="gap-9">
+      <h3
+        id="real-example"
+        class="text-3xl font-semibold text-center text-p-black"
+      >
+        Ejemplo real: Cómo usar un control de gastos en Excel en el día a día
+      </h3>
+      <p class="text-lg text-pretty">
+        La clave está en registrar los gastos en el momento. ¿Compraste un
+        chicle? ¡Anótalo! Puede parecer exagerado, pero esos pequeños gastos son
+        como hormigas que se comen tu presupuesto.
+      </p>
+
+      <article class="flex flex-col gap-8">
+        <h4
+          id="saving-control-expenses"
+          class="text-2xl font-semibold text-center text-p-black"
+        >
+          Control de gastos personales para ahorro
+        </h4>
+        <p class="text-lg text-pretty">
+          El método 70-20-10 es tan fácil de recordar. Veamos cómo implementarlo
+          en tu Excel:
+        </p>
+
+        <section class="flex flex-col gap-3">
+          <h5 class="text-xl font-semibold text-primary">
+            La magia del 70%: Necesidades básicas
+          </h5>
+          <p class="text-lg text-pretty">
+            Este es el grueso de tu presupuesto. Aquí entra:
+          </p>
+          <ul class="pl-6 justify-self-start">
+            <li class="list-disc text-lg">
+              Renta o hipoteca (ese techo que te protege de la lluvia)
+            </li>
+            <li class="list-disc text-lg">
+              Servicios básicos (porque Netflix necesita electricidad para
+              funcionar)
+            </li>
+            <li class="list-disc text-lg">
+              Alimentación (incluyendo esos vegetales que compraste con muy
+              buenas intenciones)
+            </li>
+            <li class="list-disc text-lg">
+              Transporte (sea tu fiel automóvil o el transporte público)
+            </li>
+            <li class="list-disc text-lg">
+              Seguros (porque más vale prevenir que lamentar)
+            </li>
+            <li class="list-disc text-lg">Gastos médicos básicos</li>
+          </ul>
+        </section>
+
+        <section class="flex flex-col gap-3">
+          <h5 class="text-xl font-semibold text-primary">
+            El divertido 20%: Gustos y antojos
+          </h5>
+          <p class="text-lg text-pretty">
+            ¡Aquí es donde la vida se pone interesante! Este porcentaje es para:
+          </p>
+          <ul class="pl-6 justify-self-start">
+            <li class="list-disc text-lg">
+              Salidas con amigos (porque las risas no tienen precio, pero la
+              cuenta del restaurante sí)
+            </li>
+            <li class="list-disc text-lg">
+              Ropa nueva (para esas ocasiones en que tu closet está "lleno" pero
+              no tienes "nada que ponerte")
+            </li>
+            <li class="list-disc text-lg">
+              Entretenimiento (desde tu suscripción a streaming hasta ese nuevo
+              videojuego)
+            </li>
+            <li class="list-disc text-lg">
+              Hobbies (porque necesitas algo que hacer además de mirar tu Excel
+              de gastos)
+            </li>
+          </ul>
+        </section>
+
+        <section class="flex flex-col gap-3">
+          <h5 class="text-xl font-semibold text-primary">
+            El poderoso 10%: Ahorro
+          </h5>
+          <p class="text-lg text-pretty">
+            Pequeño pero poderoso, como un chile habanero. Este porcentaje es
+            sagrado:
+          </p>
+          <ul class="pl-6 justify-self-start">
+            <li class="list-disc text-lg">
+              Fondo de emergencias (para esos momentos "¿y ahora qué hago?")
+            </li>
+            <li class="list-disc text-lg">
+              Inversiones (porque tu dinero también debe trabajar)
+            </li>
+            <li class="list-disc text-lg">
+              Metas a largo plazo (ese viaje soñado no se pagará solo)
+            </li>
+          </ul>
+        </section>
+      </article>
+
+      <article class="flex flex-col gap-4">
+        <h4
+          id="practical-example"
+          class="text-2xl font-semibold text-center text-p-black"
+        >
+          Ejemplo práctico con un ingreso de $12,000
+        </h4>
+        <p class="text-lg text-pretty">
+          La fórmula matemática para realizar el calculo es el siguiente. Para
+          conseguir el 70%, vas a multiplicar tu sueldo neto (después de
+          impuestos) por “0.7” y guarda el resultado. Si mi sueldo es de
+          $12,000, entonces el cálculo se ve así:
+        </p>
+        <ol class="pl-6 grid grid-cols-1 gap-6">
+          <li class="list-decimal text-lg text-pretty">
+            Multiplica tu sueldo por "0.7"
+            <math class="mt-4" display="block">
+              <mrow>
+                <mi class="text-md text-gray-600">$12,000</mi>
+                <mo class="text-md text-gray-600">*</mo>
+                <mi class="text-md text-gray-600">0.7</mi>
+                <mo class="text-md text-gray-600">=</mo>
+                <mi class="text-md text-gray-600">$8,400</mi>
+              </mrow>
+            </math>
+          </li>
+
+          <li class="list-decimal text-lg text-pretty">
+            Multiplicas todo tu sueldo por “0.2”
+            <math class="mt-4" display="block">
+              <mrow>
+                <mi class="text-md text-gray-600">$12,000</mi>
+                <mo class="text-md text-gray-600">*</mo>
+                <mi class="text-md text-gray-600">0.2</mi>
+                <mo class="text-md text-gray-600">=</mo>
+                <mi class="text-md text-gray-600">$2,400</mi>
+              </mrow>
+            </math>
+          </li>
+
+          <li class="list-decimal text-lg text-pretty">
+            Multiplica todo tu sueldo por “0.1”
+            <math class="mt-4" display="block">
+              <mrow>
+                <mi class="text-md text-gray-600">$12,000</mi>
+                <mo class="text-md text-gray-600">*</mo>
+                <mi class="text-md text-gray-600">0.1</mi>
+                <mo class="text-md text-gray-600">=</mo>
+                <mi class="text-md text-gray-600">$1,200</mi>
+              </mrow>
+            </math>
+          </li>
+        </ol>
+
+        <p class="text-lg text-pretty">
+          Sumando estas tres cantidades, te debe de dar el 100% de tu sueldo.
+        </p>
+        <math display="block">
+          <mrow>
+            <mi class="text-md"
+              >$8,400 <span class="text-gray-600">(70%)</span></mi
+            >
+            <mo class="text-md">+</mo>
+            <mi class="text-md"
+              >$2,400 <span class="text-gray-600">(20%)</span></mi
+            >
+            <mo class="text-md">+</mo>
+            <mi class="text-md"
+              >$1,200 <span class="text-gray-600">(10%)</span></mi
+            >
+            <mo class="text-md">=</mo>
+            <mi class="text-md">$12,000</mi>
+          </mrow>
+        </math>
+        <p class="text-lg text-pretty">
+          Ahora ingresa tus datos en la plantilla que te compartimos a
+          continuación.
+        </p>
+      </article>
+
+      <p class="text-lg text-pretty">
+        No te castigues si un mes no sale perfecto (Roma no se construyó en un
+        día). <span class="font-semibold"
+          >Ajusta los porcentajes ligeramente según tu realidad</span
+        > (quizás necesitas un 75-15-10)
+        <span class="font-semibold">Celebra tus victorias financieras</span> (¡pero
+        no gastando todo tu ahorro en la celebración!)
+      </p>
+    </Section>
+
+    <Section class="gap-11">
+      <h4
+        id="download-template"
+        class="text-3xl font-semibold text-center text-p-black"
+      >
+        Descarga una plantilla gratuita para control de gastos
+      </h4>
+      <p class="text-lg text-pretty">
+        Aquí hay algunas recomendaciones de plantillas gratuitas para usarse con
+        Google Sheets para que controles tus gastos de manera sencilla y
+        efectiva. Así, podrás gestionar tu presupuesto sin complicaciones y sin
+        gastar un centavo extra.
+      </p>
+      <p class="text-lg text-pretty">
+        No somos creadores de estas plantillas. Estas plantillas fueron creadas
+        en <a
+          rel="noopener"
+          target="_blank"
+          class="text-blue-800"
+          href="https://thegoodocs.com/es/freebies/budget-templates/"
+          >thegooddocs.com</a
+        >. y están en inglés. Nos tomamos la libertad de traducirlas al español
+        para tu comodidad.
+      </p>
+      <p id="how-obtain-copy" class="text-xl text-pretty font-semibold">
+        ¿Cómo puedo obtener una copia?
+      </p>
+      <p class="text-lg text-pretty">
+        Una vez que abras en link, se abrirá la plantilla. Dirígete al menú
+        localizado en la parte superior izquierda. Da click en “Archivo”, luego
+        en “Hacer una copia”.
+      </p>
+      <picture class="justify-self-center">
+        <Image
+          src={HOW_OBTAIN_COPY_IMG}
+          alt="¿Cómo sacar una copia de la plantilla?"
+          width="410"
+          height="221"
+        />
+      </picture>
+
+      <article class="grid grid-cols-1 gap-6">
+        <h4
+          id="monthly-budget-template"
+          class="text-2xl font-semibold text-primary"
+        >
+          Presupuesto mensual.
+        </h4>
+        <p class="text-lg text-pretty">
+          Si quieres llevar el control de tu dinero mes a mes, esta plantilla es
+          perfecta. Podrás visualizar todos los meses y, dentro de cada uno,
+          agregar ingresos, gastos fijos, gastos variables, deudas y ahorros. Al
+          final, verás un resumen claro de tu situación financiera. ¿Necesitas
+          un nuevo mes o año? Solo duplica la pestaña y sigue adelante.
+        </p>
+        <div class="justify-self-center">
+          <a
+            href="https://docs.google.com/spreadsheets/d/1JL05M95_mKAOd-ZLzIKbNL5FQADkKE3tdsU2TrS8YOY/edit?usp=sharing"
+            class="block md:inline text-center md:text-start px-4 py-2 uppercase text-primary border-solid border border-primary rounded-lg"
+            target="_blank">Abrir plantilla de presupuesto mensual</a
+          >
+        </div>
+        <picture class="justify-self-center">
+          <Image
+            src={MONTHLY_BUDGET_TEMPLATE_IMG}
+            alt="Imagen previa de plantilla: Presupuesto Mensual"
+            width="410"
+            height="221"
+          />
+        </picture>
+      </article>
+
+      <article class="grid grid-cols-1 gap-6">
+        <h4
+          id="two-weekly-budget-template"
+          class="text-2xl font-semibold text-primary"
+        >
+          Presupuesto quincenal
+        </h4>
+        <p class="text-lg text-pretty">
+          Ideal si prefieres un control más detallado de tus finanzas. Divide tu
+          ingreso, gastos fijos y gastos variables entre las primeras dos
+          semanas y las últimas dos semanas del mes. Al final, tendrás un
+          resumen claro de lo gastado y lo que te queda. Solo renombra la
+          pestaña según el mes en curso y listo.
+        </p>
+        <div class="justify-self-center">
+          <a
+            href="https://docs.google.com/spreadsheets/d/1wCjObUM_HAKoAItm4mBP3y1lDBNobwoigjVx1uPM8Ko/edit?usp=sharing"
+            class="block md:inline text-center md:text-start px-4 py-2 uppercase text-primary border-solid border border-primary rounded-lg"
+            target="_blank">Abrir plantilla de presupuesto quincenal</a
+          >
+        </div>
+        <picture class="justify-self-center">
+          <Image
+            src={TWO_WEEK_BUDGET_TEMPLATE_IMG}
+            alt="Imagen previa de plantilla: Presupuesto Mensual"
+            width="410"
+            height="221"
+          />
+        </picture>
+      </article>
+
+      <article class="grid grid-cols-1 gap-6">
+        <h4
+          id="budget-70-20-10-template"
+          class="text-2xl font-semibold text-primary"
+        >
+          Planeador de presupuesto 70/20/10
+        </h4>
+        <p class="text-lg text-pretty">
+          Si sigues la regla del 70% para necesidades, 20% para gustos y 10%
+          para ahorro, esta plantilla es para ti. Ingresas tu total de ingresos
+          y automáticamente verás cuánto debes asignar a cada categoría. Además,
+          puedes visualizar si estás por encima o por debajo de los montos
+          recomendados, ayudándote a mantener el equilibrio financiero.
+        </p>
+        <div class="justify-self-center">
+          <a
+            href="https://docs.google.com/spreadsheets/d/12qInkvJ6jTaWRkYrT_G8QmjOe9si7yrWa3kTNS3pWCQ/edit?usp=sharing"
+            class="block md:inline text-center md:text-start px-4 py-2 uppercase text-primary border-solid border border-primary rounded-lg"
+            target="_blank">Abrir plantilla de presupuesto 70/20/10</a
+          >
+        </div>
+        <picture class="justify-self-center">
+          <Image
+            src={BUDGET_70_20_10_TEMPLATE_IMG}
+            alt="Imagen previa de plantilla: Presupuesto Mensual"
+            width="410"
+            height="221"
+          />
+        </picture>
+      </article>
+    </Section>
+
+    <Section>
+      <h4
+        id="alternatives-excel"
+        class="text-3xl font-semibold text-center text-p-black"
+      >
+        Alternativas a Excel para gestionar gastos personales
+      </h4>
+      <p class="text-lg text-pretty">
+        Si bien Excel es una herramienta poderosa, no es la única opción. Aquí
+        te mostramos otras formas de llevar el control de tus finanzas:
+      </p>
+      <p class="text-lg text-pretty">
+        Las apps de gestión financiera pueden hacer maravillas por ti. Algunas
+        sincronizan automáticamente tus cuentas bancarias, envían alertas de
+        gastos y generan informes detallados.
+      </p>
+      <p class="text-lg text-pretty">
+        Sin embargo, Excel sigue ganando en flexibilidad, personalización y es
+        completamente gratuito (salvo por la licencia de Office). <span
+          class="font-semibold"
+          >Si prefieres algo automatizado, con recordatorios y detalle una app
+          es ideal.</span
+        >
+      </p>
+
+      <article class="flex flex-col gap-4">
+        <h5
+          id="budget-master-option"
+          class="text-2xl font-semibold text-primary"
+        >
+          Budget Master
+        </h5>
+        <p class="text-lg text-pretty">
+          Somos una empresa mexicana nacida en 2023 con el objetivo de
+          simplificar tu vida y tu relación con tu vida financiera.
+        </p>
+        <ul class="pl-6 justify-self-start">
+          <li class="list-disc text-lg">
+            Puedes crear presupuestos y ligar cada transacción a un presupuesto
+            en curso. De manera visual, te indica cuanto de tu presupuesto has
+            gastado y cuantos días te quedan
+          </li>
+          <li class="list-disc text-lg">
+            Dar de alta tus cuentas bancarias sin sincronizar con tu banco o
+            poner información sensible.
+          </li>
+          <li class="list-disc text-lg">
+            Llevar un registro exacto que compras has hecho.
+          </li>
+          <li class="list-disc text-lg">
+            Si es una cuenta tipo tarjeta de crédito, puedes ver que
+            transacciones has pagado, cuales están pendientes.
+          </li>
+          <li class="list-disc text-lg">
+            Si realizas una compra grupal, puedes agregar quien te debe que y
+            cuánto.
+          </li>
+          <li class="list-disc text-lg">
+            Puedes ver útiles graficas para visualizar tu comportamiento de
+            gasto en la semana y en que categoría has gastado más.
+          </li>
+        </ul>
+      </article>
+
+      <article class="flex flex-col gap-4">
+        <h5 id="fintonic-option" class="text-2xl font-semibold text-primary">
+          Fintonic
+        </h5>
+        <p class="text-lg text-pretty">
+          Es una empresa española nacida en 2012 donde buscan que sus usuarios
+          saquen el máximo partido descubriendo oportunidades de ahorro y
+          prestamos.
+        </p>
+        <ul class="pl-6 justify-self-start">
+          <li class="list-disc text-lg">
+            Sincronización bancaria para tener tus cuentas en un solo lugar.
+          </li>
+          <li class="list-disc text-lg">
+            Te provee una previsión mensual automática en base a tus gastos
+          </li>
+          <li class="list-disc text-lg">
+            Te recomienda productos y servicios adaptados a tu perfil de gasto.
+          </li>
+          <li class="list-disc text-lg">
+            Envío de notificaciones si algo ocurre con tu dinero.
+          </li>
+          <li class="list-disc text-lg">
+            Ofrece prestamos ajustados a tus necesidades
+          </li>
+        </ul>
+      </article>
+
+      <article class="flex flex-col gap-4">
+        <h5 id="splitwise-option" class="text-2xl font-semibold text-primary">
+          Splitwise
+        </h5>
+        <p class="text-lg text-pretty">
+          Es una empresa estadounidense que busca tener centralizado todos los
+          gatos compartidos con amigos y familia en un solo lugar. Ideal para
+          compartir gastos de viaje, gastos de casa con tu roomie o pareja.
+        </p>
+        <ul class="pl-6 justify-self-start">
+          <li class="list-disc text-lg">Disponible en iOS, Android y web.</li>
+          <li class="list-disc text-lg">
+            Permite llevar registro de gastos compartidos y poder organizarlos.
+          </li>
+          <li class="list-disc text-lg">
+            Provee organización mediante escaneo de recibos.
+          </li>
+          <li class="list-disc text-lg">
+            Da gráficos y tablas, tablas de conversión de moneda.
+          </li>
+          <li class="list-disc text-lg">Disponible en múltiples idiomas.</li>
+          <li class="list-disc text-lg">Sincronización bancaria.</li>
+          <li class="list-disc text-lg">Integraciones de pagos.</li>
+        </ul>
+      </article>
+    </Section>
+
+    <Section class="mb-12">
+      <h4
+        id="conclusion"
+        class="text-3xl font-semibold text-center text-p-black"
+      >
+        Conclusión
+      </h4>
+      <p class="text-lg text-pretty">
+        Excel es una herramienta poderosa para comenzar para el control de tu
+        dinero. <span class="font-semibold"
+          >Si buscas control absoluto, Excel es una buena opción.</span
+        > Sin embargo, requiere más tiempo para usarlo y configurarlo.
+      </p>
+      <p class="text-lg text-pretty">
+        <span class="font-semibold"
+          >Si deseamos análisis y registro mas avanzados de nuestros gastos, las
+          aplicaciones web y móviles son la mejor opción para nosotros.</span
+        > Ofrece un control financiero visual e inteligente. Si deseas comodidad,
+        seguridad y rapidez, las aplicaciones de gestión financiera son para ti.
+      </p>
+    </Section>
+  </main>
+  <Footer />
+</Layout>

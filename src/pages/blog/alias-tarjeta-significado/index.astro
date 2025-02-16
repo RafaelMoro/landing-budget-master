@@ -11,7 +11,7 @@ import {
   BUDGET_MASTER_TRY_APP_ROUTE,
   HOME_ROUTE,
 } from "@constants";
-import Article from "@components/Blog/Article.astro";
+import Section from "@components/Blog/Section.astro";
 import Layout from "@layouts/Layout.astro";
 import Footer from "@templates/Footer.astro";
 import Header from "@templates/Header/Header.astro";
@@ -73,12 +73,16 @@ import Header from "@templates/Header/Header.astro";
   <main
     class="flex flex-col items-center gap-12 max-w-7xl mx-auto px-3 md:px-0"
   >
-    <Article class="mt-8 justify-items-center">
-      <h1 class="text-3xl font-bold mb-5 text-center text-p-black">
+    <Section class="mt-8 justify-items-center">
+      <h1
+        transition:name="title-alias-card"
+        class="text-3xl font-bold mb-5 text-center text-p-black"
+      >
         Alias de la Tarjeta: Qué Es, Para Qué Sirve y Cómo Usarlo
       </h1>
       <Image
         src={ALIAS_TARJETA_IMG}
+        transition:name="img-alias-card"
         alt="Imagen previa del blog de ¿Qué es el alias de la tarjeta?"
         width="1280"
         height="853"
@@ -101,9 +105,9 @@ import Header from "@templates/Header/Header.astro";
           >Solo eliges el nombre de la tarjeta.</span
         >
       </p>
-    </Article>
+    </Section>
 
-    <Article>
+    <Section>
       <h2 class="text-2xl font-semibold text-center text-p-black">
         Beneficios y seguridad al usar un alias en tu tarjeta
       </h2>
@@ -142,9 +146,9 @@ import Header from "@templates/Header/Header.astro";
           de tu tarjeta, lo que mejora la seguridad
         </li>
       </ol>
-    </Article>
+    </Section>
 
-    <Article>
+    <Section>
       <Image
         src={CREDIT_CARDS_IMG}
         alt="Tarjetas de crédito"
@@ -171,9 +175,9 @@ import Header from "@templates/Header/Header.astro";
         <li class="list-disc text-lg">Ahorro viajes</li>
         <li class="list-disc text-lg">Tarjeta negocios</li>
       </ul>
-    </Article>
+    </Section>
 
-    <Article>
+    <Section>
       <h4 class="text-2xl font-semibold text-center text-p-black">
         Errores comunes al elegir un alias y cómo evitarlos
       </h4>
@@ -194,9 +198,9 @@ import Header from "@templates/Header/Header.astro";
         como “tarjeta del table” porque no sabes quién podría verlo. ¡Se inteligente
         y dale un toque de orden a tus finanzas!
       </p>
-    </Article>
+    </Section>
 
-    <Article class="mb-12">
+    <Section class="mb-12">
       <h5 class="text-2xl font-semibold text-center text-p-black">
         Conclusión
       </h5>
@@ -223,7 +227,7 @@ import Header from "@templates/Header/Header.astro";
           hrefSrc={BUDGET_MASTER_TRY_APP_ROUTE}
         />
       </div>
-    </Article>
+    </Section>
   </main>
   <Footer />
 </Layout>
