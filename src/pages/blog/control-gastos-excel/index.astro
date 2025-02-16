@@ -54,10 +54,12 @@ import { Image } from "astro:assets";
       </h1>
 
       <article class="flex flex-col gap-3">
-        <p class="text-xl font-semibold">Indice:</p>
+        <p class="text-xl">Indice:</p>
 
         <ol class="pl-6 grid grid-cols-1 gap-3">
-          <li class="list-decimal text-lg text-pretty">Introducción</li>
+          <li class="list-decimal text-lg text-pretty text-blue-800">
+            <a href="#introduction">Introducción</a>
+          </li>
           <li class="list-decimal text-lg text-pretty text-blue-800">
             <a href="#real-example"
               >Ejemplo real: Cómo usar un control de gastos en Excel en el día a
@@ -101,19 +103,38 @@ import { Image } from "astro:assets";
             </li>
           </ol>
 
-          <li class="list-decimal text-lg text-pretty">
-            Alternativas a Excel para gestionar gastos personales
+          <li class="list-decimal text-lg text-pretty text-blue-800">
+            <a href="#alternatives-excel"
+              >Alternativas a Excel para gestionar gastos personales</a
+            >
           </li>
 
-          <ol class="pl-8 grid grid-cols-1 gap-2">
-            <li class="list-decimal text-base text-pretty">Budget Master</li>
-            <li class="list-decimal text-base text-pretty">Fintonic</li>
-            <li class="list-decimal text-base text-pretty">Splitwise</li>
+          <ol class="pl-8 grid grid-cols-1 gap-2 text-blue-800">
+            <li class="list-decimal text-base text-pretty">
+              <a href="#budget-master-option">Budget Master</a>
+            </li>
+            <li class="list-decimal text-base text-pretty">
+              <a href="#fintonic-option">Fintonic</a>
+            </li>
+            <li class="list-decimal text-base text-pretty">
+              <a href="#splitwise-option">Splitwise</a>
+            </li>
           </ol>
 
-          <li class="list-decimal text-lg text-pretty">Conclusión</li>
+          <li class="list-decimal text-lg text-pretty text-blue-800">
+            <a href="#conclusion">Conclusión</a>
+          </li>
         </ol>
       </article>
+    </Section>
+
+    <Section>
+      <h2
+        id="introduction"
+        class="text-3xl font-semibold text-center text-p-black"
+      >
+        Introducción
+      </h2>
       <Image
         src={CONTROL_EXCEL_IMG}
         alt="Imagen previa del blog: Control de gastos en Excel"
@@ -154,12 +175,12 @@ import { Image } from "astro:assets";
 
     <!-- Ejemplo real: Cómo usar un control de gastos en Excel en el día a día -->
     <Section class="gap-9">
-      <h2
+      <h3
         id="real-example"
         class="text-3xl font-semibold text-center text-p-black"
       >
         Ejemplo real: Cómo usar un control de gastos en Excel en el día a día
-      </h2>
+      </h3>
       <p class="text-lg text-pretty">
         La clave está en registrar los gastos en el momento. ¿Compraste un
         chicle? ¡Anótalo! Puede parecer exagerado, pero esos pequeños gastos son
@@ -347,12 +368,12 @@ import { Image } from "astro:assets";
     </Section>
 
     <Section class="gap-11">
-      <h3
+      <h4
         id="download-template"
         class="text-3xl font-semibold text-center text-p-black"
       >
         Descarga una plantilla gratuita para control de gastos
-      </h3>
+      </h4>
       <p class="text-lg text-pretty">
         Aquí hay algunas recomendaciones de plantillas gratuitas para usarse con
         Google Sheets para que controles tus gastos de manera sencilla y
@@ -482,7 +503,10 @@ import { Image } from "astro:assets";
     </Section>
 
     <Section>
-      <h4 class="text-3xl font-semibold text-center text-p-black">
+      <h4
+        id="alternatives-excel"
+        class="text-3xl font-semibold text-center text-p-black"
+      >
         Alternativas a Excel para gestionar gastos personales
       </h4>
       <p class="text-lg text-pretty">
@@ -504,7 +528,12 @@ import { Image } from "astro:assets";
       </p>
 
       <article class="flex flex-col gap-4">
-        <h5 class="text-2xl font-semibold text-primary">Budget Master</h5>
+        <h5
+          id="budget-master-option"
+          class="text-2xl font-semibold text-primary"
+        >
+          Budget Master
+        </h5>
         <p class="text-lg text-pretty">
           Somos una empresa mexicana nacida en 2023 con el objetivo de
           simplificar tu vida y tu relación con tu vida financiera.
@@ -538,7 +567,9 @@ import { Image } from "astro:assets";
       </article>
 
       <article class="flex flex-col gap-4">
-        <h5 class="text-2xl font-semibold text-primary">Fintonic</h5>
+        <h5 id="fintonic-option" class="text-2xl font-semibold text-primary">
+          Fintonic
+        </h5>
         <p class="text-lg text-pretty">
           Es una empresa española nacida en 2012 donde buscan que sus usuarios
           saquen el máximo partido descubriendo oportunidades de ahorro y
@@ -564,7 +595,9 @@ import { Image } from "astro:assets";
       </article>
 
       <article class="flex flex-col gap-4">
-        <h5 class="text-2xl font-semibold text-primary">Splitwise</h5>
+        <h5 id="splitwise-option" class="text-2xl font-semibold text-primary">
+          Splitwise
+        </h5>
         <p class="text-lg text-pretty">
           Es una empresa estadounidense que busca tener centralizado todos los
           gatos compartidos con amigos y familia en un solo lugar. Ideal para
@@ -589,7 +622,10 @@ import { Image } from "astro:assets";
     </Section>
 
     <Section class="mb-12">
-      <h4 class="text-3xl font-semibold text-center text-p-black">
+      <h4
+        id="conclusion"
+        class="text-3xl font-semibold text-center text-p-black"
+      >
         Conclusión
       </h4>
       <p class="text-lg text-pretty">
