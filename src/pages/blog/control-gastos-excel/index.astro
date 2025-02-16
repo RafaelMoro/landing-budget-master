@@ -8,6 +8,7 @@ import {
   BLOG_CONTROL_EXCEL_ROUTE,
   CONTROL_EXCEL_IMG,
   HOW_OBTAIN_COPY_IMG,
+  MONTHLY_BUDGET_TEMPLATE_IMG,
 } from "@constants";
 import Footer from "@templates/Footer.astro";
 import Section from "@components/Blog/Section.astro";
@@ -298,7 +299,7 @@ import { Image } from "astro:assets";
         />
       </picture>
 
-      <article class="flex flex-col gap-4">
+      <article class="grid grid-cols-1 gap-8">
         <h4 class="text-xl font-semibold text-p-black">
           Plantilla para gestionar presupuesto mensual.
         </h4>
@@ -309,10 +310,21 @@ import { Image } from "astro:assets";
           final, verás un resumen claro de tu situación financiera. ¿Necesitas
           un nuevo mes o año? Solo duplica la pestaña y sigue adelante.
         </p>
-        <a
-          href="https://docs.google.com/spreadsheets/d/1JL05M95_mKAOd-ZLzIKbNL5FQADkKE3tdsU2TrS8YOY/edit?usp=sharing"
-          target="_blank">Abrir plantilla de presupuesto mensual</a
-        >
+        <div class="justify-self-center">
+          <a
+            href="https://docs.google.com/spreadsheets/d/1JL05M95_mKAOd-ZLzIKbNL5FQADkKE3tdsU2TrS8YOY/edit?usp=sharing"
+            class="px-4 py-2 uppercase text-primary border-solid border border-primary rounded-sm"
+            target="_blank">Abrir plantilla de presupuesto mensual</a
+          >
+        </div>
+        <picture class="justify-self-center">
+          <Image
+            src={MONTHLY_BUDGET_TEMPLATE_IMG}
+            alt="Imagen previa de plantilla: Presupuesto Mensual"
+            width="410"
+            height="221"
+          />
+        </picture>
       </article>
 
       <article class="flex flex-col gap-4">
