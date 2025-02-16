@@ -17,6 +17,7 @@ export const CONTROL_EXCEL_IMG = '/img/blog/control-excel.webp'
 export const HOW_OBTAIN_COPY_IMG = '/img/blog/how-obtain-copy-sheet.webp'
 export const MONTHLY_BUDGET_TEMPLATE_IMG = '/img/blog/monthy-budget-template.webp'
 export const TWO_WEEK_BUDGET_TEMPLATE_IMG = '/img/blog/two-week-budget-template.webp'
+export const BUDGET_70_20_10_TEMPLATE_IMG = '/img/blog/budget-70-20-10-template.webp'
 
 // Blog
 export const BLOG_ROUTE = '/blog'
