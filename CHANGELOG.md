@@ -1,3 +1,9 @@
+## v1.2.0 (2025-02-16)
+
+### Pull Requests
+[#40](https://github.com/RafaelMoro/landing-budget-master/pull/40) | Add excel control expenses blogpost
+
+
 ## v1.1.5 (2025-02-14)
 
 ### Pull Requests
