@@ -198,38 +198,47 @@ import { Image } from "astro:assets";
           impuestos) por “0.7” y guarda el resultado. Si mi sueldo es de
           $12,000, entonces el cálculo se ve así:
         </p>
-        <math display="block">
-          <mrow>
-            <mi class="text-md">$12,000</mi>
-            <mo class="text-md">*</mo>
-            <mi class="text-md">0.7</mi>
-            <mo class="text-md">=</mo>
-            <mi class="text-md">$8,400</mi>
-          </mrow>
-        </math>
-        <p class="text-lg text-pretty">
-          Luego nuevamente repetimos el proceso, multiplicas todo tu sueldo neto
-          por “0.2”
-        </p>
-        <math display="block">
-          <mrow>
-            <mi class="text-md">$12,000</mi>
-            <mo class="text-md">*</mo>
-            <mi class="text-md">0.2</mi>
-            <mo class="text-md">=</mo>
-            <mi class="text-md">$2,400</mi>
-          </mrow>
-        </math>
-        <p class="text-lg text-pretty">Finalmente todo tu sueldo por “0.1”.</p>
-        <math display="block">
-          <mrow>
-            <mi class="text-md">$12,000</mi>
-            <mo class="text-md">*</mo>
-            <mi class="text-md">0.1</mi>
-            <mo class="text-md">=</mo>
-            <mi class="text-md">$1,200</mi>
-          </mrow>
-        </math>
+        <ol class="pl-6 grid grid-cols-1 gap-6">
+          <li class="list-decimal text-lg text-pretty">
+            Multiplica tu sueldo por "0.7"
+            <math class="mt-4" display="block">
+              <mrow>
+                <mi class="text-md text-gray-600">$12,000</mi>
+                <mo class="text-md text-gray-600">*</mo>
+                <mi class="text-md text-gray-600">0.7</mi>
+                <mo class="text-md text-gray-600">=</mo>
+                <mi class="text-md text-gray-600">$8,400</mi>
+              </mrow>
+            </math>
+          </li>
+
+          <li class="list-decimal text-lg text-pretty">
+            Multiplicas todo tu sueldo por “0.2”
+            <math class="mt-4" display="block">
+              <mrow>
+                <mi class="text-md text-gray-600">$12,000</mi>
+                <mo class="text-md text-gray-600">*</mo>
+                <mi class="text-md text-gray-600">0.2</mi>
+                <mo class="text-md text-gray-600">=</mo>
+                <mi class="text-md text-gray-600">$2,400</mi>
+              </mrow>
+            </math>
+          </li>
+
+          <li class="list-decimal text-lg text-pretty">
+            Multiplica todo tu sueldo por “0.1”
+            <math class="mt-4" display="block">
+              <mrow>
+                <mi class="text-md text-gray-600">$12,000</mi>
+                <mo class="text-md text-gray-600">*</mo>
+                <mi class="text-md text-gray-600">0.1</mi>
+                <mo class="text-md text-gray-600">=</mo>
+                <mi class="text-md text-gray-600">$1,200</mi>
+              </mrow>
+            </math>
+          </li>
+        </ol>
+
         <p class="text-lg text-pretty">
           Sumando estas tres cantidades, te debe de dar el 100% de tu sueldo.
         </p>
