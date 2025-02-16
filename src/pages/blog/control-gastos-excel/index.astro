@@ -58,17 +58,23 @@ import { Image } from "astro:assets";
 
         <ol class="pl-6 grid grid-cols-1 gap-3">
           <li class="list-decimal text-lg text-pretty">Introducción</li>
-          <li class="list-decimal text-lg text-pretty">
-            Ejemplo real: Cómo usar un control de gastos en Excel en el día a
-            día
+          <li class="list-decimal text-lg text-pretty text-blue-800">
+            <a href="#real-example"
+              >Ejemplo real: Cómo usar un control de gastos en Excel en el día a
+              día</a
+            >
           </li>
 
           <ol class="pl-8 grid grid-cols-1 gap-2">
-            <li class="list-decimal text-base text-pretty">
-              Control de gastos personales para ahorro
+            <li class="list-decimal text-base text-pretty text-blue-800">
+              <a href="#saving-control-expenses"
+                >Control de gastos personales para ahorro</a
+              >
             </li>
-            <li class="list-decimal text-base text-pretty">
-              Ejemplo práctico con un ingreso de $12,000
+            <li class="list-decimal text-base text-pretty text-blue-800">
+              <a href="#practical-example"
+                >Ejemplo práctico con un ingreso de $12,000</a
+              >
             </li>
           </ol>
 
@@ -144,7 +150,10 @@ import { Image } from "astro:assets";
 
     <!-- Ejemplo real: Cómo usar un control de gastos en Excel en el día a día -->
     <Section class="gap-9">
-      <h2 class="text-3xl font-semibold text-center text-p-black">
+      <h2
+        id="real-example"
+        class="text-3xl font-semibold text-center text-p-black"
+      >
         Ejemplo real: Cómo usar un control de gastos en Excel en el día a día
       </h2>
       <p class="text-lg text-pretty">
@@ -154,7 +163,10 @@ import { Image } from "astro:assets";
       </p>
 
       <article class="flex flex-col gap-8">
-        <h4 class="text-2xl font-semibold text-center text-p-black">
+        <h4
+          id="saving-control-expenses"
+          class="text-2xl font-semibold text-center text-p-black"
+        >
           Control de gastos personales para ahorro
         </h4>
         <p class="text-lg text-pretty">
@@ -241,7 +253,10 @@ import { Image } from "astro:assets";
       </article>
 
       <article class="flex flex-col gap-4">
-        <h4 class="text-2xl font-semibold text-center text-p-black">
+        <h4
+          id="practical-example"
+          class="text-2xl font-semibold text-center text-p-black"
+        >
           Ejemplo práctico con un ingreso de $12,000
         </h4>
         <p class="text-lg text-pretty">
