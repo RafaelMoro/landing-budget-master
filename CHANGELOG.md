@@ -1,3 +1,9 @@
+## v1.2.1 (2025-02-16)
+
+### Pull Requests
+[#42](https://github.com/RafaelMoro/landing-budget-master/pull/42) | Add schema to control excel blogpost
+
+
 ## v1.2.0 (2025-02-16)
 
 ### Pull Requests
