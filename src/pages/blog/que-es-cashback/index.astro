@@ -1,0 +1,37 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Header from "@templates/Header/Header.astro";
+import {
+  BLOG_CASHBACK_COMPLETE_ROUTE,
+  BLOG_CASHBACK_ROUTE,
+  HOME_ROUTE,
+  BLOG_ROUTE,
+} from "@constants";
+---
+
+<Layout
+  title="Cashback: qué es, cómo se usa y dónde aprovecharlo"
+  metaDescription="Cashback: qué es y cómo ganar dinero con él. Obtén reembolsos por tus compras y optimiza tu presupuesto. Aprende a usarlo ahora."
+  ogTitle="Cashback: qué es, cómo se usa y dónde aprovecharlo | Blogs de Budget Master"
+  ogURL={BLOG_CASHBACK_COMPLETE_ROUTE}
+  ogDescription="Cashback: qué es y cómo ganar dinero con él. Obtén reembolsos por tus compras y optimiza tu presupuesto. Aprende a usarlo ahora."
+  hrefCanonical={BLOG_CASHBACK_COMPLETE_ROUTE}
+>
+  <div class="bg-dark-blue">
+    <div class="max-w-7xl mx-auto">
+      <Header isBlog />
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto mt-4 pl-3 lg:pl-0">
+    <nav class="inline-flex gap-2">
+      <a class="text-gray-500 hover:underline" href={HOME_ROUTE}>Inicio</a>
+      <span>></span>
+      <a class="text-gray-500 hover:underline" href={BLOG_ROUTE}>Blog</a>
+      <span>></span>
+      <a href={BLOG_CASHBACK_ROUTE} class="hover:underline"
+        >Cashback: qué es y cómo obtener reembolsos en cada compra</a
+      >
+    </nav>
+  </div>
+</Layout>
