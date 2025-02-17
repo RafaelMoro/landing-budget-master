@@ -13,6 +13,7 @@ import Paragraph from "@components/Blog/Paragraph.astro";
 import ListItemBullet from "@components/Blog/ListItemBullet.astro";
 import ListUnordered from "@components/Blog/ListUnordered.astro";
 import BreadcrumbsBox from "@components/Blog/BreadcrumbsBox.astro";
+import BlogHeader from "@components/Blog/BlogHeader.astro";
 import { Image } from "astro:assets";
 ---
 
@@ -24,12 +25,7 @@ import { Image } from "astro:assets";
   ogDescription="Cashback: qué es y cómo ganar dinero con él. Obtén reembolsos por tus compras y optimiza tu presupuesto. Aprende a usarlo ahora."
   hrefCanonical={BLOG_CASHBACK_COMPLETE_ROUTE}
 >
-  <div class="bg-dark-blue">
-    <div class="max-w-7xl mx-auto">
-      <Header isBlog />
-    </div>
-  </div>
-
+  <BlogHeader />
   <BreadcrumbsBox>
     <a class="text-gray-500 hover:underline" href={HOME_ROUTE}>Inicio</a>
     <span>></span>
