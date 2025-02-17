@@ -23,8 +23,10 @@ export const BUDGET_70_20_10_TEMPLATE_IMG = '/img/blog/budget-70-20-10-template.
 export const BLOG_ROUTE = '/blog'
 export const BLOG_ALIAS_CARD_ARTICLE_ROUTE = '/blog/alias-tarjeta-significado'
 export const BLOG_CONTROL_EXCEL_ROUTE = '/blog/control-gastos-excel'
+export const BLOG_CASHBACK_ROUTE = '/blog/que-es-cashback'
 
 // Complete routes
 export const COMPLETE_BLOG_ROUTE = `${BUDGET_MASTER_LANDING_URL}${BLOG_ROUTE}`
 export const BLOG_ALIAS_CARD_ART_COMPLETE_ROUTE = `${BUDGET_MASTER_LANDING_URL}${BLOG_ALIAS_CARD_ARTICLE_ROUTE}`
 export const BLOG_CONTROL_EXCEL_COMPLETE_ROUTE = `${BUDGET_MASTER_LANDING_URL}${BLOG_CONTROL_EXCEL_ROUTE}`
+export const BLOG_CASHBACK_COMPLETE_ROUTE = `${BUDGET_MASTER_LANDING_URL}${BLOG_CASHBACK_ROUTE}`
