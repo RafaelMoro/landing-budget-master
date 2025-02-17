@@ -13,8 +13,9 @@ import ListItemBullet from "@components/Blog/ListItemBullet.astro";
 import ListUnordered from "@components/Blog/ListUnordered.astro";
 import BreadcrumbsBox from "@components/Blog/BreadcrumbsBox.astro";
 import BlogHeader from "@components/Blog/BlogHeader.astro";
-import { Image } from "astro:assets";
 import BreadcrumbAnchor from "@components/Blog/BreadcrumbAnchor.astro";
+import InternalAnchor from "@components/Blog/InternalAnchor.astro";
+import { Image } from "astro:assets";
 ---
 
 <Layout
@@ -154,6 +155,7 @@ import BreadcrumbAnchor from "@components/Blog/BreadcrumbAnchor.astro";
     </Section>
 
     <Section>
+      <!-- TODO: Check the structure on changing this title to maybe h4 -->
       <h2 class="text-3xl font-bold mb-5 text-center text-p-black">
         Cashback tradicional
       </h2>
@@ -176,6 +178,35 @@ import BreadcrumbAnchor from "@components/Blog/BreadcrumbAnchor.astro";
         de todos modos. Pero si gastas más solo por la recompensa, el negocio lo
         hace el banco, no tú. La clave está en usarlo estratégicamente y no como
         excusa para derrochar.
+      </Paragraph>
+    </Section>
+
+    <Section>
+      <h2 class="text-2xl font-bold mb-5 text-center text-p-black">
+        Cashback como programa de recompensas o fidelización
+      </h2>
+      <Paragraph>
+        Este tipo de cashback funciona como una estrategia de fidelización
+        bancaria. Funciona con un programa de puntos, para después canjearlo por
+        productos.
+      </Paragraph>
+      <Paragraph>
+        Muchas tarjetas de crédito te permiten acumular puntos o saldo en cada
+        compra, los cuales después puedes utilizar para obtener descuentos,
+        pagar en ciertos comercios o acceder a un catálogo de artículos
+        exclusivos. Además, en temporadas especiales o en establecimientos
+        específicos, puedes acumular más recompensas con cada compra.
+      </Paragraph>
+
+      <Paragraph>
+        Por ejemplo, HSBC cuenta con un portal para su programa de fidelización
+        llamado "<InternalAnchor
+          href="https://www.programa-mas.com.mx/#/home"
+          text="Programa más"
+        />". Supongamos que deseas comprar unos <InternalAnchor
+          href="https://www.programa-mas.com.mx/#/Detalle/MLG75320"
+          text="Audífonos QuietComfort Ultra Negro Bose"
+        /> que cuestan 117,700 puntos.
       </Paragraph>
     </Section>
   </main>
