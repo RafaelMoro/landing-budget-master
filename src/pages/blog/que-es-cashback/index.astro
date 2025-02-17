@@ -41,7 +41,7 @@ import { Image } from "astro:assets";
   <main
     class="flex flex-col items-center gap-16 max-w-7xl mx-auto px-3 md:px-0"
   >
-    <Section>
+    <Section class="mt-8">
       <h1
         transition:name="title-cashback"
         class="text-4xl font-bold mb-5 text-center text-p-black"
@@ -166,6 +166,32 @@ import { Image } from "astro:assets";
           </a>
         </li>
       </ul>
+    </Section>
+
+    <Section>
+      <h2 class="text-3xl font-bold mb-5 text-center text-p-black">
+        Cashback tradicional
+      </h2>
+      <p class="text-lg text-pretty">
+        El cashback es como ese amigo que siempre te devuelve lo que le
+        prestaste... pero en cámara lenta. Con este sistema, un porcentaje de lo
+        que gastas (entre 1% y 5%) regresa a tu cuenta, listo para ser usado en
+        futuras compras. Suena genial, ¿verdad? Pero hay truco: para ganar
+        dinero, primero tienes que gastar.
+      </p>
+      <p class="text-lg text-pretty">
+        Por ejemplo, imagina que usas una tarjeta con 5% de cashback y haces una
+        compra de $1,000. Te devolverán $50 pesos. No está mal, pero si estás
+        pensando en comprarte unos AirPods de $2,999, usando una tarjeta con 2%
+        de cashback, tendrías que gastar unos $149,950 para conseguirlos solo
+        con recompensas. Sí, leíste bien.
+      </p>
+      <p class="text-lg text-pretty">
+        Entonces, ¿vale la pena el cashback? Sí, si ya ibas a hacer esas compras
+        de todos modos. Pero si gastas más solo por la recompensa, el negocio lo
+        hace el banco, no tú. La clave está en usarlo estratégicamente y no como
+        excusa para derrochar.
+      </p>
     </Section>
   </main>
 </Layout>
