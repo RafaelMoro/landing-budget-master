@@ -10,4 +10,4 @@ const { href, text, class: cssClass } = Astro.props;
 const anchorClasses = ["hover:underline text-blue-900", cssClass];
 ---
 
-<a class:list={anchorClasses} href={href}>{text}</a>
+<a target="_blank" class:list={anchorClasses} href={href}>{text}</a>
