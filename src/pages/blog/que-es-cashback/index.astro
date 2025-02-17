@@ -9,6 +9,7 @@ import {
   CASHBACK_THUMBNAIL,
 } from "@constants";
 import Section from "@components/Blog/Section.astro";
+import Paragraph from "@components/Blog/Paragraph.astro";
 import { Image } from "astro:assets";
 ---
 
@@ -55,12 +56,12 @@ import { Image } from "astro:assets";
         width="1280"
         height="853"
       />
-      <p class="text-lg text-pretty">
+      <Paragraph>
         Cashback es una manera en la que <span class="font-semibold"
           >te recompensan cada vez que gastas en tu tarjeta de crédito o débito.</span
         > Es un término en inglés que se puede traducir como “Dinero de vuelta”.
-      </p>
-      <p class="text-lg text-pretty">Ventajas:</p>
+      </Paragraph>
+      <Paragraph>Ventajas:</Paragraph>
       <ul class="pl-6 justify-self-start">
         <li class="list-disc text-lg">
           <span class="font-semibold"
@@ -80,7 +81,7 @@ import { Image } from "astro:assets";
         </li>
       </ul>
 
-      <p class="text-lg text-pretty">Consideraciones:</p>
+      <Paragraph>Consideraciones:</Paragraph>
       <ul class="pl-6 justify-self-start">
         <li class="list-disc text-lg">
           <span class="font-semibold">Alto interés:</span> Si no te es posible pagar
@@ -99,10 +100,10 @@ import { Image } from "astro:assets";
         </li>
       </ul>
 
-      <p class="text-lg text-pretty">
+      <Paragraph>
         Algunas tarjetas de crédito con cashback en México que te recomendamos
         revisar son:
-      </p>
+      </Paragraph>
       <ul class="pl-6 justify-self-start flex flex-col gap-2">
         <li class="list-disc text-lg text-blue-800">
           <a
@@ -172,26 +173,26 @@ import { Image } from "astro:assets";
       <h2 class="text-3xl font-bold mb-5 text-center text-p-black">
         Cashback tradicional
       </h2>
-      <p class="text-lg text-pretty">
+      <Paragraph>
         El cashback es como ese amigo que siempre te devuelve lo que le
         prestaste... pero en cámara lenta. Con este sistema, un porcentaje de lo
         que gastas (entre 1% y 5%) regresa a tu cuenta, listo para ser usado en
         futuras compras. Suena genial, ¿verdad? Pero hay truco: para ganar
         dinero, primero tienes que gastar.
-      </p>
-      <p class="text-lg text-pretty">
+      </Paragraph>
+      <Paragraph>
         Por ejemplo, imagina que usas una tarjeta con 5% de cashback y haces una
         compra de $1,000. Te devolverán $50 pesos. No está mal, pero si estás
         pensando en comprarte unos AirPods de $2,999, usando una tarjeta con 2%
         de cashback, tendrías que gastar unos $149,950 para conseguirlos solo
         con recompensas. Sí, leíste bien.
-      </p>
-      <p class="text-lg text-pretty">
+      </Paragraph>
+      <Paragraph>
         Entonces, ¿vale la pena el cashback? Sí, si ya ibas a hacer esas compras
         de todos modos. Pero si gastas más solo por la recompensa, el negocio lo
         hace el banco, no tú. La clave está en usarlo estratégicamente y no como
         excusa para derrochar.
-      </p>
+      </Paragraph>
     </Section>
   </main>
 </Layout>
