@@ -11,6 +11,7 @@ import {
 import Section from "@components/Blog/Section.astro";
 import Paragraph from "@components/Blog/Paragraph.astro";
 import ListItemBullet from "@components/Blog/ListItemBullet.astro";
+import ListUnordered from "@components/Blog/ListUnordered.astro";
 import { Image } from "astro:assets";
 ---
 
@@ -63,7 +64,7 @@ import { Image } from "astro:assets";
         > Es un término en inglés que se puede traducir como “Dinero de vuelta”.
       </Paragraph>
       <Paragraph>Ventajas:</Paragraph>
-      <ul class="pl-6 justify-self-start">
+      <ListUnordered>
         <ListItemBullet>
           <span class="font-semibold"
             >Recompensas en puntos o dinero en efectivo:</span
@@ -80,10 +81,10 @@ import { Image } from "astro:assets";
           beneficios adicionales como recompensas al llegar a cierto limite de gasto
           al mes
         </ListItemBullet>
-      </ul>
+      </ListUnordered>
 
       <Paragraph>Consideraciones:</Paragraph>
-      <ul class="pl-6 justify-self-start">
+      <ListUnordered>
         <ListItemBullet>
           <span class="font-semibold">Alto interés:</span> Si no te es posible pagar
           en su totalidad la cuenta en un mes, los intereses asociados pueden ser
@@ -99,13 +100,13 @@ import { Image } from "astro:assets";
           de cashback puede influenciar a las personas a gastar de mas o fuera de
           sus posibilidades de pago.
         </ListItemBullet>
-      </ul>
+      </ListUnordered>
 
       <Paragraph>
         Algunas tarjetas de crédito con cashback en México que te recomendamos
         revisar son:
       </Paragraph>
-      <ul class="pl-6 justify-self-start flex flex-col gap-2">
+      <ListUnordered class="flex flex-col gap-2">
         <ListItemBullet class="text-blue-800">
           <a target="_blank" href="https://platacard.mx/es/">Plata Card</a>
         </ListItemBullet>
@@ -152,7 +153,7 @@ import { Image } from "astro:assets";
             >Tarjeta Banregio Más
           </a>
         </ListItemBullet>
-      </ul>
+      </ListUnordered>
     </Section>
 
     <Section>
