@@ -13,6 +13,8 @@ export const HOME_ROUTE = '/'
 // Images
 export const ALIAS_TARJETA_IMG = '/img/blog/alias-tarjeta.webp'
 export const CREDIT_CARDS_IMG = '/img/blog/credit-cards.webp'
+export const CASHBACK_THUMBNAIL = '/img/blog/cashback-thumbnail.webp'
+
 export const CONTROL_EXCEL_IMG = '/img/blog/control-excel.webp'
 export const HOW_OBTAIN_COPY_IMG = '/img/blog/how-obtain-copy-sheet.webp'
 export const MONTHLY_BUDGET_TEMPLATE_IMG = '/img/blog/monthy-budget-template.webp'
