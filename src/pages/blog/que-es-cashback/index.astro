@@ -1,6 +1,5 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import Header from "@templates/Header/Header.astro";
 import {
   BLOG_CASHBACK_COMPLETE_ROUTE,
   BLOG_CASHBACK_ROUTE,
@@ -15,6 +14,7 @@ import ListUnordered from "@components/Blog/ListUnordered.astro";
 import BreadcrumbsBox from "@components/Blog/BreadcrumbsBox.astro";
 import BlogHeader from "@components/Blog/BlogHeader.astro";
 import { Image } from "astro:assets";
+import BreadcrumbAnchor from "@components/Blog/BreadcrumbAnchor.astro";
 ---
 
 <Layout
@@ -27,13 +27,15 @@ import { Image } from "astro:assets";
 >
   <BlogHeader />
   <BreadcrumbsBox>
-    <a class="text-gray-500 hover:underline" href={HOME_ROUTE}>Inicio</a>
+    <BreadcrumbAnchor href={HOME_ROUTE} text="Inicio" />
     <span>></span>
-    <a class="text-gray-500 hover:underline" href={BLOG_ROUTE}>Blog</a>
+    <BreadcrumbAnchor href={BLOG_ROUTE} text="Blog" />
     <span>></span>
-    <a href={BLOG_CASHBACK_ROUTE} class="hover:underline"
-      >Cashback: qué es y cómo obtener reembolsos en cada compra</a
-    >
+    <BreadcrumbAnchor
+      isCurrentPath
+      href={BLOG_CASHBACK_ROUTE}
+      text="Cashback: qué es y cómo obtener reembolsos en cada compra"
+    />
   </BreadcrumbsBox>
 
   <main
