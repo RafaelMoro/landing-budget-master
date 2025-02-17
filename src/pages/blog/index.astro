@@ -8,6 +8,7 @@ import {
   BLOG_CONTROL_EXCEL_ROUTE,
   CONTROL_EXCEL_IMG,
   BLOG_CASHBACK_ROUTE,
+  CASHBACK_THUMBNAIL,
 } from "@constants";
 import Layout from "@layouts/Layout.astro";
 import Header from "@templates/Header/Header.astro";
@@ -86,16 +87,19 @@ import { Image } from "astro:assets";
     </article>
 
     <article class="flex flex-col gap-4 max-w-[300px]">
-      <Image
-        src={CONTROL_EXCEL_IMG}
-        alt="Imagen previa del blog de Cashback: qué es y cómo obtener reembolsos en cada compra"
-        width="300"
-        height="300"
-      />
+      <div class="min-w-[300px] min-h-[200px]">
+        <Image
+          src={CASHBACK_THUMBNAIL}
+          transition:name="img-cashback"
+          alt="Imagen previa del blog de Cashback: qué es y cómo obtener reembolsos en cada compra"
+          width="300"
+          height="300"
+        />
+      </div>
       <a
         href={BLOG_CASHBACK_ROUTE}
         title="Ir a blog: Cashback: qué es y cómo obtener reembolsos en cada compra"
-        transition:name="title-control-excel"
+        transition:name="title-cashback"
         class="text-xl font-semibold transition-colors duration-300 hover:text-complementary"
       >
         Cashback: qué es y cómo obtener reembolsos en cada compra

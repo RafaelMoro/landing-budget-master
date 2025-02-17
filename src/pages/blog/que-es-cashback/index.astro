@@ -6,7 +6,10 @@ import {
   BLOG_CASHBACK_ROUTE,
   HOME_ROUTE,
   BLOG_ROUTE,
+  CASHBACK_THUMBNAIL,
 } from "@constants";
+import Section from "@components/Blog/Section.astro";
+import { Image } from "astro:assets";
 ---
 
 <Layout
@@ -34,4 +37,24 @@ import {
       >
     </nav>
   </div>
+
+  <main
+    class="flex flex-col items-center gap-16 max-w-7xl mx-auto px-3 md:px-0"
+  >
+    <Section>
+      <h1
+        transition:name="title-cashback"
+        class="text-4xl font-bold mb-5 text-center text-p-black"
+      >
+        Cashback: qué es y cómo obtener reembolsos en cada compra
+      </h1>
+      <Image
+        src={CASHBACK_THUMBNAIL}
+        transition:name="img-cashback"
+        alt="Imagen previa del blog: Control de gastos en Excel"
+        width="1280"
+        height="853"
+      />
+    </Section>
+  </main>
 </Layout>
