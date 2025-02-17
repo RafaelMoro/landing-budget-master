@@ -1,0 +1,13 @@
+---
+export interface Props {
+  href: string;
+  text: string;
+  class?: string;
+}
+
+const { href, text, class: cssClass } = Astro.props;
+
+const anchorClasses = ["hover:underline text-blue-900", cssClass];
+---
+
+<a class:list={anchorClasses} href={href}>{text}</a>
