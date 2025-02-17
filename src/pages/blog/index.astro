@@ -7,6 +7,7 @@ import {
   HOME_ROUTE,
   BLOG_CONTROL_EXCEL_ROUTE,
   CONTROL_EXCEL_IMG,
+  BLOG_CASHBACK_ROUTE,
 } from "@constants";
 import Layout from "@layouts/Layout.astro";
 import Header from "@templates/Header/Header.astro";
@@ -81,6 +82,31 @@ import { Image } from "astro:assets";
         Descarga 3 diferentes plantillas para gestionar tus finanzas personales
         de forma efectiva. Conoce ejemplos reales y alternativas a las
         plantillas.
+      </p>
+    </article>
+
+    <article class="flex flex-col gap-4 max-w-[300px]">
+      <Image
+        src={CONTROL_EXCEL_IMG}
+        alt="Imagen previa del blog de Cashback: qué es y cómo obtener reembolsos en cada compra"
+        width="300"
+        height="300"
+      />
+      <a
+        href={BLOG_CASHBACK_ROUTE}
+        title="Ir a blog: Cashback: qué es y cómo obtener reembolsos en cada compra"
+        transition:name="title-control-excel"
+        class="text-xl font-semibold transition-colors duration-300 hover:text-complementary"
+      >
+        Cashback: qué es y cómo obtener reembolsos en cada compra
+      </a>
+      <p class="text-gray-600 text-lg text-pretty">
+        Descubre todo sobre el cashback y cómo aprovecharlo al máximo para
+        recuperar dinero en cada compra. Exploramos sus beneficios, tipos y
+        diferencias entre el cashback tradicional y los programas de
+        recompensas, con ejemplos claros para que entiendas su funcionamiento.
+        ¿Realmente vale la pena? Te damos una conclusión honesta para que
+        decidas si este sistema es tu mejor aliado financiero
       </p>
     </article>
   </section>
