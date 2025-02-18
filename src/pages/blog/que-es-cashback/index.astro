@@ -6,6 +6,7 @@ import {
   HOME_ROUTE,
   BLOG_ROUTE,
   CASHBACK_THUMBNAIL,
+  CASHBACK_BEGINNING_IMG,
 } from "@constants";
 import Section from "@components/Blog/Section.astro";
 import Paragraph from "@components/Blog/Paragraph.astro";
@@ -156,6 +157,14 @@ import { Image } from "astro:assets";
       <h2 class="text-3xl font-bold mb-5 text-center text-p-black">
         Del pasado al presente: Cómo evolucionó el cashback
       </h2>
+      <picture class="justify-self-center">
+        <Image
+          src={CASHBACK_BEGINNING_IMG}
+          alt="Comienzo del cashback"
+          width="512"
+          height="512"
+        />
+      </picture>
       <Paragraph>
         Los programas de cashback datan desde 1986 cuando una tarjeta de
         Discover fue lanzada nacionamente en Estados Unidos introduciendo este
