@@ -234,33 +234,49 @@ import { Image } from "astro:assets";
         </Paragraph>
 
         <Paragraph>
-          Existen <span class="font-semibold">otras tarjetas de crédito</span> en
-          donde <span class="font-semibold"
-            >juntas más puntos por cada dólar gastado</span
-          > pero varia en sus tarjetas de crédito y en las entidades financieras.
-          Como es el caso de la <InternalAnchor
-            href="https://www.hsbc.com.mx/tarjetas-de-credito/productos/oro/"
-            text="HSBC Gold"
-          /> donde juntas 1.1 puntos por cada dólar o la <InternalAnchor
-            href="https://www.hsbc.com.mx/tarjetas-de-credito/productos/platinum/"
-            text="HSBC Platinum"
-          /> donde acumulas 1.3 puntos por dólar gastado.
+          Algunas tarjetas de crédito ofrecen más puntos por cada dólar gastado,
+          pero esto varía según la tarjeta y el banco.
         </Paragraph>
+        <ListUnordered>
+          <ListItemBullet>
+            <InternalAnchor
+              href="https://www.hsbc.com.mx/tarjetas-de-credito/productos/oro/"
+              text="HSBC Gold:"
+            />
+            1.1 puntos por cada dólar gastado.
+          </ListItemBullet>
+          <ListItemBullet class="mt-2">
+            <InternalAnchor
+              href="https://www.hsbc.com.mx/tarjetas-de-credito/productos/platinum/"
+              text="HSBC Platinum"
+            />
+            1.3 puntos por dólar gastado
+          </ListItemBullet>
+        </ListUnordered>
 
         <Paragraph>
-          Existe esta dinámica en varias entidades bancarias como Santander,
-          American Express, BBVA Bancomer, etc. Es la misma dinámica, pero con
-          nombres diferentes. Con American Express, juntas <InternalAnchor
-            href="https://www.americanexpress.com/es-mx/beneficios/recompensas/membership-rewards/"
-            text="puntos Membership Rewards,"
-          /> para BBVA juntas <InternalAnchor
-            href="https://www.bbva.mx/personas/landings/usa-tus-puntos-bbva.html"
-            text="puntos Bancomer"
-          /> o Citibanamex con <InternalAnchor
-            href="https://www.banamex.com/premia/index.html"
-            text="puntos premia"
-          />
+          Este sistema también lo usan otros bancos con diferentes nombres:
         </Paragraph>
+        <ListUnordered>
+          <ListItemBullet noDisc>
+            ✔️ American Express → <InternalAnchor
+              href="https://www.americanexpress.com/es-mx/beneficios/recompensas/membership-rewards/"
+              text="puntos Membership Rewards,"
+            />
+          </ListItemBullet>
+          <ListItemBullet class="my-2" noDisc>
+            ✔️ BBVA Bancomer →<InternalAnchor
+              href="https://www.bbva.mx/personas/landings/usa-tus-puntos-bbva.html"
+              text="puntos Bancomer"
+            />
+          </ListItemBullet>
+          <ListItemBullet noDisc>
+            ✔️ Citibanamex → <InternalAnchor
+              href="https://www.banamex.com/premia/index.html"
+              text="puntos premia"
+            />
+          </ListItemBullet>
+        </ListUnordered>
       </article>
 
       <article class="flex flex-col gap-5">
