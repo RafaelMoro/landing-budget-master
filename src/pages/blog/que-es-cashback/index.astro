@@ -32,15 +32,14 @@ import AnchorButton from "@components/AnchorButton.astro";
 >
   <BlogHeader />
   <BreadcrumbsBox>
-    <BreadcrumbAnchor href={HOME_ROUTE} text="Inicio" />
+    <BreadcrumbAnchor href={HOME_ROUTE}>Inicio</BreadcrumbAnchor>
     <span>></span>
-    <BreadcrumbAnchor href={BLOG_ROUTE} text="Blog" />
+    <BreadcrumbAnchor href={BLOG_ROUTE}>Blog</BreadcrumbAnchor>
     <span>></span>
-    <BreadcrumbAnchor
-      isCurrentPath
-      href={BLOG_CASHBACK_ROUTE}
-      text="Cashback: qué es y cómo obtener reembolsos en cada compra"
-    />
+    <BreadcrumbAnchor isCurrentPath href={BLOG_CASHBACK_ROUTE}
+      >Cashback: qué es y cómo <br class="md:hidden" /> obtener reembolsos en cada
+      compra</BreadcrumbAnchor
+    >
   </BreadcrumbsBox>
 
   <main
