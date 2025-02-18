@@ -17,6 +17,7 @@ import BlogHeader from "@components/Blog/BlogHeader.astro";
 import BreadcrumbAnchor from "@components/Blog/BreadcrumbAnchor.astro";
 import InternalAnchor from "@components/Blog/InternalAnchor.astro";
 import { Image } from "astro:assets";
+import Footer from "@templates/Footer.astro";
 ---
 
 <Layout
@@ -95,59 +96,6 @@ import { Image } from "astro:assets";
         <ListItemBullet>
           Tentación de gastar de más: El incentivo de cashback puede influenciar
           a las personas a gastar de mas o fuera de sus posibilidades de pago.
-        </ListItemBullet>
-      </ListUnordered>
-
-      <Paragraph>
-        Algunas tarjetas de crédito con cashback en México que te recomendamos
-        revisar son:
-      </Paragraph>
-      <ListUnordered class="flex flex-col gap-2">
-        <ListItemBullet class="text-blue-800">
-          <a target="_blank" href="https://platacard.mx/es/">Plata Card</a>
-        </ListItemBullet>
-        <ListItemBullet class="text-blue-800">
-          <a target="_blank" href="https://www.storicard.com/stori-black"
-            >Stori black</a
-          >
-        </ListItemBullet>
-        <ListItemBullet class="text-blue-800">
-          <a
-            target="_blank"
-            href="https://www.hsbc.com.mx/tarjetas-de-credito/productos/2now/"
-            >2Now</a
-          >
-        </ListItemBullet>
-        <ListItemBullet class="text-blue-800">
-          <a target="_blank" href="https://vexi.mx/vexi-american-express/"
-            >Tarjeta Vexi American Express</a
-          >
-        </ListItemBullet>
-        <ListItemBullet class="text-blue-800">
-          <a target="_blank" href="https://www.klar.mx/platino"
-            >Tarjeta Klar Platino</a
-          >
-        </ListItemBullet>
-        <ListItemBullet class="text-blue-800">
-          <a
-            target="_blank"
-            href="https://web.didiglobal.com/mx/tarjeta-de-credito/"
-            >Didi Card</a
-          >
-        </ListItemBullet>
-        <ListItemBullet class="text-blue-800">
-          <a
-            target="_blank"
-            href="https://www.santander.com.mx/personas/tarjetas-de-credito/likeu.html"
-            >Tarjeta LikeU Santander</a
-          >
-        </ListItemBullet>
-        <ListItemBullet class="text-blue-800">
-          <a
-            target="_blank"
-            href="https://www.banregio.com/personas/tarjetas/mas.php"
-            >Tarjeta Banregio Más
-          </a>
         </ListItemBullet>
       </ListUnordered>
     </Section>
@@ -297,5 +245,76 @@ import { Image } from "astro:assets";
         </Paragraph>
       </article>
     </Section>
+
+    <Section class="mb-12">
+      <h5 class="text-2xl text-center font-bold text-p-black">Conclusión</h5>
+      <Paragraph>
+        El cashback es una estrategia inteligente para optimizar el gasto
+        diario, permitiendo recuperar un porcentaje del dinero en compras
+        habituales. Más que un simple beneficio, se ha convertido en una
+        herramienta clave para el ahorro y la fidelización de clientes.
+      </Paragraph>
+      <Paragraph>
+        Sin embargo, su verdadero valor depende del uso estratégico: comparar
+        opciones, conocer las condiciones y aprovechar al máximo las
+        oportunidades disponibles. En un mundo donde cada centavo cuenta, el
+        cashback no solo devuelve dinero, sino que también ofrece la posibilidad
+        de gastar de manera más inteligente.
+      </Paragraph>
+
+      <Paragraph>
+        Algunas tarjetas de crédito con cashback en México que te recomendamos
+        revisar son:
+      </Paragraph>
+      <ListUnordered class="flex flex-col gap-2">
+        <ListItemBullet class="text-blue-800">
+          <a target="_blank" href="https://platacard.mx/es/">Plata Card</a>
+        </ListItemBullet>
+        <ListItemBullet class="text-blue-800">
+          <a target="_blank" href="https://www.storicard.com/stori-black"
+            >Stori black</a
+          >
+        </ListItemBullet>
+        <ListItemBullet class="text-blue-800">
+          <a
+            target="_blank"
+            href="https://www.hsbc.com.mx/tarjetas-de-credito/productos/2now/"
+            >2Now</a
+          >
+        </ListItemBullet>
+        <ListItemBullet class="text-blue-800">
+          <a target="_blank" href="https://vexi.mx/vexi-american-express/"
+            >Tarjeta Vexi American Express</a
+          >
+        </ListItemBullet>
+        <ListItemBullet class="text-blue-800">
+          <a target="_blank" href="https://www.klar.mx/platino"
+            >Tarjeta Klar Platino</a
+          >
+        </ListItemBullet>
+        <ListItemBullet class="text-blue-800">
+          <a
+            target="_blank"
+            href="https://web.didiglobal.com/mx/tarjeta-de-credito/"
+            >Didi Card</a
+          >
+        </ListItemBullet>
+        <ListItemBullet class="text-blue-800">
+          <a
+            target="_blank"
+            href="https://www.santander.com.mx/personas/tarjetas-de-credito/likeu.html"
+            >Tarjeta LikeU Santander</a
+          >
+        </ListItemBullet>
+        <ListItemBullet class="text-blue-800">
+          <a
+            target="_blank"
+            href="https://www.banregio.com/personas/tarjetas/mas.php"
+            >Tarjeta Banregio Más
+          </a>
+        </ListItemBullet>
+      </ListUnordered>
+    </Section>
   </main>
+  <Footer />
 </Layout>
