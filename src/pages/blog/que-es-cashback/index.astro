@@ -1,0 +1,356 @@
+---
+import Layout from "@layouts/Layout.astro";
+import {
+  BLOG_CASHBACK_COMPLETE_ROUTE,
+  BLOG_CASHBACK_ROUTE,
+  HOME_ROUTE,
+  BLOG_ROUTE,
+  CASHBACK_THUMBNAIL,
+  CASHBACK_BEGINNING_IMG,
+  BUDGET_MASTER_TRY_APP_ROUTE,
+} from "@constants";
+import Section from "@components/Blog/Section.astro";
+import Paragraph from "@components/Blog/Paragraph.astro";
+import ListItemBullet from "@components/Blog/ListItemBullet.astro";
+import ListUnordered from "@components/Blog/ListUnordered.astro";
+import BreadcrumbsBox from "@components/Blog/BreadcrumbsBox.astro";
+import BlogHeader from "@components/Blog/BlogHeader.astro";
+import BreadcrumbAnchor from "@components/Blog/BreadcrumbAnchor.astro";
+import InternalAnchor from "@components/Blog/InternalAnchor.astro";
+import { Image } from "astro:assets";
+import Footer from "@templates/Footer.astro";
+import AnchorButton from "@components/AnchorButton.astro";
+---
+
+<script is:inline slot="schema" type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://budget-master.space/blog/que-es-cashback"
+    },
+    "headline": "Cashback: qué es, cómo se usa y dónde aprovecharlo",
+    "description": "Cashback: qué es y cómo ganar dinero con él. Obtén reembolsos por tus compras y optimiza tu presupuesto. Aprende a usarlo ahora.",
+    "image": "https://budget-master.space/img/blog/cashback-thumbnail.webp",
+    "author": {
+      "@type": "Organization",
+      "name": "Budget Master",
+      "url": "https://budget-master.space"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Budget Master",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://budget-master.space/logo.svg"
+      }
+    },
+    "datePublished": "2025-02-18T11:22:00-06:00",
+    "dateModified": "2025-02-18T11:22:00-06:00"
+  }
+</script>
+<Layout
+  title="Cashback: qué es, cómo se usa y dónde aprovecharlo"
+  metaDescription="Cashback: qué es y cómo ganar dinero con él. Obtén reembolsos por tus compras y optimiza tu presupuesto. Aprende a usarlo ahora."
+  ogTitle="Cashback: qué es, cómo se usa y dónde aprovecharlo | Blogs de Budget Master"
+  ogURL={BLOG_CASHBACK_COMPLETE_ROUTE}
+  ogDescription="Cashback: qué es y cómo ganar dinero con él. Obtén reembolsos por tus compras y optimiza tu presupuesto. Aprende a usarlo ahora."
+  hrefCanonical={BLOG_CASHBACK_COMPLETE_ROUTE}
+>
+  <BlogHeader />
+  <BreadcrumbsBox>
+    <BreadcrumbAnchor href={HOME_ROUTE}>Inicio</BreadcrumbAnchor>
+    <span>></span>
+    <BreadcrumbAnchor href={BLOG_ROUTE}>Blog</BreadcrumbAnchor>
+    <span>></span>
+    <BreadcrumbAnchor isCurrentPath href={BLOG_CASHBACK_ROUTE}
+      >Cashback: qué es y cómo <br class="md:hidden" /> obtener reembolsos en cada
+      compra</BreadcrumbAnchor
+    >
+  </BreadcrumbsBox>
+
+  <main
+    class="flex flex-col items-center gap-16 max-w-7xl mx-auto px-3 md:px-0"
+  >
+    <!-- Cashback: qué es y cómo obtener reembolsos en cada compra -->
+    <Section class="mt-8">
+      <h1
+        transition:name="title-cashback"
+        class="text-4xl font-bold mb-5 text-center text-p-black"
+      >
+        Cashback: qué es y cómo obtener reembolsos en cada compra
+      </h1>
+      <Image
+        src={CASHBACK_THUMBNAIL}
+        transition:name="img-cashback"
+        alt="Imagen previa del blog: Control de gastos en Excel"
+        width="1280"
+        height="853"
+      />
+      <Paragraph>
+        Cashback es una manera en la que <span class="font-semibold"
+          >te recompensan con efectivo o puntos cada vez que gastas en tu
+          tarjeta de crédito o débito.</span
+        > Es un término en inglés que se puede traducir como “Dinero de vuelta”.
+      </Paragraph>
+      <Paragraph class="text-xl font-semibold">Ventajas:</Paragraph>
+      <ListUnordered>
+        <ListItemBullet>
+          Recompensas en puntos o dinero en efectivo: Es el principal beneficio
+          al gastar tu dinero con este tipo de productos financieros
+        </ListItemBullet>
+        <ListItemBullet>
+          Sin complicaciones: Si eliges una tarjeta que se adecue a tus gastos y
+          estilo de vida, se te recompensara por mantener los mismos hábitos de
+          gasto.
+        </ListItemBullet>
+        <ListItemBullet>
+          Bonificaciones: Algunas tarjetas ofrecen beneficios adicionales como
+          recompensas al llegar a cierto limite de gasto al mes
+        </ListItemBullet>
+      </ListUnordered>
+
+      <Paragraph class="text-xl font-semibold">Consideraciones:</Paragraph>
+      <ListUnordered>
+        <ListItemBullet>
+          Alto interés: Si no te es posible pagar en su totalidad la cuenta en
+          un mes, los intereses asociados pueden ser altos.
+        </ListItemBullet>
+        <ListItemBullet>
+          Posibles comisiones: Pueden venir con comisiones anuales o mensuales.
+          Sin embargo, hay productos que te condonan ciertas comisiones si
+          cumples con alguna condición
+        </ListItemBullet>
+        <ListItemBullet>
+          Tentación de gastar de más: El incentivo de cashback puede influenciar
+          a las personas a gastar de mas o fuera de sus posibilidades de pago.
+        </ListItemBullet>
+      </ListUnordered>
+    </Section>
+
+    <!-- Del pasado al presente: Cómo evolucionó el cashback -->
+    <Section>
+      <h2 class="text-3xl font-bold mb-5 text-center text-p-black">
+        Del pasado al presente: Cómo evolucionó el cashback
+      </h2>
+      <picture class="justify-self-center">
+        <Image
+          src={CASHBACK_BEGINNING_IMG}
+          alt="Comienzo del cashback"
+          width="512"
+          height="512"
+        />
+      </picture>
+      <Paragraph>
+        Los programas de cashback datan desde 1986 cuando una tarjeta de
+        Discover fue lanzada nacionamente en Estados Unidos introduciendo este
+        concepto sin anualidad y un limite de crédito mayor al usual.
+      </Paragraph>
+      <Paragraph>
+        Ofrecía cashback en ciertas compras. Desde entonces se ha vuelto una
+        recompensa muy frecuente en las tarjetas de crédito.
+      </Paragraph>
+      <Paragraph>
+        Es importante conocer las condiciones de como redimir el cashback.
+        Algunas instituciones transfieren el dinero directo a tu cuenta o lo
+        abonan a tu tarjeta de crédito. Otros te dan tarjetas de regalo para
+        gastarse en ciertos establecimientos tal como lo hace American Express
+        en muchas de sus promociones.
+      </Paragraph>
+    </Section>
+
+    <!-- Tipos de cashback -->
+    <Section class="gap-11">
+      <h3 class="text-3xl font-bold text-center text-p-black">
+        Tipos de cashback
+      </h3>
+
+      <article class="flex flex-col gap-5">
+        <h4 class="text-2xl font-bold text-p-black">Cashback tradicional</h4>
+        <Paragraph>
+          El cashback es como ese amigo que siempre te devuelve lo que le
+          prestaste... pero en cámara lenta. Con este sistema, <span
+            class="font-semibold"
+            >un porcentaje de lo que gastas (entre 1% y 5%) regresa a tu cuenta,</span
+          > listo para ser usado en futuras compras. Suena genial, ¿verdad? Pero
+          hay truco: para ganar dinero, primero tienes que gastar.
+        </Paragraph>
+
+        <Paragraph>
+          Si usas una tarjeta con 5% de cashback y compras algo por $1,000, te
+          devuelven $50 pesos. Suena bien, ¿no? Ahora, si quieres unos AirPods
+          de $2,999 y tu tarjeta solo ofrece 2% de cashback, tendrías que gastar
+          $149,950 para juntar esa cantidad solo con recompensas. Sí, así de
+          loco.
+        </Paragraph>
+        <Paragraph>
+          Entonces, ¿vale la pena el cashback? Sí, si ya ibas a hacer esas
+          compras de todos modos. Pero si gastas más solo por la recompensa, el
+          negocio lo hace el banco, no tú. La clave está en usarlo
+          estratégicamente y no como excusa para derrochar.
+        </Paragraph>
+      </article>
+
+      <article class="flex flex-col gap-5">
+        <h4 class="text-2xl font-bold text-p-black">
+          Cashback como programa de recompensas o fidelización
+        </h4>
+        <Paragraph>
+          Este tipo de cashback funciona como una estrategia de fidelización
+          bancaria. Funciona con un programa de puntos, para después canjearlo
+          por productos. También puedes obtener descuentos o acumular más puntos
+          en ciertas temporadas especiales o en establecimientos específicos.
+        </Paragraph>
+
+        <Paragraph>
+          Algunas tarjetas de crédito ofrecen más puntos por cada dólar gastado,
+          pero esto varía según la tarjeta y el banco.
+        </Paragraph>
+        <ListUnordered>
+          <ListItemBullet>
+            <InternalAnchor
+              href="https://www.hsbc.com.mx/tarjetas-de-credito/productos/oro/"
+              text="HSBC Gold:"
+            />
+            1.1 puntos por cada dólar gastado.
+          </ListItemBullet>
+          <ListItemBullet class="mt-2">
+            <InternalAnchor
+              href="https://www.hsbc.com.mx/tarjetas-de-credito/productos/platinum/"
+              text="HSBC Platinum"
+            />
+            1.3 puntos por dólar gastado
+          </ListItemBullet>
+        </ListUnordered>
+
+        <Paragraph>
+          Este sistema también lo usan otros bancos con diferentes nombres:
+        </Paragraph>
+        <ListUnordered>
+          <ListItemBullet noDisc>
+            ✔️ American Express → <InternalAnchor
+              href="https://www.americanexpress.com/es-mx/beneficios/recompensas/membership-rewards/"
+              text="puntos Membership Rewards,"
+            />
+          </ListItemBullet>
+          <ListItemBullet class="my-2" noDisc>
+            ✔️ BBVA Bancomer →<InternalAnchor
+              href="https://www.bbva.mx/personas/landings/usa-tus-puntos-bbva.html"
+              text="puntos Bancomer"
+            />
+          </ListItemBullet>
+          <ListItemBullet noDisc>
+            ✔️ Citibanamex → <InternalAnchor
+              href="https://www.banamex.com/premia/index.html"
+              text="puntos premia"
+            />
+          </ListItemBullet>
+        </ListUnordered>
+      </article>
+
+      <article class="flex flex-col gap-5">
+        <h4 class="text-xl font-bold text-p-black">
+          Ejemplo real de Cashback como programa de recompensas.
+        </h4>
+        <Paragraph>
+          HSBC en su programa de fidelización llamado "<InternalAnchor
+            href="https://www.programa-mas.com.mx/#/home"
+            text="Programa más"
+          />", puedes canjear puntos por artículos. Si quieres comprar unos <InternalAnchor
+            href="https://www.programa-mas.com.mx/#/Detalle/MLG75320"
+            text="Audífonos QuietComfort Ultra Negro Bose"
+          /> que cuestan 117,700 puntos.
+        </Paragraph>
+
+        <Paragraph>
+          Con la tarjeta <InternalAnchor
+            href="https://www.hsbc.com.mx/tarjetas-de-credito/productos/clasica/"
+            text="HSBC Clásica,"
+          /> ganas 1 punto por cada dólar gastado. Para canejar el artículo, deberías
+          de gastar $117,700 dólares. Al tipo de cambio de 1 dólar a $20.28 pesos,
+          esto equivale a $2,38 millones de pesos. Toda una fortuna para juntar esos
+          puntos.
+        </Paragraph>
+      </article>
+    </Section>
+
+    <Section class="mb-12">
+      <h5 class="text-2xl text-center font-bold text-p-black">Conclusión</h5>
+
+      <Paragraph>
+        Algunas tarjetas de crédito con cashback en México que te recomendamos
+        revisar son:
+      </Paragraph>
+      <ListUnordered class="flex flex-col gap-2">
+        <ListItemBullet class="text-blue-800">
+          <a target="_blank" href="https://platacard.mx/es/">Plata Card</a>
+        </ListItemBullet>
+        <ListItemBullet class="text-blue-800">
+          <a target="_blank" href="https://www.storicard.com/stori-black"
+            >Stori black</a
+          >
+        </ListItemBullet>
+        <ListItemBullet class="text-blue-800">
+          <a
+            target="_blank"
+            href="https://www.hsbc.com.mx/tarjetas-de-credito/productos/2now/"
+            >2Now</a
+          >
+        </ListItemBullet>
+        <ListItemBullet class="text-blue-800">
+          <a target="_blank" href="https://vexi.mx/vexi-american-express/"
+            >Tarjeta Vexi American Express</a
+          >
+        </ListItemBullet>
+        <ListItemBullet class="text-blue-800">
+          <a target="_blank" href="https://www.klar.mx/platino"
+            >Tarjeta Klar Platino</a
+          >
+        </ListItemBullet>
+        <ListItemBullet class="text-blue-800">
+          <a
+            target="_blank"
+            href="https://web.didiglobal.com/mx/tarjeta-de-credito/"
+            >Didi Card</a
+          >
+        </ListItemBullet>
+        <ListItemBullet class="text-blue-800">
+          <a
+            target="_blank"
+            href="https://www.santander.com.mx/personas/tarjetas-de-credito/likeu.html"
+            >Tarjeta LikeU Santander</a
+          >
+        </ListItemBullet>
+        <ListItemBullet class="text-blue-800">
+          <a
+            target="_blank"
+            href="https://www.banregio.com/personas/tarjetas/mas.php"
+            >Tarjeta Banregio Más
+          </a>
+        </ListItemBullet>
+      </ListUnordered>
+
+      <Paragraph>
+        El cashback es una excelente forma de recuperar dinero en cada compra,
+        pero su verdadero beneficio está en usarlo estratégicamente. Comparar
+        opciones, conocer los términos y aprovechar promociones te permitirá
+        sacarle el máximo provecho y ahorrar sin esfuerzo.
+      </Paragraph>
+
+      <Paragraph>
+        Y si quieres llevar tu control financiero al siguiente nivel, <span
+          class="text-primary font-bold uppercase">Budget Master</span
+        > es tu mejor aliado. Gestiona tus gastos, optimiza tu presupuesto y descubre
+        nuevas formas de hacer que tu dinero rinda más.
+      </Paragraph>
+      <div class="flex justify-center">
+        <AnchorButton
+          text="¡Empezar Ahora!"
+          hrefSrc={BUDGET_MASTER_TRY_APP_ROUTE}
+        />
+      </div>
+    </Section>
+  </main>
+  <Footer />
+</Layout>
