@@ -1,0 +1,19 @@
+---
+export interface Props {
+  href: string;
+  class?: string;
+  isCurrentPath?: boolean;
+}
+
+const { href, isCurrentPath = false, class: cssClass } = Astro.props;
+
+const anchorClasses = [
+  "text-lg text-pretty hover:underline",
+  cssClass,
+  { "text-gray-500": !isCurrentPath },
+];
+---
+
+<a class:list={anchorClasses} href={href}>
+  <slot />
+</a>

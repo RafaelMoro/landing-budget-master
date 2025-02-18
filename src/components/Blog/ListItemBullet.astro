@@ -1,0 +1,12 @@
+---
+export interface Props {
+  noDisc?: boolean;
+  class?: string;
+}
+
+const { class: className, noDisc = false } = Astro.props;
+---
+
+<li class:list={["text-lg", className, { "list-disc": !noDisc }]}>
+  <slot />
+</li>

@@ -1,3 +1,9 @@
+## v1.3.0 (2025-02-18)
+
+### Pull Requests
+[#44](https://github.com/RafaelMoro/landing-budget-master/pull/44) | Add cashback blogpost
+
+
 ## v1.2.1 (2025-02-16)
 
 ### Pull Requests
