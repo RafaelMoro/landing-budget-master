@@ -7,6 +7,7 @@ import {
   BLOG_ROUTE,
   CASHBACK_THUMBNAIL,
   CASHBACK_BEGINNING_IMG,
+  BUDGET_MASTER_TRY_APP_ROUTE,
 } from "@constants";
 import Section from "@components/Blog/Section.astro";
 import Paragraph from "@components/Blog/Paragraph.astro";
@@ -18,6 +19,7 @@ import BreadcrumbAnchor from "@components/Blog/BreadcrumbAnchor.astro";
 import InternalAnchor from "@components/Blog/InternalAnchor.astro";
 import { Image } from "astro:assets";
 import Footer from "@templates/Footer.astro";
+import AnchorButton from "@components/AnchorButton.astro";
 ---
 
 <Layout
@@ -248,19 +250,6 @@ import Footer from "@templates/Footer.astro";
 
     <Section class="mb-12">
       <h5 class="text-2xl text-center font-bold text-p-black">Conclusión</h5>
-      <Paragraph>
-        El cashback es una estrategia inteligente para optimizar el gasto
-        diario, permitiendo recuperar un porcentaje del dinero en compras
-        habituales. Más que un simple beneficio, se ha convertido en una
-        herramienta clave para el ahorro y la fidelización de clientes.
-      </Paragraph>
-      <Paragraph>
-        Sin embargo, su verdadero valor depende del uso estratégico: comparar
-        opciones, conocer las condiciones y aprovechar al máximo las
-        oportunidades disponibles. En un mundo donde cada centavo cuenta, el
-        cashback no solo devuelve dinero, sino que también ofrece la posibilidad
-        de gastar de manera más inteligente.
-      </Paragraph>
 
       <Paragraph>
         Algunas tarjetas de crédito con cashback en México que te recomendamos
@@ -314,6 +303,26 @@ import Footer from "@templates/Footer.astro";
           </a>
         </ListItemBullet>
       </ListUnordered>
+
+      <Paragraph>
+        El cashback es una excelente forma de recuperar dinero en cada compra,
+        pero su verdadero beneficio está en usarlo estratégicamente. Comparar
+        opciones, conocer los términos y aprovechar promociones te permitirá
+        sacarle el máximo provecho y ahorrar sin esfuerzo.
+      </Paragraph>
+
+      <Paragraph>
+        Y si quieres llevar tu control financiero al siguiente nivel, <span
+          class="text-primary font-bold uppercase">Budget Master</span
+        > es tu mejor aliado. Gestiona tus gastos, optimiza tu presupuesto y descubre
+        nuevas formas de hacer que tu dinero rinda más.
+      </Paragraph>
+      <div class="flex justify-center">
+        <AnchorButton
+          text="¡Empezar Ahora!"
+          hrefSrc={BUDGET_MASTER_TRY_APP_ROUTE}
+        />
+      </div>
     </Section>
   </main>
   <Footer />
