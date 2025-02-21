@@ -18,6 +18,8 @@ import Header from "@templates/Header/Header.astro";
 import TableOfContentsMobile from "@components/TableOfContents/TableOfContentsMobile.astro";
 import ListUnordered from "@components/Blog/ListUnordered.astro";
 import ListItemBullet from "@components/Blog/ListItemBullet.astro";
+import TableOfContentsDesktop from "@components/TableOfContents/TableOfContentsDesktop.astro";
+import ContentDesktop from "@components/TableOfContents/ContentDesktop.astro";
 ---
 
 <script is:inline slot="schema" type="application/ld+json">
@@ -75,178 +77,197 @@ import ListItemBullet from "@components/Blog/ListItemBullet.astro";
     </article>
   </div>
 
-  <main
-    class="flex flex-col items-center gap-12 max-w-7xl mx-auto px-3 md:px-0"
-  >
-    <Section class="mt-8 justify-items-center">
-      <h1
-        transition:name="title-alias-card"
-        class="text-3xl font-bold mb-5 text-center text-p-black"
-      >
-        Alias de la Tarjeta: Qué Es, Para Qué Sirve y Cómo Usarlo
-      </h1>
-
-      <TableOfContentsMobile
-        title="Alias de la Tarjeta: Qué Es, Para Qué Sirve y Cómo Usarlo"
-      >
-        <ListUnordered>
-          <ListItemBullet
-            >Beneficios y seguridad al usar un alias en tu tarjeta</ListItemBullet
-          >
-          <ListItemBullet
-            >Ejemplos de alias efectivos y cuáles evitar</ListItemBullet
-          >
-        </ListUnordered>
-      </TableOfContentsMobile>
-
-      <Image
-        src={ALIAS_TARJETA_IMG}
-        transition:name="img-alias-card"
-        alt="Imagen previa del blog de ¿Qué es el alias de la tarjeta?"
-        width="1280"
-        height="853"
+  <div class="grid grid-dt gap-3 relative">
+    <TableOfContentsDesktop>
+      <ContentDesktop
+        text="Beneficios y seguridad al usar un alias en tu tarjeta"
       />
-      <p class="text-lg text-pretty">
-        Se refiere típicamente a un <span class="font-semibold"
-          >sobrenombre o etiqueta que se le da a una tarjeta o cuenta bancaria</span
-        > para identificarla fácilmente y distinguirla de otras. Por ejemplo:
-      </p>
-      <ul class="pl-6 justify-self-start">
-        <li class="list-disc text-lg">Tarjeta para financiamiento</li>
-        <li class="list-disc text-lg">Tarjeta de Meses sin intereses</li>
-        <li class="list-disc text-lg">Cuenta de ahorros.</li>
-        <li class="list-disc text-lg">Tarjeta de crédito principal.</li>
-      </ul>
-      <p class="text-lg text-pretty">
-        Al hacerlo, es más difícil equivocarse o confundirse de tarjeta. Y lo
-        mejor es que no tienes que aprenderte números de tarjeta o los nombres
-        de los productos financieros. <span class="font-semibold"
-          >Solo eliges el nombre de la tarjeta.</span
+      <ContentDesktop text="Ejemplos de alias efectivos y cuáles evitar" />
+    </TableOfContentsDesktop>
+    <main
+      class="flex flex-col items-center gap-12 max-w-7xl mx-auto px-3 md:px-0"
+    >
+      <Section class="mt-8 justify-items-center">
+        <h1
+          transition:name="title-alias-card"
+          class="text-3xl font-bold mb-5 text-center text-p-black"
         >
-      </p>
-    </Section>
+          Alias de la Tarjeta: Qué Es, Para Qué Sirve y Cómo Usarlo
+        </h1>
 
-    <Section>
-      <h2 class="text-2xl font-semibold text-center text-p-black">
-        Beneficios y seguridad al usar un alias en tu tarjeta
-      </h2>
-      <p class="text-lg text-pretty">
-        Es muy útil cuando se tienen muchas tarjetas del mismo banco. También,
-        cuando es el mismo producto financiero o tarjeta, pero se usa para
-        diferentes propósitos como gastos personales, gastos de la empresa,
-        compras financiadas a meses sin intereses, etc.
-      </p>
-      <p class="text-xl text-pretty text-center font-semibold">Puntos clave:</p>
-      <ol class="pl-6 grid grid-cols-1 gap-5">
-        <li class="list-decimal text-lg text-pretty">
-          <span class="font-semibold">Mejora en la seguridad:</span> Usar un alias
-          protege los números de tu tarjeta de ser expuesta reduciendo el riesgo
-          de fraude o uso no autorizado.
-        </li>
-        <li class="list-decimal text-lg text-pretty">
-          <span class="font-semibold">Carteras digitales y tokenización.</span> Muchas
-          carteras digitales y sistemas de pago usan alias como parte de su proceso
-          llamado tokenización.
-          <p class="text-lg text-pretty mt-3">
-            Este proceso, los números de la tarjeta son reemplazados con un
-            alias para ser usado posteriormente en pagos sin ser revelado los
-            detalles sensibles de tu tarjeta.
-          </p>
-        </li>
-        <li class="list-decimal text-lg text-pretty">
-          <span class="font-semibold">Conveniencia:</span> Los alias son más fáciles
-          de recordar para manejar múltiples tarjetas, y como se van usando, se recuerdan
-          más fácilmente los nombres en vez de las terminaciones de las tarjetas.
-        </li>
-        <li class="list-decimal text-lg text-pretty">
-          <span class="font-semibold">Uso en transacciones en línea:</span> Cuando
-          se realizan compras en línea o se configuran pagos recurrentes, los usuarios
-          pueden elegir la opción usualmente de usar un alias en vez de la terminación
-          de tu tarjeta, lo que mejora la seguridad
-        </li>
-      </ol>
-    </Section>
+        <TableOfContentsMobile
+          title="Alias de la Tarjeta: Qué Es, Para Qué Sirve y Cómo Usarlo"
+        >
+          <ListUnordered>
+            <ListItemBullet
+              >Beneficios y seguridad al usar un alias en tu tarjeta</ListItemBullet
+            >
+            <ListItemBullet
+              >Ejemplos de alias efectivos y cuáles evitar</ListItemBullet
+            >
+          </ListUnordered>
+        </TableOfContentsMobile>
 
-    <Section>
-      <Image
-        src={CREDIT_CARDS_IMG}
-        alt="Tarjetas de crédito"
-        width="1280"
-        height="853"
-      />
-      <h3 class="text-2xl font-semibold text-center text-p-black">
-        Ejemplos de alias efectivos y cuáles evitar
-      </h3>
-      <p class="text-lg text-pretty">
-        Elegir el alias puede parecer cosa de nada, pero podría marcar la
-        diferencia entre una gestión financiera organizada y un autentico
-        desastre.
-      </p>
-      <p class="text-lg text-pretty">
-        <span class="font-semibold">El punto es no crear confusión,</span> no quieres
-        pagar la cena con tu pareja con “Tarjeta de desastre” en lugar de la que
-        querías usar en realidad.
-      </p>
-      <p class="text-lg text-pretty">Ejemplos de alias efectivos:</p>
-      <ul class="pl-6">
-        <li class="list-disc text-lg">Crédito compras</li>
-        <li class="list-disc text-lg">Débito personal</li>
-        <li class="list-disc text-lg">Ahorro viajes</li>
-        <li class="list-disc text-lg">Tarjeta negocios</li>
-      </ul>
-    </Section>
-
-    <Section>
-      <h4 class="text-2xl font-semibold text-center text-p-black">
-        Errores comunes al elegir un alias y cómo evitarlos
-      </h4>
-      <p class="text-lg text-pretty">
-        Deben ser alias que <span class="font-semibold"
-          >permitan identificar su propósito</span
-        > evitando errores al pagar con la tarjeta errónea. Evita usar alias como:
-      </p>
-      <ul class="pl-6">
-        <li class="list-disc text-lg">Tarjeta millonaria</li>
-        <li class="list-disc text-lg">Nunca gastar</li>
-        <li class="list-disc text-lg">Tarjeta 1</li>
-      </ul>
-      <p class="text-lg text-pretty">
-        <span class="font-semibold"
-          >Evita nombres genéricos y pocos descriptivos</span
-        > que solo podrían confundirte más. Y por favor, no uses nombres comprometedores
-        como “tarjeta del table” porque no sabes quién podría verlo. ¡Se inteligente
-        y dale un toque de orden a tus finanzas!
-      </p>
-    </Section>
-
-    <Section class="mb-12">
-      <h5 class="text-2xl font-semibold text-center text-p-black">
-        Conclusión
-      </h5>
-      <p class="text-lg text-pretty">Un buen alias te ayudara a:</p>
-      <ul class="pl-6">
-        <li class="list-disc text-lg">Ahorrar dolores de cabeza</li>
-        <li class="list-disc text-lg">Manejar mejor tus finanzas</li>
-        <li class="list-disc text-lg">
-          Evitar momentos incomodos o frustrantes
-        </li>
-        <li class="list-disc text-lg">Proteger información sensible.</li>
-        <li class="list-disc text-lg">
-          Simplificar transacciones manteniendo la seguridad
-        </li>
-      </ul>
-      <p class="text-lg text-pretty">
-        Con ingenio y organización, gestiona tus tarjetas de manera fácil y
-        segura. La mejor forma de organizar tus finanzas es con Budget Master.
-        Comienza tu prueba gratis de 1 mes sin ingresar tus datos bancarios.
-      </p>
-      <div class="flex justify-center">
-        <AnchorButton
-          text="¡Empezar Ahora!"
-          hrefSrc={BUDGET_MASTER_TRY_APP_ROUTE}
+        <Image
+          src={ALIAS_TARJETA_IMG}
+          transition:name="img-alias-card"
+          alt="Imagen previa del blog de ¿Qué es el alias de la tarjeta?"
+          width="1280"
+          height="853"
         />
-      </div>
-    </Section>
-  </main>
+        <p class="text-lg text-pretty">
+          Se refiere típicamente a un <span class="font-semibold"
+            >sobrenombre o etiqueta que se le da a una tarjeta o cuenta bancaria</span
+          > para identificarla fácilmente y distinguirla de otras. Por ejemplo:
+        </p>
+        <ul class="pl-6 justify-self-start">
+          <li class="list-disc text-lg">Tarjeta para financiamiento</li>
+          <li class="list-disc text-lg">Tarjeta de Meses sin intereses</li>
+          <li class="list-disc text-lg">Cuenta de ahorros.</li>
+          <li class="list-disc text-lg">Tarjeta de crédito principal.</li>
+        </ul>
+        <p class="text-lg text-pretty">
+          Al hacerlo, es más difícil equivocarse o confundirse de tarjeta. Y lo
+          mejor es que no tienes que aprenderte números de tarjeta o los nombres
+          de los productos financieros. <span class="font-semibold"
+            >Solo eliges el nombre de la tarjeta.</span
+          >
+        </p>
+      </Section>
+
+      <Section>
+        <h2 class="text-2xl font-semibold text-center text-p-black">
+          Beneficios y seguridad al usar un alias en tu tarjeta
+        </h2>
+        <p class="text-lg text-pretty">
+          Es muy útil cuando se tienen muchas tarjetas del mismo banco. También,
+          cuando es el mismo producto financiero o tarjeta, pero se usa para
+          diferentes propósitos como gastos personales, gastos de la empresa,
+          compras financiadas a meses sin intereses, etc.
+        </p>
+        <p class="text-xl text-pretty text-center font-semibold">
+          Puntos clave:
+        </p>
+        <ol class="pl-6 grid grid-cols-1 gap-5">
+          <li class="list-decimal text-lg text-pretty">
+            <span class="font-semibold">Mejora en la seguridad:</span> Usar un alias
+            protege los números de tu tarjeta de ser expuesta reduciendo el riesgo
+            de fraude o uso no autorizado.
+          </li>
+          <li class="list-decimal text-lg text-pretty">
+            <span class="font-semibold">Carteras digitales y tokenización.</span
+            > Muchas carteras digitales y sistemas de pago usan alias como parte
+            de su proceso llamado tokenización.
+            <p class="text-lg text-pretty mt-3">
+              Este proceso, los números de la tarjeta son reemplazados con un
+              alias para ser usado posteriormente en pagos sin ser revelado los
+              detalles sensibles de tu tarjeta.
+            </p>
+          </li>
+          <li class="list-decimal text-lg text-pretty">
+            <span class="font-semibold">Conveniencia:</span> Los alias son más fáciles
+            de recordar para manejar múltiples tarjetas, y como se van usando, se
+            recuerdan más fácilmente los nombres en vez de las terminaciones de las
+            tarjetas.
+          </li>
+          <li class="list-decimal text-lg text-pretty">
+            <span class="font-semibold">Uso en transacciones en línea:</span> Cuando
+            se realizan compras en línea o se configuran pagos recurrentes, los usuarios
+            pueden elegir la opción usualmente de usar un alias en vez de la terminación
+            de tu tarjeta, lo que mejora la seguridad
+          </li>
+        </ol>
+      </Section>
+
+      <Section>
+        <Image
+          src={CREDIT_CARDS_IMG}
+          alt="Tarjetas de crédito"
+          width="1280"
+          height="853"
+        />
+        <h3 class="text-2xl font-semibold text-center text-p-black">
+          Ejemplos de alias efectivos y cuáles evitar
+        </h3>
+        <p class="text-lg text-pretty">
+          Elegir el alias puede parecer cosa de nada, pero podría marcar la
+          diferencia entre una gestión financiera organizada y un autentico
+          desastre.
+        </p>
+        <p class="text-lg text-pretty">
+          <span class="font-semibold">El punto es no crear confusión,</span> no quieres
+          pagar la cena con tu pareja con “Tarjeta de desastre” en lugar de la que
+          querías usar en realidad.
+        </p>
+        <p class="text-lg text-pretty">Ejemplos de alias efectivos:</p>
+        <ul class="pl-6">
+          <li class="list-disc text-lg">Crédito compras</li>
+          <li class="list-disc text-lg">Débito personal</li>
+          <li class="list-disc text-lg">Ahorro viajes</li>
+          <li class="list-disc text-lg">Tarjeta negocios</li>
+        </ul>
+      </Section>
+
+      <Section>
+        <h4 class="text-2xl font-semibold text-center text-p-black">
+          Errores comunes al elegir un alias y cómo evitarlos
+        </h4>
+        <p class="text-lg text-pretty">
+          Deben ser alias que <span class="font-semibold"
+            >permitan identificar su propósito</span
+          > evitando errores al pagar con la tarjeta errónea. Evita usar alias como:
+        </p>
+        <ul class="pl-6">
+          <li class="list-disc text-lg">Tarjeta millonaria</li>
+          <li class="list-disc text-lg">Nunca gastar</li>
+          <li class="list-disc text-lg">Tarjeta 1</li>
+        </ul>
+        <p class="text-lg text-pretty">
+          <span class="font-semibold"
+            >Evita nombres genéricos y pocos descriptivos</span
+          > que solo podrían confundirte más. Y por favor, no uses nombres comprometedores
+          como “tarjeta del table” porque no sabes quién podría verlo. ¡Se inteligente
+          y dale un toque de orden a tus finanzas!
+        </p>
+      </Section>
+
+      <Section class="mb-12">
+        <h5 class="text-2xl font-semibold text-center text-p-black">
+          Conclusión
+        </h5>
+        <p class="text-lg text-pretty">Un buen alias te ayudara a:</p>
+        <ul class="pl-6">
+          <li class="list-disc text-lg">Ahorrar dolores de cabeza</li>
+          <li class="list-disc text-lg">Manejar mejor tus finanzas</li>
+          <li class="list-disc text-lg">
+            Evitar momentos incomodos o frustrantes
+          </li>
+          <li class="list-disc text-lg">Proteger información sensible.</li>
+          <li class="list-disc text-lg">
+            Simplificar transacciones manteniendo la seguridad
+          </li>
+        </ul>
+        <p class="text-lg text-pretty">
+          Con ingenio y organización, gestiona tus tarjetas de manera fácil y
+          segura. La mejor forma de organizar tus finanzas es con Budget Master.
+          Comienza tu prueba gratis de 1 mes sin ingresar tus datos bancarios.
+        </p>
+        <div class="flex justify-center">
+          <AnchorButton
+            text="¡Empezar Ahora!"
+            hrefSrc={BUDGET_MASTER_TRY_APP_ROUTE}
+          />
+        </div>
+      </Section>
+    </main>
+  </div>
   <Footer />
 </Layout>
+
+<style>
+  @media (min-width: 1024px) {
+    .grid-dt {
+      grid-template-columns: 20% 80%;
+    }
+  }
+</style>
