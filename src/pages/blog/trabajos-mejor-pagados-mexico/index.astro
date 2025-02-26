@@ -20,6 +20,7 @@ import ListUnordered from "@components/Blog/ListUnordered.astro";
 import ListItemBullet from "@components/Blog/ListItemBullet.astro";
 import MarketTendencyTable from "./MarketTendencyTable.astro";
 import AnchorButton from "@components/AnchorButton.astro";
+import CheckIcon from "@components/icons/CheckIcon.astro";
 ---
 
 <Layout
@@ -180,9 +181,12 @@ import AnchorButton from "@components/AnchorButton.astro";
             Principales aptitudes
           </h5>
           <ListUnordered>
-            <ListItemBullet noDisc
-              >✔️ Gestión de relaciones con clientes: Construir y mantener
-              relaciones sólidas con cuentas estratégicas.</ListItemBullet
+            <ListItemBullet class="inline-flex gap-2" noDisc>
+              <span class="text-secondary-analogous mt-1"
+                ><CheckIcon strokeWidth="6" />
+              </span>
+              Gestión de relaciones con clientes: Construir y mantener relaciones
+              sólidas con cuentas estratégicas.</ListItemBullet
             >
             <ListItemBullet noDisc
               >✔️ Negociación y cierre de ventas: Manejar acuerdos comerciales y
