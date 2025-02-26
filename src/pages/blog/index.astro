@@ -9,6 +9,8 @@ import {
   CONTROL_EXCEL_IMG,
   BLOG_CASHBACK_ROUTE,
   CASHBACK_THUMBNAIL,
+  WELL_PAID_JOBS_IMG,
+  BLOG_BEST_JOBS_PAID_MEXICO_ROUTE,
 } from "@constants";
 import Layout from "@layouts/Layout.astro";
 import Header from "@templates/Header/Header.astro";
@@ -109,6 +111,31 @@ import { Image } from "astro:assets";
         cada compra. Exploramos sus beneficios, tipos y diferencias entre el
         cashback tradicional y los programas de recompensas, con ejemplos claros
         para que entiendas su funcionamiento.
+      </p>
+    </article>
+
+    <article class="flex flex-col gap-4 max-w-[300px]">
+      <div class="min-w-[300px] min-h-[200px]">
+        <Image
+          src={WELL_PAID_JOBS_IMG}
+          transition:name="img-best-well-paid-jobs"
+          alt="Imagen previa del blog de Trabajos Mejor Pagados en México: ¿Cuáles Son y Cómo Conseguirlos?"
+          width="300"
+          height="300"
+        />
+      </div>
+      <a
+        href={BLOG_BEST_JOBS_PAID_MEXICO_ROUTE}
+        title="Ir a blog: Trabajos Mejor Pagados en México: ¿Cuáles Son y Cómo Conseguirlos?"
+        transition:name="title-best-well-paid-jobs"
+        class="text-xl font-semibold transition-colors duration-300 hover:text-complementary"
+      >
+        Trabajos Mejor Pagados en México: ¿Cuáles Son y Cómo Conseguirlos?
+      </a>
+      <p class="text-gray-600 text-lg text-pretty">
+        Los 10 trabajos mejor pagados en México en 2025 y sus responsabilidades
+        de cada puesto, las habilidades clave y los requisitos de estudios o
+        certificaciones necesarias para acceder a ellos.
       </p>
     </article>
   </section>
