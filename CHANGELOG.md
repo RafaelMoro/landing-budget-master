@@ -1,3 +1,9 @@
+## v1.4.1 (2025-02-26)
+
+### Pull Requests
+[#48](https://github.com/RafaelMoro/landing-budget-master/pull/48) | Use bun instead of pnpm
+
+
 ## v1.4.0 (2025-02-26)
 
 ### Pull Requests
