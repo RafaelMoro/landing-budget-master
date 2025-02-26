@@ -123,41 +123,15 @@ import MarketTendencyTable from "./MarketTendencyTable.astro";
           >
         </ListUnordered>
 
-        <h5 class="text-xl font-bold text-p-black list-decimal">
-          Tendencias del mercado laboral
-        </h5>
-        <ListUnordered>
-          <ListItemBullet
-            >Industrias con mayor demanda: Servicios y consultoría de TI,
-            manufactura química, telecomunicaciones.</ListItemBullet
-          >
-          <ListItemBullet
-            >• Ciudades con más contrataciones: Ciudad de México, Monterrey,
-            Guadalajara, León.</ListItemBullet
-          >
-          <ListItemBullet>Promedio de experiencia: 5 a 6 años.</ListItemBullet>
-          <ListItemBullet
-            >Puestos previos comunes: Ejecutivo de cuentas, vendedor, director
-            de ventas.</ListItemBullet
-          >
-          <ListItemBullet
-            >Opciones de trabajo flexible: 27-37% de teletrabajo o esquema
-            híbrido.</ListItemBullet
-          >
-          <ListItemBullet
-            >Distribución por género: Entre 37%-45% mujeres y 55%-64% hombres.</ListItemBullet
-          >
-        </ListUnordered>
+        <MarketTendencyTable
+          industries="Servicios y consultoría de TI, manufactura química, telecomunicaciones."
+          cities="Ciudad de México, Monterrey, Guadalajara, León."
+          expAverage="5 a 6 años."
+          previousPositions="Ejecutivo de cuentas, vendedor, director de ventas."
+          flexibleWorkPorcentage="27-37% de teletrabajo o esquema híbrido."
+          genreDistribution="Entre 37%-45% mujeres y 55%-64% hombres."
+        />
       </article>
-
-      <MarketTendencyTable
-        industries="Servicios y consultoría de TI, manufactura química, telecomunicaciones."
-        cities="Ciudad de México, Monterrey, Guadalajara, León."
-        expAverage="5 a 6 años."
-        previousPositions="Ejecutivo de cuentas, vendedor, director de ventas."
-        flexibleWorkPorcentage="27-37% de teletrabajo o esquema híbrido."
-        genreDistribution="Entre 37%-45% mujeres y 55%-64% hombres."
-      />
     </Section>
   </main>
   <Footer />
