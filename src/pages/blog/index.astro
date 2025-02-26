@@ -9,6 +9,8 @@ import {
   CONTROL_EXCEL_IMG,
   BLOG_CASHBACK_ROUTE,
   CASHBACK_THUMBNAIL,
+  BEST_FINANCE_APPS_IMG,
+  BLOG_BEST_APPS_FINANCIES,
 } from "@constants";
 import Layout from "@layouts/Layout.astro";
 import Header from "@templates/Header/Header.astro";
@@ -109,6 +111,31 @@ import { Image } from "astro:assets";
         cada compra. Exploramos sus beneficios, tipos y diferencias entre el
         cashback tradicional y los programas de recompensas, con ejemplos claros
         para que entiendas su funcionamiento.
+      </p>
+    </article>
+
+    <article class="flex flex-col gap-4 max-w-[300px]">
+      <div class="min-w-[300px] min-h-[200px]">
+        <Image
+          src={BEST_FINANCE_APPS_IMG}
+          transition:name="img-cashback"
+          alt="Imagen previa del blog de Las mejores apps de finanzas personales para gestionar tu dinero"
+          width="300"
+          height="300"
+        />
+      </div>
+      <a
+        href={BLOG_BEST_APPS_FINANCIES}
+        title="Ir a blog: Las mejores apps de finanzas personales para gestionar tu dinero"
+        transition:name="title-cashback"
+        class="text-xl font-semibold transition-colors duration-300 hover:text-complementary"
+      >
+        Las mejores apps de finanzas personales para gestionar tu dinero
+      </a>
+      <p class="text-gray-600 text-lg text-pretty">
+        Descubre las mejores apps de finanzas personales para controlar tus
+        gastos, gestionar tu presupuesto y ahorrar más. ¡Elige la ideal para ti
+        y usala!"
       </p>
     </article>
   </section>
