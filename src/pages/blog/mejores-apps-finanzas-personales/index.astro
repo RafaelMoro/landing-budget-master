@@ -1,0 +1,33 @@
+---
+import Layout from "@layouts/Layout.astro";
+import {
+  BLOG_BEST_APPS_FINANCIES_COMPLETE_ROUTE,
+  BLOG_BEST_APPS_FINANCIES,
+  HOME_ROUTE,
+  BLOG_ROUTE,
+} from "@constants";
+import BlogHeader from "@components/Blog/BlogHeader.astro";
+import BreadcrumbsBox from "@components/Blog/BreadcrumbsBox.astro";
+import BreadcrumbAnchor from "@components/Blog/BreadcrumbAnchor.astro";
+---
+
+<Layout
+  title="Mejores apps de finanzas personales para controlar tus gastos"
+  metaDescription="Descubre las mejores apps de finanzas personales para controlar tus gastos, gestionar tu presupuesto y ahorrar más. ¡Elige la ideal para ti y usala!"
+  ogTitle="Las mejores apps de finanzas personales para gestionar tu dinero | Blogs de Budget Master"
+  ogURL={BLOG_BEST_APPS_FINANCIES_COMPLETE_ROUTE}
+  ogDescription="Descubre las mejores apps de finanzas personales para controlar tus gastos, gestionar tu presupuesto y ahorrar más. ¡Elige la ideal para ti y usala!"
+  hrefCanonical={BLOG_BEST_APPS_FINANCIES_COMPLETE_ROUTE}
+>
+  <BlogHeader />
+  <BreadcrumbsBox>
+    <BreadcrumbAnchor href={HOME_ROUTE}>Inicio</BreadcrumbAnchor>
+    <span>></span>
+    <BreadcrumbAnchor href={BLOG_ROUTE}>Blog</BreadcrumbAnchor>
+    <span>></span>
+    <BreadcrumbAnchor isCurrentPath href={BLOG_BEST_APPS_FINANCIES}
+      >Las mejores apps de finanzas personales <br class="md:hidden" /> para gestionar
+      tu dinero</BreadcrumbAnchor
+    >
+  </BreadcrumbsBox>
+</Layout>
