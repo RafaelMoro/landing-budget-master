@@ -5,10 +5,16 @@ import {
   BLOG_BEST_JOBS_PAID_MEXICO_ROUTE,
   HOME_ROUTE,
   BLOG_ROUTE,
+  WELL_PAID_JOBS_IMG,
 } from "@constants";
 import BlogHeader from "@components/Blog/BlogHeader.astro";
 import BreadcrumbsBox from "@components/Blog/BreadcrumbsBox.astro";
 import BreadcrumbAnchor from "@components/Blog/BreadcrumbAnchor.astro";
+import Section from "@components/Blog/Section.astro";
+import { Image } from "astro:assets";
+import Paragraph from "@components/Blog/Paragraph.astro";
+import InternalAnchor from "@components/Blog/InternalAnchor.astro";
+import Footer from "@templates/Footer.astro";
 ---
 
 <Layout
@@ -29,4 +35,50 @@ import BreadcrumbAnchor from "@components/Blog/BreadcrumbAnchor.astro";
       >Trabajos Mejor Pagados en México</BreadcrumbAnchor
     >
   </BreadcrumbsBox>
+
+  <main
+    class="flex flex-col items-center gap-16 max-w-7xl mx-auto px-3 md:px-0"
+  >
+    <!-- Trabajos Bien Pagados en México: ¿Cuáles Son y Cómo Conseguirlos? -->
+    <Section class="mt-8">
+      <h1
+        transition:name="title-best-well-paid-jobs"
+        class="text-4xl font-bold mb-5 text-center text-p-black"
+      >
+        Trabajos Bien Pagados en México: ¿Cuáles Son y Cómo Conseguirlos?
+      </h1>
+      <Image
+        src={WELL_PAID_JOBS_IMG}
+        transition:name="img-best-well-paid-jobs"
+        alt="Imagen previa del blog: Trabajos Mejor Pagados en México"
+        width="1280"
+        height="853"
+      />
+      <Paragraph>
+        Si algo es cierto en el mundo laboral, es que no se trata solo de
+        trabajar duro, sino de trabajar inteligente. Y en México, como en
+        cualquier otro país, hay empleos que pagan mejor que otros. Pero,
+        ¿cuáles son? Y lo más importante, ¿cómo puedes acceder a ellos sin
+        perder años en el intento?
+      </Paragraph>
+      <Paragraph>
+        Según datos de LinkedIn, las aptitudes demandadas han cambiado un 25%
+        desde 2015 y seguirán evolucionando hasta un 65% para 2030. De acuerdo
+        al <InternalAnchor
+          href="https://www3.weforum.org/docs/WEF_Future_of_Jobs_2023.pdf"
+          text="Foro Económico Mundial"
+        /> de un reporte de los trabajos del futuro del 2023 y la tendencia actual
+        de las empresas globales es adoptar en sus procesos nuevas formas de análisis
+        de datos e inteligencia artificial.
+      </Paragraph>
+
+      <Paragraph>
+        Te recomendamos mantenerte actualizado de fuentes como LinkedIn, Indeed,
+        Instituto Mexicano para la competitividad (IMCO) que ofrecen datos
+        actualizados sobre tendencias en carreras, empelos en demanda y salarios
+        en México.
+      </Paragraph>
+    </Section>
+  </main>
+  <Footer />
 </Layout>
