@@ -15,6 +15,8 @@ import { Image } from "astro:assets";
 import Paragraph from "@components/Blog/Paragraph.astro";
 import InternalAnchor from "@components/Blog/InternalAnchor.astro";
 import Footer from "@templates/Footer.astro";
+import ListUnordered from "@components/Blog/ListUnordered.astro";
+import ListItemBullet from "@components/Blog/ListItemBullet.astro";
 ---
 
 <Layout
@@ -78,6 +80,74 @@ import Footer from "@templates/Footer.astro";
         actualizados sobre tendencias en carreras, empelos en demanda y salarios
         en México.
       </Paragraph>
+    </Section>
+
+    <Section>
+      <h2 class="text-3xl font-bold mb-5 text-center text-p-black">
+        Los 10 Trabajos Mejor Pagados en México en 2025
+      </h2>
+
+      <article class="flex flex-col gap-5">
+        <h4 class="text-2xl font-bold text-p-black list-decimal">
+          Director de cuentas clave
+        </h4>
+        <Paragraph>
+          El Director de Cuentas Clave es responsable de gestionar las
+          relaciones con los clientes más importantes de la empresa, asegurando
+          su satisfacción, fidelización y crecimiento dentro del negocio. Su
+          función principal es construir y mantener una relación sólida con
+          estas cuentas estratégicas, maximizando oportunidades de negocio y
+          optimizando la gestión de ventas.
+        </Paragraph>
+
+        <h5 class="text-xl font-bold text-p-black list-decimal">
+          Principales aptitudes
+        </h5>
+        <ListUnordered>
+          <ListItemBullet noDisc
+            >✔️ Gestión de relaciones con clientes: Construir y mantener
+            relaciones sólidas con cuentas estratégicas.</ListItemBullet
+          >
+          <ListItemBullet noDisc
+            >✔️ Negociación y cierre de ventas: Manejar acuerdos comerciales y
+            asegurar contratos beneficiosos.</ListItemBullet
+          >
+          <ListItemBullet noDisc
+            >✔️ Desarrollo de cuentas clave: Identificar oportunidades de
+            crecimiento dentro de cuentas existentes.</ListItemBullet
+          >
+          <ListItemBullet noDisc
+            >✔️ Estrategia comercial: Diseñar y ejecutar planes para maximizar
+            ingresos y retención..</ListItemBullet
+          >
+        </ListUnordered>
+
+        <h5 class="text-xl font-bold text-p-black list-decimal">
+          Tendencias del mercado laboral
+        </h5>
+        <ListUnordered>
+          <ListItemBullet
+            >Industrias con mayor demanda: Servicios y consultoría de TI,
+            manufactura química, telecomunicaciones.</ListItemBullet
+          >
+          <ListItemBullet
+            >• Ciudades con más contrataciones: Ciudad de México, Monterrey,
+            Guadalajara, León.</ListItemBullet
+          >
+          <ListItemBullet>Promedio de experiencia: 5 a 6 años.</ListItemBullet>
+          <ListItemBullet
+            >Puestos previos comunes: Ejecutivo de cuentas, vendedor, director
+            de ventas.</ListItemBullet
+          >
+          <ListItemBullet
+            >Opciones de trabajo flexible: 27-37% de teletrabajo o esquema
+            híbrido.</ListItemBullet
+          >
+          <ListItemBullet
+            >Distribución por género: Entre 37%-45% mujeres y 55%-64% hombres.</ListItemBullet
+          >
+        </ListUnordered>
+      </article>
     </Section>
   </main>
   <Footer />
