@@ -1,0 +1,32 @@
+---
+import Layout from "@layouts/Layout.astro";
+import {
+  BLOG_BEST_JOBS_PAID_MEXICO_COMPLETE_ROUTE,
+  BLOG_BEST_JOBS_PAID_MEXICO_ROUTE,
+  HOME_ROUTE,
+  BLOG_ROUTE,
+} from "@constants";
+import BlogHeader from "@components/Blog/BlogHeader.astro";
+import BreadcrumbsBox from "@components/Blog/BreadcrumbsBox.astro";
+import BreadcrumbAnchor from "@components/Blog/BreadcrumbAnchor.astro";
+---
+
+<Layout
+  title="Trabajos Bien Pagados en México: ¿Cuáles Son y Cómo Conseguirlos?"
+  metaDescription="Descubre los 10 trabajos bien pagados en México y encuentra opciones de oficina, creativas o diferentes con altos sueldos. ¡Conoce cuál es ideal para ti!"
+  ogTitle="Trabajos Bien Pagados en México: ¿Cuáles Son y Cómo Conseguirlos? | Blogs de Budget Master"
+  ogURL={BLOG_BEST_JOBS_PAID_MEXICO_COMPLETE_ROUTE}
+  ogDescription="Descubre los 10 trabajos bien pagados en México y encuentra opciones de oficina, creativas o diferentes con altos sueldos. ¡Conoce cuál es ideal para ti!"
+  hrefCanonical={BLOG_BEST_JOBS_PAID_MEXICO_COMPLETE_ROUTE}
+>
+  <BlogHeader />
+  <BreadcrumbsBox>
+    <BreadcrumbAnchor href={HOME_ROUTE}>Inicio</BreadcrumbAnchor>
+    <span>></span>
+    <BreadcrumbAnchor href={BLOG_ROUTE}>Blog</BreadcrumbAnchor>
+    <span>></span>
+    <BreadcrumbAnchor isCurrentPath href={BLOG_BEST_JOBS_PAID_MEXICO_ROUTE}
+      >Trabajos Mejor Pagados en México</BreadcrumbAnchor
+    >
+  </BreadcrumbsBox>
+</Layout>
