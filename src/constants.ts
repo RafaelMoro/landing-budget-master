@@ -15,6 +15,7 @@ export const ALIAS_TARJETA_IMG = '/img/blog/alias-tarjeta.webp'
 export const CREDIT_CARDS_IMG = '/img/blog/credit-cards.webp'
 export const CASHBACK_THUMBNAIL = '/img/blog/cashback-thumbnail.webp'
 export const CASHBACK_BEGINNING_IMG = '/img/blog/beginning-cashback.webp'
+export const BEST_FINANCE_APPS_IMG = '/img/blog/best-finances-apps-thumbnail.webp'
 
 export const CONTROL_EXCEL_IMG = '/img/blog/control-excel.webp'
 export const HOW_OBTAIN_COPY_IMG = '/img/blog/how-obtain-copy-sheet.webp'
@@ -27,9 +28,11 @@ export const BLOG_ROUTE = '/blog'
 export const BLOG_ALIAS_CARD_ARTICLE_ROUTE = '/blog/alias-tarjeta-significado'
 export const BLOG_CONTROL_EXCEL_ROUTE = '/blog/control-gastos-excel'
 export const BLOG_CASHBACK_ROUTE = '/blog/que-es-cashback'
+export const BLOG_BEST_APPS_FINANCIES = '/blog/mejores-apps-finanzas-personales'
 
 // Complete routes
 export const COMPLETE_BLOG_ROUTE = `${BUDGET_MASTER_LANDING_URL}${BLOG_ROUTE}`
 export const BLOG_ALIAS_CARD_ART_COMPLETE_ROUTE = `${BUDGET_MASTER_LANDING_URL}${BLOG_ALIAS_CARD_ARTICLE_ROUTE}`
 export const BLOG_CONTROL_EXCEL_COMPLETE_ROUTE = `${BUDGET_MASTER_LANDING_URL}${BLOG_CONTROL_EXCEL_ROUTE}`
 export const BLOG_CASHBACK_COMPLETE_ROUTE = `${BUDGET_MASTER_LANDING_URL}${BLOG_CASHBACK_ROUTE}`
+export const BLOG_BEST_APPS_FINANCIES_COMPLETE_ROUTE = `${BUDGET_MASTER_LANDING_URL}${BLOG_BEST_APPS_FINANCIES}`
