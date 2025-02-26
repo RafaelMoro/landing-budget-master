@@ -1,3 +1,9 @@
+## v1.4.0 (2025-02-26)
+
+### Pull Requests
+[#46](https://github.com/RafaelMoro/landing-budget-master/pull/46) | Add best jobs mexico and add flowbite
+
+
 ## v1.3.0 (2025-02-18)
 
 ### Pull Requests
