@@ -21,15 +21,18 @@ export const HOW_OBTAIN_COPY_IMG = '/img/blog/how-obtain-copy-sheet.webp'
 export const MONTHLY_BUDGET_TEMPLATE_IMG = '/img/blog/monthy-budget-template.webp'
 export const TWO_WEEK_BUDGET_TEMPLATE_IMG = '/img/blog/two-week-budget-template.webp'
 export const BUDGET_70_20_10_TEMPLATE_IMG = '/img/blog/budget-70-20-10-template.webp'
+export const WELL_PAID_JOBS_IMG = '/img/blog/best-jobs-thumbnail.webp'
 
 // Blog
 export const BLOG_ROUTE = '/blog'
 export const BLOG_ALIAS_CARD_ARTICLE_ROUTE = '/blog/alias-tarjeta-significado'
 export const BLOG_CONTROL_EXCEL_ROUTE = '/blog/control-gastos-excel'
 export const BLOG_CASHBACK_ROUTE = '/blog/que-es-cashback'
+export const BLOG_BEST_JOBS_PAID_MEXICO_ROUTE = '/blog/trabajos-mejor-pagados-mexico'
 
 // Complete routes
 export const COMPLETE_BLOG_ROUTE = `${BUDGET_MASTER_LANDING_URL}${BLOG_ROUTE}`
 export const BLOG_ALIAS_CARD_ART_COMPLETE_ROUTE = `${BUDGET_MASTER_LANDING_URL}${BLOG_ALIAS_CARD_ARTICLE_ROUTE}`
 export const BLOG_CONTROL_EXCEL_COMPLETE_ROUTE = `${BUDGET_MASTER_LANDING_URL}${BLOG_CONTROL_EXCEL_ROUTE}`
 export const BLOG_CASHBACK_COMPLETE_ROUTE = `${BUDGET_MASTER_LANDING_URL}${BLOG_CASHBACK_ROUTE}`
+export const BLOG_BEST_JOBS_PAID_MEXICO_COMPLETE_ROUTE = `${BUDGET_MASTER_LANDING_URL}${BLOG_BEST_JOBS_PAID_MEXICO_ROUTE}`

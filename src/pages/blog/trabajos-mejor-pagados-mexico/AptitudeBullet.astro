@@ -1,0 +1,16 @@
+---
+import ListItemBullet from "@components/Blog/ListItemBullet.astro";
+import CheckIcon from "@components/icons/CheckIcon.astro";
+
+export interface Props {
+  text: string;
+}
+const { text } = Astro.props;
+---
+
+<ListItemBullet class="inline-flex gap-2" noDisc>
+  <span class="text-secondary-analogous mt-1"
+    ><CheckIcon strokeWidth="6" />
+  </span>
+  {text}
+</ListItemBullet>
