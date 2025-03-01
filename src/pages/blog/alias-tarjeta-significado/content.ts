@@ -28,6 +28,6 @@ export const tableContentsBasic: BasicTableContents[] = [
 export const extendedTableContents: ExtendedTableContents[] = tableContentsBasic.map(
   (content) => ({
     ...content,
-    href: `${BLOG_ALIAS_CARD_ARTICLE_ROUTE}#${content.anchorId}`,
+    href: `${BLOG_ALIAS_CARD_ARTICLE_ROUTE}#${content.contentId}`,
   })
 );
