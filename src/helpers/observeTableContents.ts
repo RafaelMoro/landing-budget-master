@@ -27,8 +27,10 @@ export function observeTableContents({ elements, tableContents }: ObserveElement
     if (!content) return
     const anchor = document.querySelector(`#${content.anchorId}`) as HTMLAnchorElement;
     const inactiveAnchors = contentsNotIntersecting.map((content) => document.querySelector(`#${content.anchorId}`) as HTMLAnchorElement);
-    inactiveAnchors.forEach((anchor) => anchor.classList.remove("text-blue-600"));
-    anchor.classList.add("text-blue-600");
+    inactiveAnchors.forEach((anchor) => {
+      anchor.classList.remove("text-blue-800")
+    });
+    anchor.classList.add("text-blue-800");
   }
 
   const observer = new IntersectionObserver(
