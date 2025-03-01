@@ -77,16 +77,8 @@ import ContentDesktop from "@components/TableOfContents/ContentDesktop.astro";
     </article>
   </div>
 
-  <div class="grid grid-dt gap-3 relative">
-    <TableOfContentsDesktop>
-      <ContentDesktop
-        text="Beneficios y seguridad al usar un alias en tu tarjeta"
-      />
-      <ContentDesktop text="Ejemplos de alias efectivos y cuáles evitar" />
-    </TableOfContentsDesktop>
-    <main
-      class="flex flex-col items-center gap-12 max-w-7xl mx-auto px-3 md:px-0 max-h-dvh overflow-y-auto"
-    >
+  <div class="flex w-full justify-center">
+    <main class="flex flex-col items-center gap-12 max-w-2xl p-9">
       <Section class="mt-8 justify-items-center">
         <h1
           transition:name="title-alias-card"
@@ -260,14 +252,12 @@ import ContentDesktop from "@components/TableOfContents/ContentDesktop.astro";
         </div>
       </Section>
     </main>
+    <TableOfContentsDesktop>
+      <ContentDesktop
+        text="Beneficios y seguridad al usar un alias en tu tarjeta"
+      />
+      <ContentDesktop text="Ejemplos de alias efectivos y cuáles evitar" />
+    </TableOfContentsDesktop>
   </div>
   <Footer />
 </Layout>
-
-<style>
-  @media (min-width: 1024px) {
-    .grid-dt {
-      grid-template-columns: 20% 80%;
-    }
-  }
-</style>
