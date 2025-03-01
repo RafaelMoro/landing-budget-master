@@ -11,10 +11,7 @@ import {
   BUDGET_MASTER_TRY_APP_ROUTE,
   HOME_ROUTE,
 } from "@constants";
-import {
-  type BasicTableContents,
-  type ExtendedTableContents,
-} from "@interface";
+import { extendedTableContents } from "./content";
 import Section from "@components/Blog/Section.astro";
 import Layout from "@layouts/Layout.astro";
 import Footer from "@templates/Footer.astro";
@@ -25,35 +22,6 @@ import ListItemBullet from "@components/Blog/ListItemBullet.astro";
 import TableOfContentsDesktop from "@components/TableOfContents/TableOfContentsDesktop.astro";
 import ContentDesktop from "@components/TableOfContents/ContentDesktop.astro";
 
-const tableContentsBasic: BasicTableContents[] = [
-  {
-    contentId: "card-alias",
-    anchorId: "title-card-alias",
-    text: "Alias de la Tarjeta: Qué Es, Para Qué Sirve y Cómo Usarlo",
-  },
-  {
-    contentId: "security-benefits",
-    anchorId: "title-security-benefits",
-    text: "Beneficios y seguridad al usar un alias en tu tarjeta",
-  },
-  {
-    contentId: "alias-examples",
-    anchorId: "title-alias-examples",
-    text: "Ejemplos de alias efectivos y cuáles evitar",
-  },
-  {
-    contentId: "common-errors",
-    anchorId: "title-common-errors",
-    text: "Errores comunes al elegir un alias y cómo evitarlos",
-  },
-  { contentId: "conclusion", anchorId: "title-conclusion", text: "Conclusión" },
-];
-const extendedTableContents: ExtendedTableContents[] = tableContentsBasic.map(
-  (content) => ({
-    ...content,
-    href: `${BLOG_ALIAS_CARD_ARTICLE_ROUTE}#${content.anchorId}`,
-  })
-);
 const [cardAlias, securityBenefits, aliasExamples, commonErrors, conclusion] =
   extendedTableContents;
 ---
@@ -115,7 +83,10 @@ const [cardAlias, securityBenefits, aliasExamples, commonErrors, conclusion] =
 
   <div class="flex w-full justify-center">
     <main class="flex flex-col items-center gap-12 max-w-2xl p-9">
-      <Section id={cardAlias.contentId} class="mt-8 justify-items-center">
+      <Section
+        id={cardAlias.contentId}
+        class="mt-8 justify-items-center content"
+      >
         <h1
           transition:name="title-alias-card"
           class="text-3xl font-bold mb-5 text-center text-p-black"
@@ -163,7 +134,7 @@ const [cardAlias, securityBenefits, aliasExamples, commonErrors, conclusion] =
         </p>
       </Section>
 
-      <Section id={securityBenefits.contentId}>
+      <Section id={securityBenefits.contentId} class="content">
         <h2 class="text-2xl font-semibold text-center text-p-black">
           Beneficios y seguridad al usar un alias en tu tarjeta
         </h2>
@@ -207,7 +178,7 @@ const [cardAlias, securityBenefits, aliasExamples, commonErrors, conclusion] =
         </ol>
       </Section>
 
-      <Section id={aliasExamples.contentId}>
+      <Section id={aliasExamples.contentId} class="content">
         <Image
           src={CREDIT_CARDS_IMG}
           alt="Tarjetas de crédito"
@@ -236,7 +207,7 @@ const [cardAlias, securityBenefits, aliasExamples, commonErrors, conclusion] =
         </ul>
       </Section>
 
-      <Section id={commonErrors.contentId}>
+      <Section id={commonErrors.contentId} class="content">
         <h4 class="text-2xl font-semibold text-center text-p-black">
           Errores comunes al elegir un alias y cómo evitarlos
         </h4>
@@ -259,7 +230,7 @@ const [cardAlias, securityBenefits, aliasExamples, commonErrors, conclusion] =
         </p>
       </Section>
 
-      <Section id={conclusion.contentId} class="mb-12">
+      <Section id={conclusion.contentId} class="mb-12 content">
         <h5 class="text-2xl font-semibold text-center text-p-black">
           Conclusión
         </h5>
@@ -298,3 +269,27 @@ const [cardAlias, securityBenefits, aliasExamples, commonErrors, conclusion] =
   </div>
   <Footer />
 </Layout>
+
+<script>
+  import {
+    observeTableContents,
+    type ObserveElementContent,
+  } from "@helpers/observeTableContents";
+  import { extendedTableContents } from "./content";
+
+  const $contents: ObserveElementContent[] = extendedTableContents.map(
+    (content) => {
+      return {
+        elementToObserve:
+          document.querySelector(`#${content.contentId}`) ?? null,
+        anchorToActive: document.querySelector(`#${content.anchorId}`) ?? null,
+      };
+    }
+  );
+  if ($contents) {
+    observeTableContents({
+      elements: $contents,
+      tableContents: extendedTableContents,
+    });
+  }
+</script>
