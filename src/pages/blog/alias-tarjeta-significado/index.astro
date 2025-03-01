@@ -11,6 +11,10 @@ import {
   BUDGET_MASTER_TRY_APP_ROUTE,
   HOME_ROUTE,
 } from "@constants";
+import {
+  type BasicTableContents,
+  type ExtendedTableContents,
+} from "@interface";
 import Section from "@components/Blog/Section.astro";
 import Layout from "@layouts/Layout.astro";
 import Footer from "@templates/Footer.astro";
@@ -21,7 +25,7 @@ import ListItemBullet from "@components/Blog/ListItemBullet.astro";
 import TableOfContentsDesktop from "@components/TableOfContents/TableOfContentsDesktop.astro";
 import ContentDesktop from "@components/TableOfContents/ContentDesktop.astro";
 
-const tableContentsBasic = [
+const tableContentsBasic: BasicTableContents[] = [
   {
     contentId: "card-alias",
     anchorId: "title-card-alias",
@@ -44,10 +48,12 @@ const tableContentsBasic = [
   },
   { contentId: "conclusion", anchorId: "title-conclusion", text: "Conclusión" },
 ];
-const extendedTableContents = tableContentsBasic.map((content) => ({
-  ...content,
-  href: `${BLOG_ALIAS_CARD_ARTICLE_ROUTE}#${content.anchorId}`,
-}));
+const extendedTableContents: ExtendedTableContents[] = tableContentsBasic.map(
+  (content) => ({
+    ...content,
+    href: `${BLOG_ALIAS_CARD_ARTICLE_ROUTE}#${content.anchorId}`,
+  })
+);
 const [cardAlias, securityBenefits, aliasExamples, commonErrors, conclusion] =
   extendedTableContents;
 ---
