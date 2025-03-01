@@ -21,15 +21,35 @@ import ListItemBullet from "@components/Blog/ListItemBullet.astro";
 import TableOfContentsDesktop from "@components/TableOfContents/TableOfContentsDesktop.astro";
 import ContentDesktop from "@components/TableOfContents/ContentDesktop.astro";
 
-const tableContents = [
-  { contentId: "card-alias", anchor: "title-card-alias" },
-  { contentId: "security-benefits", anchor: "title-security-benefits" },
-  { contentId: "alias-examples", anchor: "title-alias-examples" },
-  { contentId: "common-errors", anchor: "title-common-errors" },
-  { contentId: "conclusion", anchor: "title-conclusion" },
+const tableContentsBasic = [
+  {
+    contentId: "card-alias",
+    anchorId: "title-card-alias",
+    text: "Alias de la Tarjeta: Qué Es, Para Qué Sirve y Cómo Usarlo",
+  },
+  {
+    contentId: "security-benefits",
+    anchorId: "title-security-benefits",
+    text: "Beneficios y seguridad al usar un alias en tu tarjeta",
+  },
+  {
+    contentId: "alias-examples",
+    anchorId: "title-alias-examples",
+    text: "Ejemplos de alias efectivos y cuáles evitar",
+  },
+  {
+    contentId: "common-errors",
+    anchorId: "title-common-errors",
+    text: "Errores comunes al elegir un alias y cómo evitarlos",
+  },
+  { contentId: "conclusion", anchorId: "title-conclusion", text: "Conclusión" },
 ];
+const extendedTableContents = tableContentsBasic.map((content) => ({
+  ...content,
+  href: `${BLOG_ALIAS_CARD_ARTICLE_ROUTE}#${content.anchorId}`,
+}));
 const [cardAlias, securityBenefits, aliasExamples, commonErrors, conclusion] =
-  tableContents;
+  extendedTableContents;
 ---
 
 <script is:inline slot="schema" type="application/ld+json">
@@ -263,10 +283,11 @@ const [cardAlias, securityBenefits, aliasExamples, commonErrors, conclusion] =
       </Section>
     </main>
     <TableOfContentsDesktop>
-      <ContentDesktop
-        text="Beneficios y seguridad al usar un alias en tu tarjeta"
-      />
-      <ContentDesktop text="Ejemplos de alias efectivos y cuáles evitar" />
+      {
+        extendedTableContents.map(({ text, href, anchorId }) => (
+          <ContentDesktop text={text} href={href} id={anchorId} />
+        ))
+      }
     </TableOfContentsDesktop>
   </div>
   <Footer />
