@@ -20,6 +20,16 @@ import ListUnordered from "@components/Blog/ListUnordered.astro";
 import ListItemBullet from "@components/Blog/ListItemBullet.astro";
 import TableOfContentsDesktop from "@components/TableOfContents/TableOfContentsDesktop.astro";
 import ContentDesktop from "@components/TableOfContents/ContentDesktop.astro";
+
+const tableContents = [
+  { contentId: "card-alias", anchor: "title-card-alias" },
+  { contentId: "security-benefits", anchor: "title-security-benefits" },
+  { contentId: "alias-examples", anchor: "title-alias-examples" },
+  { contentId: "common-errors", anchor: "title-common-errors" },
+  { contentId: "conclusion", anchor: "title-conclusion" },
+];
+const [cardAlias, securityBenefits, aliasExamples, commonErrors, conclusion] =
+  tableContents;
 ---
 
 <script is:inline slot="schema" type="application/ld+json">
@@ -79,7 +89,7 @@ import ContentDesktop from "@components/TableOfContents/ContentDesktop.astro";
 
   <div class="flex w-full justify-center">
     <main class="flex flex-col items-center gap-12 max-w-2xl p-9">
-      <Section class="mt-8 justify-items-center">
+      <Section id={cardAlias.contentId} class="mt-8 justify-items-center">
         <h1
           transition:name="title-alias-card"
           class="text-3xl font-bold mb-5 text-center text-p-black"
@@ -127,7 +137,7 @@ import ContentDesktop from "@components/TableOfContents/ContentDesktop.astro";
         </p>
       </Section>
 
-      <Section>
+      <Section id={securityBenefits.contentId}>
         <h2 class="text-2xl font-semibold text-center text-p-black">
           Beneficios y seguridad al usar un alias en tu tarjeta
         </h2>
@@ -171,7 +181,7 @@ import ContentDesktop from "@components/TableOfContents/ContentDesktop.astro";
         </ol>
       </Section>
 
-      <Section>
+      <Section id={aliasExamples.contentId}>
         <Image
           src={CREDIT_CARDS_IMG}
           alt="Tarjetas de crédito"
@@ -200,7 +210,7 @@ import ContentDesktop from "@components/TableOfContents/ContentDesktop.astro";
         </ul>
       </Section>
 
-      <Section>
+      <Section id={commonErrors.contentId}>
         <h4 class="text-2xl font-semibold text-center text-p-black">
           Errores comunes al elegir un alias y cómo evitarlos
         </h4>
@@ -223,7 +233,7 @@ import ContentDesktop from "@components/TableOfContents/ContentDesktop.astro";
         </p>
       </Section>
 
-      <Section class="mb-12">
+      <Section id={conclusion.contentId} class="mb-12">
         <h5 class="text-2xl font-semibold text-center text-p-black">
           Conclusión
         </h5>
