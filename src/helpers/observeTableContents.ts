@@ -22,11 +22,13 @@ export function observeTableContents({ elements, tableContents }: ObserveElement
     const element = entry.target as HTMLDivElement;
     const id = element.id;
     const content = tableContents.find((content) => content.contentId === id);
+    const contentsNotIntersecting = tableContents.filter((content) => content.contentId !== id);
 
     if (!content) return
     const anchor = document.querySelector(`#${content.anchorId}`) as HTMLAnchorElement;
+    const inactiveAnchors = contentsNotIntersecting.map((content) => document.querySelector(`#${content.anchorId}`) as HTMLAnchorElement);
+    inactiveAnchors.forEach((anchor) => anchor.classList.remove("text-blue-600"));
     anchor.classList.add("text-blue-600");
-    observer.unobserve(element);
   }
 
   const observer = new IntersectionObserver(
