@@ -1,12 +1,7 @@
 import type { ExtendedTableContents } from "@interface";
 
-export interface ObserveElementContent {
-  elementToObserve: Element | null;
-  anchorToActive: Element | null;
-}
-
 export interface ObserveElementProps {
-  elements: ObserveElementContent[]
+  elements: (Element | null)[]
   tableContents: ExtendedTableContents[];
 }
 
@@ -20,7 +15,9 @@ export function observeTableContents({ elements, tableContents }: ObserveElement
 
   const activeAnchor = (entry: IntersectionObserverEntry) => {
     const element = entry.target as HTMLDivElement;
+    console.log(element)
     const id = element.id;
+    console.log(id)
     const content = tableContents.find((content) => content.contentId === id);
     const contentsNotIntersecting = tableContents.filter((content) => content.contentId !== id);
 
@@ -40,12 +37,7 @@ export function observeTableContents({ elements, tableContents }: ObserveElement
     { threshold: 0.75 }
   );
 
-  if (elements) {
-    elements.forEach((element) => {
-      if (!element.elementToObserve) {
-        return
-      }
-      observer.observe(element.elementToObserve);
-    });
-  }
+  (elements as (Element | null)[]).filter(Boolean).forEach((element) => {
+    observer.observe(element as Element);
+  });
 }
