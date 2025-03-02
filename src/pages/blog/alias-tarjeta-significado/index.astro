@@ -274,16 +274,22 @@ const [cardAlias, securityBenefits, aliasExamples, commonErrors, conclusion] =
   import { observeTableContents } from "@helpers/observeTableContents";
   import { extendedTableContents } from "./content";
 
-  const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
-  if (isDesktop) {
-    const $contents: (Element | null)[] = extendedTableContents.map(
-      (content) => {
-        return document.querySelector(`#${content.contentId}`) ?? null;
+  document.addEventListener("astro:page-load", () => {
+    const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
+    if (isDesktop) {
+      const $contents: (Element | null)[] = extendedTableContents.map(
+        (content) => {
+          return document.querySelector(`#${content.contentId}`) ?? null;
+        }
+      );
+      const [firstContent] = $contents;
+
+      if (firstContent) {
+        observeTableContents({
+          elements: $contents,
+          tableContents: extendedTableContents,
+        });
       }
-    );
-    observeTableContents({
-      elements: $contents,
-      tableContents: extendedTableContents,
-    });
-  }
+    }
+  });
 </script>
