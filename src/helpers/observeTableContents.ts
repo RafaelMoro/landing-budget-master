@@ -15,9 +15,7 @@ export function observeTableContents({ elements, tableContents }: ObserveElement
 
   const activeAnchor = (entry: IntersectionObserverEntry) => {
     const element = entry.target as HTMLDivElement;
-    console.log(element)
     const id = element.id;
-    console.log(id)
     const content = tableContents.find((content) => content.contentId === id);
     const contentsNotIntersecting = tableContents.filter((content) => content.contentId !== id);
 
