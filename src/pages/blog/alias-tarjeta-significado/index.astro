@@ -284,6 +284,7 @@ const [cardAlias, securityBenefits, aliasExamples, commonErrors, conclusion] =
       );
       const [firstContent] = $contents;
 
+      // If the first element exist, then observe the elements
       if (firstContent) {
         observeTableContents({
           elements: $contents,
