@@ -22,10 +22,11 @@ import ChevronDown from "../icons/ChevronDown.astro";
   import { DESKTOP_WATCH_MEDIA } from "@constants";
 
   const details = document.querySelector("details");
+  const summary = document.querySelector("summary");
   const isDesktop = window.matchMedia(DESKTOP_WATCH_MEDIA).matches;
 
-  if (details && !isDesktop) {
-    details.addEventListener("click", (e) => {
+  if (details && summary && !isDesktop) {
+    summary.addEventListener("click", (e) => {
       if (details.hasAttribute("open")) {
         // since it's not closed yet, it's open!
         e.preventDefault(); // stop the default behavior, meaning - the hiding
