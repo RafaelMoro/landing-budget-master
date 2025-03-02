@@ -277,19 +277,24 @@ const [cardAlias, securityBenefits, aliasExamples, commonErrors, conclusion] =
   } from "@helpers/observeTableContents";
   import { extendedTableContents } from "./content";
 
-  const $contents: ObserveElementContent[] = extendedTableContents.map(
-    (content) => {
-      return {
-        elementToObserve:
-          document.querySelector(`#${content.contentId}`) ?? null,
-        anchorToActive: document.querySelector(`#${content.anchorId}`) ?? null,
-      };
+  const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
+  if (isDesktop) {
+    const $contents: ObserveElementContent[] = extendedTableContents.map(
+      (content) => {
+        return {
+          elementToObserve:
+            document.querySelector(`#${content.contentId}`) ?? null,
+          anchorToActive:
+            document.querySelector(`#${content.anchorId}`) ?? null,
+        };
+      }
+    );
+    if ($contents) {
+      console.log("execute observe");
+      observeTableContents({
+        elements: $contents,
+        tableContents: extendedTableContents,
+      });
     }
-  );
-  if ($contents) {
-    observeTableContents({
-      elements: $contents,
-      tableContents: extendedTableContents,
-    });
   }
 </script>
