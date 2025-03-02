@@ -23,9 +23,12 @@ const { title } = Astro.props;
 </details>
 
 <script>
-  const details = document.querySelector("details");
+  import { DESKTOP_WATCH_MEDIA } from "@constants";
 
-  if (details) {
+  const details = document.querySelector("details");
+  const isDesktop = window.matchMedia(DESKTOP_WATCH_MEDIA).matches;
+
+  if (details && !isDesktop) {
     details.addEventListener("click", (e) => {
       if (details.hasAttribute("open")) {
         // since it's not closed yet, it's open!

@@ -273,10 +273,13 @@ const [cardAlias, securityBenefits, aliasExamples, commonErrors, conclusion] =
 <script>
   import { observeTableContents } from "@helpers/observeTableContents";
   import { extendedTableContents } from "./content";
-  import { BLOG_ALIAS_CARD_ARTICLE_ROUTE } from "@constants";
+  import {
+    BLOG_ALIAS_CARD_ARTICLE_ROUTE,
+    DESKTOP_WATCH_MEDIA,
+  } from "@constants";
 
   document.addEventListener("astro:page-load", () => {
-    const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
+    const isDesktop = window.matchMedia(DESKTOP_WATCH_MEDIA).matches;
     if (isDesktop) {
       const $contents: (Element | null)[] = extendedTableContents.map(
         (content) => {
