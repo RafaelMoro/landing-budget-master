@@ -17,10 +17,9 @@ import Layout from "@layouts/Layout.astro";
 import Footer from "@templates/Footer.astro";
 import Header from "@templates/Header/Header.astro";
 import TableOfContentsMobile from "@components/TableOfContents/TableOfContentsMobile.astro";
-import ListUnordered from "@components/Blog/ListUnordered.astro";
-import ListItemBullet from "@components/Blog/ListItemBullet.astro";
 import TableOfContentsDesktop from "@components/TableOfContents/TableOfContentsDesktop.astro";
 import ContentDesktop from "@components/TableOfContents/ContentDesktop.astro";
+import ContentMobile from "@components/TableOfContents/ContentMobile.astro";
 
 const [cardAlias, securityBenefits, aliasExamples, commonErrors, conclusion] =
   extendedTableContents;
@@ -95,12 +94,11 @@ const [cardAlias, securityBenefits, aliasExamples, commonErrors, conclusion] =
         </h1>
 
         <TableOfContentsMobile>
-          <ListItemBullet
-            >Beneficios y seguridad al usar un alias en tu tarjeta</ListItemBullet
-          >
-          <ListItemBullet
-            >Ejemplos de alias efectivos y cuáles evitar</ListItemBullet
-          >
+          {
+            extendedTableContents.map(({ href, text }) => (
+              <ContentMobile text={text} href={href} />
+            ))
+          }
         </TableOfContentsMobile>
 
         <Image
