@@ -3,9 +3,10 @@ import type { ExtendedTableContents } from "@interface";
 export interface ObserveElementProps {
   elements: (Element | null)[]
   tableContents: ExtendedTableContents[];
+  location: string;
 }
 
-export function observeTableContents({ elements, tableContents }: ObserveElementProps) {
+export function observeTableContents({ elements, tableContents, location }: ObserveElementProps) {
   if (!elements) {
     throw new Error("No elements or element provided");
   }
@@ -40,6 +41,9 @@ export function observeTableContents({ elements, tableContents }: ObserveElement
   });
 
   document.addEventListener("astro:before-preparation", () => {
-    observer.disconnect();
+    // Disconnect only if the current location is the blogpost is being called on
+    if (window.location.pathname === location) {
+      observer.disconnect();
+    }
   })
 }

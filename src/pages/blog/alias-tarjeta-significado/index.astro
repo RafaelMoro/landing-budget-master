@@ -273,6 +273,7 @@ const [cardAlias, securityBenefits, aliasExamples, commonErrors, conclusion] =
 <script>
   import { observeTableContents } from "@helpers/observeTableContents";
   import { extendedTableContents } from "./content";
+  import { BLOG_ALIAS_CARD_ARTICLE_ROUTE } from "@constants";
 
   document.addEventListener("astro:page-load", () => {
     const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
@@ -289,6 +290,7 @@ const [cardAlias, securityBenefits, aliasExamples, commonErrors, conclusion] =
         observeTableContents({
           elements: $contents,
           tableContents: extendedTableContents,
+          location: BLOG_ALIAS_CARD_ARTICLE_ROUTE,
         });
       }
     }
