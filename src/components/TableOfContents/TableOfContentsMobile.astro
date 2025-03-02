@@ -1,6 +1,7 @@
 ---
 import ListTreeIcon from "../icons/ListTreeIcon.astro";
 import ChevronDown from "../icons/ChevronDown.astro";
+import ListUnordered from "@components/Blog/ListUnordered.astro";
 ---
 
 <details
@@ -13,7 +14,9 @@ import ChevronDown from "../icons/ChevronDown.astro";
       <ChevronDown />
     </div>
   </summary>
-  <slot />
+  <ListUnordered>
+    <slot />
+  </ListUnordered>
 </details>
 
 <script>
