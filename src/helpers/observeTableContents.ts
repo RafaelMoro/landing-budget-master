@@ -38,4 +38,8 @@ export function observeTableContents({ elements, tableContents }: ObserveElement
   (elements as (Element | null)[]).filter(Boolean).forEach((element) => {
     observer.observe(element as Element);
   });
+
+  document.addEventListener("astro:before-preparation", () => {
+    observer.disconnect();
+  })
 }
