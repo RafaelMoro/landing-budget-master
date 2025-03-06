@@ -1,0 +1,29 @@
+---
+import ContentDesktop from "@components/TableOfContents/ContentDesktop.astro";
+import TableOfContentsDesktop from "@components/TableOfContents/TableOfContentsDesktop.astro";
+import type { ExtendedTableContents } from "@interface";
+export interface Props {
+  extendedTableContents: ExtendedTableContents[];
+  mainCssClass?: string;
+}
+
+const { extendedTableContents, mainCssClass } = Astro.props;
+---
+
+<div class="flex w-full justify-center">
+  <main
+    class:list={[
+      "flex flex-col items-center gap-12 max-w-2xl p-9",
+      mainCssClass,
+    ]}
+  >
+    <slot />
+  </main>
+  <TableOfContentsDesktop>
+    {
+      extendedTableContents.map(({ text, href, anchorId }) => (
+        <ContentDesktop text={text} href={href} id={anchorId} />
+      ))
+    }
+  </TableOfContentsDesktop>
+</div>
