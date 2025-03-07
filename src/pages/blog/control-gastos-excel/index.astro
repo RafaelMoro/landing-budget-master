@@ -16,6 +16,7 @@ import { extendedTableContentsExpenseControl } from "./control-gastos-excel.cont
 import Footer from "@templates/Footer.astro";
 import Section from "@components/Blog/Section.astro";
 import { Image } from "astro:assets";
+import BlogWrapper from "@components/Blog/BlogWrapper.astro";
 
 const [
   introduction,
@@ -90,9 +91,7 @@ const [budgetMasterOption, fintonicOption, splitwiseOption] =
     </article>
   </section>
 
-  <main
-    class="flex flex-col items-center gap-16 max-w-7xl mx-auto px-3 md:px-0"
-  >
+  <BlogWrapper extendedTableContents={extendedTableContentsExpenseControl}>
     <!-- Index -->
     <Section class="mt-8 justify-items-center">
       <h1
@@ -101,80 +100,6 @@ const [budgetMasterOption, fintonicOption, splitwiseOption] =
       >
         Control de gastos en Excel: Guía completa con ejemplos y plantillas
       </h1>
-
-      <article class="flex flex-col gap-3">
-        <p class="text-xl">Tabla de contenidos:</p>
-
-        <ol class="pl-6 grid grid-cols-1 gap-3">
-          <li class="list-decimal text-lg text-pretty text-blue-800">
-            <a href="#introduction">Introducción</a>
-          </li>
-          <li class="list-decimal text-lg text-pretty text-blue-800">
-            <a href="#real-example"
-              >Ejemplo real: Cómo usar un control de gastos en Excel en el día a
-              día</a
-            >
-          </li>
-
-          <ol class="pl-8 grid grid-cols-1 gap-2">
-            <li class="list-decimal text-base text-pretty text-blue-800">
-              <a href="#saving-control-expenses"
-                >Control de gastos personales para ahorro</a
-              >
-            </li>
-            <li class="list-decimal text-base text-pretty text-blue-800">
-              <a href="#practical-example"
-                >Ejemplo práctico con un ingreso de $12,000</a
-              >
-            </li>
-          </ol>
-
-          <li class="list-decimal text-lg text-pretty text-blue-800">
-            <a href="#download-template"
-              >Descarga una plantilla gratuita para control de gastos</a
-            >
-          </li>
-
-          <ol class="pl-8 grid grid-cols-1 gap-2 text-blue-800">
-            <li class="list-decimal text-base text-pretty">
-              <a href="#how-obtain-copy">¿Cómo puedo obtener una copia?</a>
-            </li>
-            <li class="list-decimal text-base text-pretty">
-              <a href="#monthly-budget-template">Presupuesto mensual.</a>
-            </li>
-            <li class="list-decimal text-base text-pretty">
-              <a href="#two-weekly-budget-template">Presupuesto quincenal</a>
-            </li>
-            <li class="list-decimal text-base text-pretty">
-              <a href="#budget-70-20-10-template"
-                >Planeador de presupuesto 70/20/10</a
-              >
-            </li>
-          </ol>
-
-          <li class="list-decimal text-lg text-pretty text-blue-800">
-            <a href="#alternatives-excel"
-              >Alternativas a Excel para gestionar gastos personales</a
-            >
-          </li>
-
-          <ol class="pl-8 grid grid-cols-1 gap-2 text-blue-800">
-            <li class="list-decimal text-base text-pretty">
-              <a href="#budget-master-option">Budget Master</a>
-            </li>
-            <li class="list-decimal text-base text-pretty">
-              <a href="#fintonic-option">Fintonic</a>
-            </li>
-            <li class="list-decimal text-base text-pretty">
-              <a href="#splitwise-option">Splitwise</a>
-            </li>
-          </ol>
-
-          <li class="list-decimal text-lg text-pretty text-blue-800">
-            <a href="#conclusion">Conclusión</a>
-          </li>
-        </ol>
-      </article>
     </Section>
 
     <Section>
@@ -697,7 +622,7 @@ const [budgetMasterOption, fintonicOption, splitwiseOption] =
         seguridad y rapidez, las aplicaciones de gestión financiera son para ti.
       </p>
     </Section>
-  </main>
+  </BlogWrapper>
   <Footer />
 </Layout>
 
