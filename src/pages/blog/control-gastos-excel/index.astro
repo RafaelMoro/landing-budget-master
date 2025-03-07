@@ -12,9 +12,27 @@ import {
   TWO_WEEK_BUDGET_TEMPLATE_IMG,
   BUDGET_70_20_10_TEMPLATE_IMG,
 } from "@constants";
+import { extendedTableContentsExpenseControl } from "./control-gastos-excel.content";
 import Footer from "@templates/Footer.astro";
 import Section from "@components/Blog/Section.astro";
 import { Image } from "astro:assets";
+
+const [
+  introduction,
+  realExample,
+  downloadTemplate,
+  alternativesExcel,
+  conclusion,
+] = extendedTableContentsExpenseControl;
+const [savingControlExpenses, practicalExample] = realExample?.subcontent ?? [];
+const [
+  howObtainCopy,
+  monthlyBudgetTemplate,
+  twoWeeklyBudgetTemplate,
+  budget702010Template,
+] = downloadTemplate?.subcontent ?? [];
+const [budgetMasterOption, fintonicOption, splitwiseOption] =
+  alternativesExcel?.subcontent ?? [];
 ---
 
 <script is:inline slot="schema" type="application/ld+json">
@@ -161,7 +179,7 @@ import { Image } from "astro:assets";
 
     <Section>
       <h2
-        id="introduction"
+        id={introduction.contentId}
         class="text-3xl font-semibold text-center text-p-black"
       >
         Introducción
@@ -207,7 +225,7 @@ import { Image } from "astro:assets";
     <!-- Ejemplo real: Cómo usar un control de gastos en Excel en el día a día -->
     <Section class="gap-9">
       <h3
-        id="real-example"
+        id={realExample.contentId}
         class="text-3xl font-semibold text-center text-p-black"
       >
         Ejemplo real: Cómo usar un control de gastos en Excel en el día a día
@@ -220,7 +238,7 @@ import { Image } from "astro:assets";
 
       <article class="flex flex-col gap-8">
         <h4
-          id="saving-control-expenses"
+          id={savingControlExpenses.contentId}
           class="text-2xl font-semibold text-center text-p-black"
         >
           Control de gastos personales para ahorro
@@ -310,7 +328,7 @@ import { Image } from "astro:assets";
 
       <article class="flex flex-col gap-4">
         <h4
-          id="practical-example"
+          id={practicalExample.contentId}
           class="text-2xl font-semibold text-center text-p-black"
         >
           Ejemplo práctico con un ingreso de $12,000
@@ -400,7 +418,7 @@ import { Image } from "astro:assets";
 
     <Section class="gap-11">
       <h4
-        id="download-template"
+        id={downloadTemplate.contentId}
         class="text-3xl font-semibold text-center text-p-black"
       >
         Descarga una plantilla gratuita para control de gastos
@@ -422,7 +440,7 @@ import { Image } from "astro:assets";
         >. y están en inglés. Nos tomamos la libertad de traducirlas al español
         para tu comodidad.
       </p>
-      <p id="how-obtain-copy" class="text-xl text-pretty font-semibold">
+      <p id={howObtainCopy.contentId} class="text-xl text-pretty font-semibold">
         ¿Cómo puedo obtener una copia?
       </p>
       <p class="text-lg text-pretty">
@@ -441,7 +459,7 @@ import { Image } from "astro:assets";
 
       <article class="grid grid-cols-1 gap-6">
         <h4
-          id="monthly-budget-template"
+          id={monthlyBudgetTemplate.contentId}
           class="text-2xl font-semibold text-primary"
         >
           Presupuesto mensual.
@@ -472,7 +490,7 @@ import { Image } from "astro:assets";
 
       <article class="grid grid-cols-1 gap-6">
         <h4
-          id="two-weekly-budget-template"
+          id={twoWeeklyBudgetTemplate.contentId}
           class="text-2xl font-semibold text-primary"
         >
           Presupuesto quincenal
@@ -503,7 +521,7 @@ import { Image } from "astro:assets";
 
       <article class="grid grid-cols-1 gap-6">
         <h4
-          id="budget-70-20-10-template"
+          id={budget702010Template.contentId}
           class="text-2xl font-semibold text-primary"
         >
           Planeador de presupuesto 70/20/10
@@ -535,7 +553,7 @@ import { Image } from "astro:assets";
 
     <Section>
       <h4
-        id="alternatives-excel"
+        id={alternativesExcel.contentId}
         class="text-3xl font-semibold text-center text-p-black"
       >
         Alternativas a Excel para gestionar gastos personales
@@ -560,7 +578,7 @@ import { Image } from "astro:assets";
 
       <article class="flex flex-col gap-4">
         <h5
-          id="budget-master-option"
+          id={budgetMasterOption.contentId}
           class="text-2xl font-semibold text-primary"
         >
           Budget Master
@@ -598,7 +616,10 @@ import { Image } from "astro:assets";
       </article>
 
       <article class="flex flex-col gap-4">
-        <h5 id="fintonic-option" class="text-2xl font-semibold text-primary">
+        <h5
+          id={fintonicOption.contentId}
+          class="text-2xl font-semibold text-primary"
+        >
           Fintonic
         </h5>
         <p class="text-lg text-pretty">
@@ -626,7 +647,10 @@ import { Image } from "astro:assets";
       </article>
 
       <article class="flex flex-col gap-4">
-        <h5 id="splitwise-option" class="text-2xl font-semibold text-primary">
+        <h5
+          id={splitwiseOption.contentId}
+          class="text-2xl font-semibold text-primary"
+        >
           Splitwise
         </h5>
         <p class="text-lg text-pretty">
@@ -654,7 +678,7 @@ import { Image } from "astro:assets";
 
     <Section class="mb-12">
       <h4
-        id="conclusion"
+        id={conclusion.contentId}
         class="text-3xl font-semibold text-center text-p-black"
       >
         Conclusión
@@ -676,3 +700,29 @@ import { Image } from "astro:assets";
   </main>
   <Footer />
 </Layout>
+
+<script>
+  import { observeTableContents } from "@helpers/observeTableContents";
+  import { extendedTableContentsExpenseControl } from "./control-gastos-excel.content";
+  import { BLOG_CONTROL_EXCEL_ROUTE, DESKTOP_WATCH_MEDIA } from "@constants";
+
+  document.addEventListener("astro:page-load", () => {
+    const isDesktop = window.matchMedia(DESKTOP_WATCH_MEDIA).matches;
+    if (isDesktop) {
+      const $contents: (Element | null)[] =
+        extendedTableContentsExpenseControl.map((content) => {
+          return document.querySelector(`#${content.contentId}`) ?? null;
+        });
+      const [firstContent] = $contents;
+
+      // If the first element exist, then observe the elements
+      if (firstContent) {
+        observeTableContents({
+          elements: $contents,
+          tableContents: extendedTableContentsExpenseControl,
+          location: BLOG_CONTROL_EXCEL_ROUTE,
+        });
+      }
+    }
+  });
+</script>
