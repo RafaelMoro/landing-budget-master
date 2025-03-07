@@ -1,4 +1,5 @@
 import { BLOG_ALIAS_CARD_ARTICLE_ROUTE } from "@constants";
+import { getExtendedTableContents } from "@helpers/getExtendedTableContents";
 import type { BasicTableContents, ExtendedTableContents } from "@interface";
 
 export const tableContentsBasic: BasicTableContents[] = [
@@ -25,9 +26,7 @@ export const tableContentsBasic: BasicTableContents[] = [
   { contentId: "conclusion", anchorId: "title-conclusion", text: "Conclusión" },
 ];
 
-export const extendedTableContents: ExtendedTableContents[] = tableContentsBasic.map(
-  (content) => ({
-    ...content,
-    href: `${BLOG_ALIAS_CARD_ARTICLE_ROUTE}#${content.contentId}`,
-  })
-);
+export const extendedTableContents = getExtendedTableContents({
+  tableContents: tableContentsBasic,
+  route: BLOG_ALIAS_CARD_ARTICLE_ROUTE,
+});
