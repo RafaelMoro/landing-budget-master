@@ -41,7 +41,7 @@ export const tableContentsBasic: BasicTableContents[] = [
   { contentId: "conclusion", anchorId: "title-conclusion", text: "Conclusión" },
 ];
 
-export const extendedTableContents = getExtendedTableContents({
+export const extendedTableContentsExpenseControl = getExtendedTableContents({
   tableContents: tableContentsBasic,
   route: BLOG_CONTROL_EXCEL_ROUTE,
 });
