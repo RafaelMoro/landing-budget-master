@@ -1,4 +1,5 @@
 import type { ExtendedTableContents } from "@interface";
+import { getContentIds } from "./tableContents.helper";
 
 export interface ObserveElementProps {
   elements: (Element | null)[]
@@ -7,6 +8,8 @@ export interface ObserveElementProps {
 }
 
 export function observeTableContents({ elements, tableContents, location }: ObserveElementProps) {
+  console.log('tableContents', tableContents)
+  console.log('elements', elements)
   if (!elements) {
     throw new Error("No elements or element provided");
   }
@@ -17,10 +20,15 @@ export function observeTableContents({ elements, tableContents, location }: Obse
   const activeAnchor = (entry: IntersectionObserverEntry) => {
     const element = entry.target as HTMLDivElement;
     const id = element.id;
-    const content = tableContents.find((content) => content.contentId === id);
-    const contentsNotIntersecting = tableContents.filter((content) => content.contentId !== id);
+    // Get all content Ids including subcontents. This returns contentId and anchorId
+    const allContents = getContentIds({ tableContents });
+    const content = allContents.find((content) => content.contentId === id);
+    const contentsNotIntersecting = allContents.filter((content) => content.contentId !== id);
 
-    if (!content) return
+    if (!content) {
+      console.warn('content not found for observable table of contents')
+      return
+    }
     const anchor = document.querySelector(`#${content.anchorId}`) as HTMLAnchorElement;
     const inactiveAnchors = contentsNotIntersecting.map((content) => document.querySelector(`#${content.anchorId}`) as HTMLAnchorElement);
     inactiveAnchors.forEach((anchor) => {
