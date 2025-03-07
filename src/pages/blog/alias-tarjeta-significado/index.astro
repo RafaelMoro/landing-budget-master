@@ -11,14 +11,12 @@ import {
   BUDGET_MASTER_TRY_APP_ROUTE,
   HOME_ROUTE,
 } from "@constants";
-import { extendedTableContents } from "./content";
+import { extendedTableContents } from "./alias-tarjeta-significado.content";
 import Section from "@components/Blog/Section.astro";
 import Layout from "@layouts/Layout.astro";
 import Footer from "@templates/Footer.astro";
 import Header from "@templates/Header/Header.astro";
 import TableOfContentsMobile from "@components/TableOfContents/TableOfContentsMobile.astro";
-import TableOfContentsDesktop from "@components/TableOfContents/TableOfContentsDesktop.astro";
-import ContentDesktop from "@components/TableOfContents/ContentDesktop.astro";
 import ContentMobile from "@components/TableOfContents/ContentMobile.astro";
 import BlogWrapper from "@components/Blog/BlogWrapper.astro";
 
@@ -252,7 +250,7 @@ const [cardAlias, securityBenefits, aliasExamples, commonErrors, conclusion] =
 
 <script>
   import { observeTableContents } from "@helpers/observeTableContents";
-  import { extendedTableContents } from "./content";
+  import { extendedTableContents } from "./alias-tarjeta-significado.content";
   import {
     BLOG_ALIAS_CARD_ARTICLE_ROUTE,
     DESKTOP_WATCH_MEDIA,
