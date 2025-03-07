@@ -1,5 +1,5 @@
 import { BLOG_CONTROL_EXCEL_ROUTE } from "@constants";
-import { getExtendedTableContents } from "@helpers/getExtendedTableContents";
+import { getExtendedTableContents } from "@helpers/tableContents.helper";
 import type { BasicTableContents } from "@interface";
 
 export const tableContentsBasic: BasicTableContents[] = [

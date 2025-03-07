@@ -1,5 +1,5 @@
 import { BLOG_ALIAS_CARD_ARTICLE_ROUTE } from "@constants";
-import { getExtendedTableContents } from "@helpers/getExtendedTableContents";
+import { getExtendedTableContents } from "@helpers/tableContents.helper";
 import type { BasicTableContents, ExtendedTableContents } from "@interface";
 
 export const tableContentsBasic: BasicTableContents[] = [
