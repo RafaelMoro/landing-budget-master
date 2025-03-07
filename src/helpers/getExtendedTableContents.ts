@@ -23,4 +23,13 @@ export const getExtendedTableContents = ({ tableContents, route }: GetExtendedTa
       }
     }
   );
-} 
+}
+
+export const getContentIds = ({ tableContents }: { tableContents: ExtendedTableContents[] }) => {
+  return tableContents.flatMap((content) => {
+    if (content.subcontent !== undefined && content.subcontent.length > 0 ) {
+      return [content.contentId, ...content.subcontent.map((subcontent) => subcontent.contentId)]
+    }
+    return [content.contentId]
+  })
+}
