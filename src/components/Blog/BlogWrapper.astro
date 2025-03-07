@@ -21,8 +21,13 @@ const { extendedTableContents, mainCssClass } = Astro.props;
   </main>
   <TableOfContentsDesktop>
     {
-      extendedTableContents.map(({ text, href, anchorId }) => (
-        <ContentDesktop text={text} href={href} id={anchorId} />
+      extendedTableContents.map(({ text, href, anchorId, subcontent = [] }) => (
+        <ContentDesktop
+          text={text}
+          href={href}
+          id={anchorId}
+          subcontent={subcontent}
+        />
       ))
     }
   </TableOfContentsDesktop>
