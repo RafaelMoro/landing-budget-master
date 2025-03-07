@@ -7,9 +7,20 @@ interface GetExtendedTableContentsProps {
 
 export const getExtendedTableContents = ({ tableContents, route }: GetExtendedTableContentsProps): ExtendedTableContents[] => {
   return tableContents.map(
-    (content) => ({
-      ...content,
-      href: `${route}#${content.contentId}`,
-    })
+    (content) => {
+      if (content.subcontent !== undefined && content.subcontent?.length > 0) {
+        return {
+          ...content,
+          href: `${route}#${content.contentId}`,
+          subcontent: content.subcontent.map((subcontent) => ({ ...subcontent, href: `${route}#${subcontent.contentId}` }))
+        }
+      }
+
+      return {
+        ...content,
+        href: `${route}#${content.contentId}`,
+        subcontent: []
+      }
+    }
   );
 } 
