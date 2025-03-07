@@ -8,8 +8,6 @@ export interface ObserveElementProps {
 }
 
 export function observeTableContents({ elements, tableContents, location }: ObserveElementProps) {
-  console.log('tableContents', tableContents)
-  console.log('elements', elements)
   if (!elements) {
     throw new Error("No elements or element provided");
   }
