@@ -9,6 +9,7 @@ import {
   CASHBACK_BEGINNING_IMG,
   BUDGET_MASTER_TRY_APP_ROUTE,
 } from "@constants";
+import { cashbackExtendedTableContents } from "./cashback.content";
 import Section from "@components/Blog/Section.astro";
 import Paragraph from "@components/Blog/Paragraph.astro";
 import ListItemBullet from "@components/Blog/ListItemBullet.astro";
@@ -20,6 +21,8 @@ import InternalAnchor from "@components/Blog/InternalAnchor.astro";
 import { Image } from "astro:assets";
 import Footer from "@templates/Footer.astro";
 import AnchorButton from "@components/AnchorButton.astro";
+import BlogWrapper from "@components/Blog/BlogWrapper.astro";
+import TableOfContentsMobileTemplate from "@components/TableOfContents/TableOfContentsMobileTemplate.astro";
 ---
 
 <script is:inline slot="schema" type="application/ld+json">
@@ -70,9 +73,7 @@ import AnchorButton from "@components/AnchorButton.astro";
     >
   </BreadcrumbsBox>
 
-  <main
-    class="flex flex-col items-center gap-16 max-w-7xl mx-auto px-3 md:px-0"
-  >
+  <BlogWrapper extendedTableContents={cashbackExtendedTableContents}>
     <!-- Cashback: qué es y cómo obtener reembolsos en cada compra -->
     <Section class="mt-8">
       <h1
@@ -81,6 +82,9 @@ import AnchorButton from "@components/AnchorButton.astro";
       >
         Cashback: qué es y cómo obtener reembolsos en cada compra
       </h1>
+      <TableOfContentsMobileTemplate
+        extendedTableContents={cashbackExtendedTableContents}
+      />
       <Image
         src={CASHBACK_THUMBNAIL}
         transition:name="img-cashback"
@@ -351,7 +355,7 @@ import AnchorButton from "@components/AnchorButton.astro";
         />
       </div>
     </Section>
-  </main>
+  </BlogWrapper>
   <Footer />
 </Layout>
 <script>
