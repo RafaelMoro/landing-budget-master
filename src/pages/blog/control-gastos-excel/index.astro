@@ -12,9 +12,34 @@ import {
   TWO_WEEK_BUDGET_TEMPLATE_IMG,
   BUDGET_70_20_10_TEMPLATE_IMG,
 } from "@constants";
+import { extendedTableContentsExpenseControl } from "./control-gastos-excel.content";
 import Footer from "@templates/Footer.astro";
 import Section from "@components/Blog/Section.astro";
 import { Image } from "astro:assets";
+import BlogWrapper from "@components/Blog/BlogWrapper.astro";
+import TableOfContentsMobile from "@components/TableOfContents/TableOfContentsMobile.astro";
+import ContentMobile from "@components/TableOfContents/ContentMobile.astro";
+import BlogHeader from "@components/Blog/BlogHeader.astro";
+import BreadcrumbsBox from "@components/Blog/BreadcrumbsBox.astro";
+import BreadcrumbAnchor from "@components/Blog/BreadcrumbAnchor.astro";
+import TableOfContentsMobileTemplate from "@components/TableOfContents/TableOfContentsMobileTemplate.astro";
+
+const [
+  introduction,
+  realExample,
+  downloadTemplate,
+  alternativesExcel,
+  conclusion,
+] = extendedTableContentsExpenseControl;
+const [savingControlExpenses, practicalExample] = realExample?.subcontent ?? [];
+const [
+  howObtainCopy,
+  monthlyBudgetTemplate,
+  twoWeeklyBudgetTemplate,
+  budget702010Template,
+] = downloadTemplate?.subcontent ?? [];
+const [budgetMasterOption, fintonicOption, splitwiseOption] =
+  alternativesExcel?.subcontent ?? [];
 ---
 
 <script is:inline slot="schema" type="application/ld+json">
@@ -53,28 +78,20 @@ import { Image } from "astro:assets";
   ogDescription="Aprende cómo hacer un control de gastos en Excel fácil y rápido. Usa las plantillas para gestionar tus finanzas personales. ¡Descárgala ahora!"
   hrefCanonical={BLOG_CONTROL_EXCEL_COMPLETE_ROUTE}
 >
-  <div class="bg-dark-blue">
-    <div class="max-w-7xl mx-auto">
-      <Header isBlog />
-    </div>
-  </div>
+  <BlogHeader />
 
-  <section class="max-w-7xl mx-auto mt-4 pl-3 lg:pl-0">
-    <article class="inline-flex gap-2">
-      <a class="text-gray-500 hover:underline" href={HOME_ROUTE}>Inicio</a>
-      <span>></span>
-      <a class="text-gray-500 hover:underline" href={BLOG_ROUTE}>Blog</a>
-      <span>></span>
-      <a href={BLOG_CONTROL_EXCEL_ROUTE} class="hover:underline"
-        >Control de gastos en Excel: <br class="md:hidden" /> Guía completa con ejemplos
-        y plantillas</a
-      >
-    </article>
-  </section>
+  <BreadcrumbsBox>
+    <BreadcrumbAnchor href={HOME_ROUTE}>Inicio</BreadcrumbAnchor>
+    <span>></span>
+    <BreadcrumbAnchor href={BLOG_ROUTE}>Blog</BreadcrumbAnchor>
+    <span>></span>
+    <BreadcrumbAnchor isCurrentPath href={BLOG_CONTROL_EXCEL_ROUTE}
+      >Control de gastos en Excel: <br class="md:hidden" /> Guía completa con ejemplos
+      y plantillas</BreadcrumbAnchor
+    >
+  </BreadcrumbsBox>
 
-  <main
-    class="flex flex-col items-center gap-16 max-w-7xl mx-auto px-3 md:px-0"
-  >
+  <BlogWrapper extendedTableContents={extendedTableContentsExpenseControl}>
     <!-- Index -->
     <Section class="mt-8 justify-items-center">
       <h1
@@ -84,84 +101,14 @@ import { Image } from "astro:assets";
         Control de gastos en Excel: Guía completa con ejemplos y plantillas
       </h1>
 
-      <article class="flex flex-col gap-3">
-        <p class="text-xl">Tabla de contenidos:</p>
-
-        <ol class="pl-6 grid grid-cols-1 gap-3">
-          <li class="list-decimal text-lg text-pretty text-blue-800">
-            <a href="#introduction">Introducción</a>
-          </li>
-          <li class="list-decimal text-lg text-pretty text-blue-800">
-            <a href="#real-example"
-              >Ejemplo real: Cómo usar un control de gastos en Excel en el día a
-              día</a
-            >
-          </li>
-
-          <ol class="pl-8 grid grid-cols-1 gap-2">
-            <li class="list-decimal text-base text-pretty text-blue-800">
-              <a href="#saving-control-expenses"
-                >Control de gastos personales para ahorro</a
-              >
-            </li>
-            <li class="list-decimal text-base text-pretty text-blue-800">
-              <a href="#practical-example"
-                >Ejemplo práctico con un ingreso de $12,000</a
-              >
-            </li>
-          </ol>
-
-          <li class="list-decimal text-lg text-pretty text-blue-800">
-            <a href="#download-template"
-              >Descarga una plantilla gratuita para control de gastos</a
-            >
-          </li>
-
-          <ol class="pl-8 grid grid-cols-1 gap-2 text-blue-800">
-            <li class="list-decimal text-base text-pretty">
-              <a href="#how-obtain-copy">¿Cómo puedo obtener una copia?</a>
-            </li>
-            <li class="list-decimal text-base text-pretty">
-              <a href="#monthly-budget-template">Presupuesto mensual.</a>
-            </li>
-            <li class="list-decimal text-base text-pretty">
-              <a href="#two-weekly-budget-template">Presupuesto quincenal</a>
-            </li>
-            <li class="list-decimal text-base text-pretty">
-              <a href="#budget-70-20-10-template"
-                >Planeador de presupuesto 70/20/10</a
-              >
-            </li>
-          </ol>
-
-          <li class="list-decimal text-lg text-pretty text-blue-800">
-            <a href="#alternatives-excel"
-              >Alternativas a Excel para gestionar gastos personales</a
-            >
-          </li>
-
-          <ol class="pl-8 grid grid-cols-1 gap-2 text-blue-800">
-            <li class="list-decimal text-base text-pretty">
-              <a href="#budget-master-option">Budget Master</a>
-            </li>
-            <li class="list-decimal text-base text-pretty">
-              <a href="#fintonic-option">Fintonic</a>
-            </li>
-            <li class="list-decimal text-base text-pretty">
-              <a href="#splitwise-option">Splitwise</a>
-            </li>
-          </ol>
-
-          <li class="list-decimal text-lg text-pretty text-blue-800">
-            <a href="#conclusion">Conclusión</a>
-          </li>
-        </ol>
-      </article>
+      <TableOfContentsMobileTemplate
+        extendedTableContents={extendedTableContentsExpenseControl}
+      />
     </Section>
 
     <Section>
       <h2
-        id="introduction"
+        id={introduction.contentId}
         class="text-3xl font-semibold text-center text-p-black"
       >
         Introducción
@@ -207,7 +154,7 @@ import { Image } from "astro:assets";
     <!-- Ejemplo real: Cómo usar un control de gastos en Excel en el día a día -->
     <Section class="gap-9">
       <h3
-        id="real-example"
+        id={realExample.contentId}
         class="text-3xl font-semibold text-center text-p-black"
       >
         Ejemplo real: Cómo usar un control de gastos en Excel en el día a día
@@ -220,7 +167,7 @@ import { Image } from "astro:assets";
 
       <article class="flex flex-col gap-8">
         <h4
-          id="saving-control-expenses"
+          id={savingControlExpenses.contentId}
           class="text-2xl font-semibold text-center text-p-black"
         >
           Control de gastos personales para ahorro
@@ -310,7 +257,7 @@ import { Image } from "astro:assets";
 
       <article class="flex flex-col gap-4">
         <h4
-          id="practical-example"
+          id={practicalExample.contentId}
           class="text-2xl font-semibold text-center text-p-black"
         >
           Ejemplo práctico con un ingreso de $12,000
@@ -400,7 +347,7 @@ import { Image } from "astro:assets";
 
     <Section class="gap-11">
       <h4
-        id="download-template"
+        id={downloadTemplate.contentId}
         class="text-3xl font-semibold text-center text-p-black"
       >
         Descarga una plantilla gratuita para control de gastos
@@ -422,7 +369,7 @@ import { Image } from "astro:assets";
         >. y están en inglés. Nos tomamos la libertad de traducirlas al español
         para tu comodidad.
       </p>
-      <p id="how-obtain-copy" class="text-xl text-pretty font-semibold">
+      <p id={howObtainCopy.contentId} class="text-xl text-pretty font-semibold">
         ¿Cómo puedo obtener una copia?
       </p>
       <p class="text-lg text-pretty">
@@ -441,7 +388,7 @@ import { Image } from "astro:assets";
 
       <article class="grid grid-cols-1 gap-6">
         <h4
-          id="monthly-budget-template"
+          id={monthlyBudgetTemplate.contentId}
           class="text-2xl font-semibold text-primary"
         >
           Presupuesto mensual.
@@ -472,7 +419,7 @@ import { Image } from "astro:assets";
 
       <article class="grid grid-cols-1 gap-6">
         <h4
-          id="two-weekly-budget-template"
+          id={twoWeeklyBudgetTemplate.contentId}
           class="text-2xl font-semibold text-primary"
         >
           Presupuesto quincenal
@@ -503,7 +450,7 @@ import { Image } from "astro:assets";
 
       <article class="grid grid-cols-1 gap-6">
         <h4
-          id="budget-70-20-10-template"
+          id={budget702010Template.contentId}
           class="text-2xl font-semibold text-primary"
         >
           Planeador de presupuesto 70/20/10
@@ -535,7 +482,7 @@ import { Image } from "astro:assets";
 
     <Section>
       <h4
-        id="alternatives-excel"
+        id={alternativesExcel.contentId}
         class="text-3xl font-semibold text-center text-p-black"
       >
         Alternativas a Excel para gestionar gastos personales
@@ -560,7 +507,7 @@ import { Image } from "astro:assets";
 
       <article class="flex flex-col gap-4">
         <h5
-          id="budget-master-option"
+          id={budgetMasterOption.contentId}
           class="text-2xl font-semibold text-primary"
         >
           Budget Master
@@ -598,7 +545,10 @@ import { Image } from "astro:assets";
       </article>
 
       <article class="flex flex-col gap-4">
-        <h5 id="fintonic-option" class="text-2xl font-semibold text-primary">
+        <h5
+          id={fintonicOption.contentId}
+          class="text-2xl font-semibold text-primary"
+        >
           Fintonic
         </h5>
         <p class="text-lg text-pretty">
@@ -626,7 +576,10 @@ import { Image } from "astro:assets";
       </article>
 
       <article class="flex flex-col gap-4">
-        <h5 id="splitwise-option" class="text-2xl font-semibold text-primary">
+        <h5
+          id={splitwiseOption.contentId}
+          class="text-2xl font-semibold text-primary"
+        >
           Splitwise
         </h5>
         <p class="text-lg text-pretty">
@@ -654,7 +607,7 @@ import { Image } from "astro:assets";
 
     <Section class="mb-12">
       <h4
-        id="conclusion"
+        id={conclusion.contentId}
         class="text-3xl font-semibold text-center text-p-black"
       >
         Conclusión
@@ -673,6 +626,32 @@ import { Image } from "astro:assets";
         seguridad y rapidez, las aplicaciones de gestión financiera son para ti.
       </p>
     </Section>
-  </main>
+  </BlogWrapper>
   <Footer />
 </Layout>
+
+<script>
+  import { observeTableContents } from "@helpers/observeTableContents";
+  import { extendedTableContentsExpenseControl } from "./control-gastos-excel.content";
+  import { BLOG_CONTROL_EXCEL_ROUTE, DESKTOP_WATCH_MEDIA } from "@constants";
+  import { getContentsIds } from "@helpers/tableContents.helper";
+
+  document.addEventListener("astro:page-load", () => {
+    const isDesktop = window.matchMedia(DESKTOP_WATCH_MEDIA).matches;
+    if (isDesktop) {
+      const $contents = getContentsIds({
+        tableContents: extendedTableContentsExpenseControl,
+      });
+      const [firstContent] = $contents;
+
+      // If the first element exist, then observe the elements
+      if (firstContent) {
+        observeTableContents({
+          elements: $contents,
+          tableContents: extendedTableContentsExpenseControl,
+          location: BLOG_CONTROL_EXCEL_ROUTE,
+        });
+      }
+    }
+  });
+</script>

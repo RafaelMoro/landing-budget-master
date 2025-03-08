@@ -1,3 +1,15 @@
+## v1.6.0 (2025-03-08)
+
+### Pull Requests
+[#51](https://github.com/RafaelMoro/landing-budget-master/pull/51) | Add table contents into blogposts
+
+
+## v1.5.0 (2025-03-08)
+
+### Pull Requests
+[#50](https://github.com/RafaelMoro/landing-budget-master/pull/50) | add table contents
+
+
 ## v1.4.1 (2025-02-26)
 
 ### Pull Requests

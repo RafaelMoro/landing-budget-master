@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "@layouts/Layout.astro";
 import {
   BLOG_CASHBACK_COMPLETE_ROUTE,
@@ -9,6 +10,8 @@ import {
   CASHBACK_BEGINNING_IMG,
   BUDGET_MASTER_TRY_APP_ROUTE,
 } from "@constants";
+import { cashbackExtendedTableContents } from "./cashback.content";
+
 import Section from "@components/Blog/Section.astro";
 import Paragraph from "@components/Blog/Paragraph.astro";
 import ListItemBullet from "@components/Blog/ListItemBullet.astro";
@@ -17,9 +20,13 @@ import BreadcrumbsBox from "@components/Blog/BreadcrumbsBox.astro";
 import BlogHeader from "@components/Blog/BlogHeader.astro";
 import BreadcrumbAnchor from "@components/Blog/BreadcrumbAnchor.astro";
 import InternalAnchor from "@components/Blog/InternalAnchor.astro";
-import { Image } from "astro:assets";
 import Footer from "@templates/Footer.astro";
 import AnchorButton from "@components/AnchorButton.astro";
+import BlogWrapper from "@components/Blog/BlogWrapper.astro";
+import TableOfContentsMobileTemplate from "@components/TableOfContents/TableOfContentsMobileTemplate.astro";
+
+const [cashbackInto, historyCashback, cashbackTypes, conclusion] =
+  cashbackExtendedTableContents;
 ---
 
 <script is:inline slot="schema" type="application/ld+json">
@@ -70,17 +77,18 @@ import AnchorButton from "@components/AnchorButton.astro";
     >
   </BreadcrumbsBox>
 
-  <main
-    class="flex flex-col items-center gap-16 max-w-7xl mx-auto px-3 md:px-0"
-  >
+  <BlogWrapper extendedTableContents={cashbackExtendedTableContents}>
     <!-- Cashback: qué es y cómo obtener reembolsos en cada compra -->
-    <Section class="mt-8">
+    <Section id={cashbackInto.contentId} class="mt-8">
       <h1
         transition:name="title-cashback"
         class="text-4xl font-bold mb-5 text-center text-p-black"
       >
         Cashback: qué es y cómo obtener reembolsos en cada compra
       </h1>
+      <TableOfContentsMobileTemplate
+        extendedTableContents={cashbackExtendedTableContents}
+      />
       <Image
         src={CASHBACK_THUMBNAIL}
         transition:name="img-cashback"
@@ -130,7 +138,7 @@ import AnchorButton from "@components/AnchorButton.astro";
     </Section>
 
     <!-- Del pasado al presente: Cómo evolucionó el cashback -->
-    <Section>
+    <Section id={historyCashback.contentId}>
       <h2 class="text-3xl font-bold mb-5 text-center text-p-black">
         Del pasado al presente: Cómo evolucionó el cashback
       </h2>
@@ -161,7 +169,7 @@ import AnchorButton from "@components/AnchorButton.astro";
     </Section>
 
     <!-- Tipos de cashback -->
-    <Section class="gap-11">
+    <Section id={cashbackTypes.contentId} class="gap-11">
       <h3 class="text-3xl font-bold text-center text-p-black">
         Tipos de cashback
       </h3>
@@ -275,7 +283,7 @@ import AnchorButton from "@components/AnchorButton.astro";
       </article>
     </Section>
 
-    <Section class="mb-12">
+    <Section id={conclusion.contentId} class="mb-12">
       <h5 class="text-2xl text-center font-bold text-p-black">Conclusión</h5>
 
       <Paragraph>
@@ -351,6 +359,31 @@ import AnchorButton from "@components/AnchorButton.astro";
         />
       </div>
     </Section>
-  </main>
+  </BlogWrapper>
   <Footer />
 </Layout>
+<script>
+  import { observeTableContents } from "@helpers/observeTableContents";
+  import { cashbackExtendedTableContents } from "./cashback.content";
+  import { BLOG_CASHBACK_ROUTE, DESKTOP_WATCH_MEDIA } from "@constants";
+  import { getContentsIds } from "@helpers/tableContents.helper";
+
+  document.addEventListener("astro:page-load", () => {
+    const isDesktop = window.matchMedia(DESKTOP_WATCH_MEDIA).matches;
+    if (isDesktop) {
+      const $contents = getContentsIds({
+        tableContents: cashbackExtendedTableContents,
+      });
+      const [firstContent] = $contents;
+
+      // If the first element exist, then observe the elements
+      if (firstContent) {
+        observeTableContents({
+          elements: $contents,
+          tableContents: cashbackExtendedTableContents,
+          location: BLOG_CASHBACK_ROUTE,
+        });
+      }
+    }
+  });
+</script>

@@ -11,10 +11,19 @@ import {
   BUDGET_MASTER_TRY_APP_ROUTE,
   HOME_ROUTE,
 } from "@constants";
+import { extendedTableContents } from "./alias-tarjeta-significado.content";
+
 import Section from "@components/Blog/Section.astro";
 import Layout from "@layouts/Layout.astro";
 import Footer from "@templates/Footer.astro";
-import Header from "@templates/Header/Header.astro";
+import BlogWrapper from "@components/Blog/BlogWrapper.astro";
+import BlogHeader from "@components/Blog/BlogHeader.astro";
+import BreadcrumbsBox from "@components/Blog/BreadcrumbsBox.astro";
+import BreadcrumbAnchor from "@components/Blog/BreadcrumbAnchor.astro";
+import TableOfContentsMobileTemplate from "@components/TableOfContents/TableOfContentsMobileTemplate.astro";
+
+const [cardAlias, securityBenefits, aliasExamples, commonErrors, conclusion] =
+  extendedTableContents;
 ---
 
 <script is:inline slot="schema" type="application/ld+json">
@@ -53,33 +62,32 @@ import Header from "@templates/Header/Header.astro";
   ogDescription="Descubre qué es el alias de la tarjeta, para qué sirve y cómo configurarlo fácilmente. Conoce su significado con ejemplos. ¡Aprende más aquí!"
   hrefCanonical={BLOG_ALIAS_CARD_ART_COMPLETE_ROUTE}
 >
-  <div class="bg-dark-blue">
-    <div class="max-w-7xl mx-auto">
-      <Header isBlog />
-    </div>
-  </div>
-  <div class="max-w-7xl mx-auto mt-4 pl-3 lg:pl-0">
-    <article class="inline-flex gap-2">
-      <a class="text-gray-500 hover:underline" href={HOME_ROUTE}>Inicio</a>
-      <span>></span>
-      <a class="text-gray-500 hover:underline" href={BLOG_ROUTE}>Blog</a>
-      <span>></span>
-      <a href={BLOG_ALIAS_CARD_ARTICLE_ROUTE} class="hover:underline"
-        >Alias de la Tarjeta: Qué Es, <br class="md:hidden" /> Para Qué Sirve y Cómo
-        Usarlo</a
-      >
-    </article>
-  </div>
-  <main
-    class="flex flex-col items-center gap-12 max-w-7xl mx-auto px-3 md:px-0"
-  >
-    <Section class="mt-8 justify-items-center">
+  <BlogHeader />
+
+  <BreadcrumbsBox>
+    <BreadcrumbAnchor href={HOME_ROUTE}>Inicio</BreadcrumbAnchor>
+    <span>></span>
+    <BreadcrumbAnchor href={BLOG_ROUTE}>Blog</BreadcrumbAnchor>
+    <span>></span>
+    <BreadcrumbAnchor isCurrentPath href={BLOG_ALIAS_CARD_ARTICLE_ROUTE}
+      >Alias de la Tarjeta: Qué Es, <br class="md:hidden" /> Para Qué Sirve y Cómo
+      Usarlo</BreadcrumbAnchor
+    >
+  </BreadcrumbsBox>
+
+  <BlogWrapper extendedTableContents={extendedTableContents}>
+    <Section id={cardAlias.contentId} class="mt-8 justify-items-center content">
       <h1
         transition:name="title-alias-card"
         class="text-3xl font-bold mb-5 text-center text-p-black"
       >
         Alias de la Tarjeta: Qué Es, Para Qué Sirve y Cómo Usarlo
       </h1>
+
+      <TableOfContentsMobileTemplate
+        extendedTableContents={extendedTableContents}
+      />
+
       <Image
         src={ALIAS_TARJETA_IMG}
         transition:name="img-alias-card"
@@ -107,7 +115,7 @@ import Header from "@templates/Header/Header.astro";
       </p>
     </Section>
 
-    <Section>
+    <Section id={securityBenefits.contentId} class="content">
       <h2 class="text-2xl font-semibold text-center text-p-black">
         Beneficios y seguridad al usar un alias en tu tarjeta
       </h2>
@@ -148,7 +156,7 @@ import Header from "@templates/Header/Header.astro";
       </ol>
     </Section>
 
-    <Section>
+    <Section id={aliasExamples.contentId} class="content">
       <Image
         src={CREDIT_CARDS_IMG}
         alt="Tarjetas de crédito"
@@ -177,7 +185,7 @@ import Header from "@templates/Header/Header.astro";
       </ul>
     </Section>
 
-    <Section>
+    <Section id={commonErrors.contentId} class="content">
       <h4 class="text-2xl font-semibold text-center text-p-black">
         Errores comunes al elegir un alias y cómo evitarlos
       </h4>
@@ -200,7 +208,7 @@ import Header from "@templates/Header/Header.astro";
       </p>
     </Section>
 
-    <Section class="mb-12">
+    <Section id={conclusion.contentId} class="mb-12 content">
       <h5 class="text-2xl font-semibold text-center text-p-black">
         Conclusión
       </h5>
@@ -228,6 +236,35 @@ import Header from "@templates/Header/Header.astro";
         />
       </div>
     </Section>
-  </main>
+  </BlogWrapper>
   <Footer />
 </Layout>
+
+<script>
+  import { observeTableContents } from "@helpers/observeTableContents";
+  import { extendedTableContents } from "./alias-tarjeta-significado.content";
+  import {
+    BLOG_ALIAS_CARD_ARTICLE_ROUTE,
+    DESKTOP_WATCH_MEDIA,
+  } from "@constants";
+  import { getContentsIds } from "@helpers/tableContents.helper";
+
+  document.addEventListener("astro:page-load", () => {
+    const isDesktop = window.matchMedia(DESKTOP_WATCH_MEDIA).matches;
+    if (isDesktop) {
+      const $contents = getContentsIds({
+        tableContents: extendedTableContents,
+      });
+      const [firstContent] = $contents;
+
+      // If the first element exist, then observe the elements
+      if (firstContent) {
+        observeTableContents({
+          elements: $contents,
+          tableContents: extendedTableContents,
+          location: BLOG_ALIAS_CARD_ARTICLE_ROUTE,
+        });
+      }
+    }
+  });
+</script>

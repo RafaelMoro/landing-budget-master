@@ -1,0 +1,28 @@
+---
+import type { SubcontentExtended } from "@interface";
+
+export interface Props {
+  id: string;
+  text: string;
+  href: string;
+  subcontent?: SubcontentExtended[];
+}
+const { text, href, id, subcontent = [] } = Astro.props;
+---
+
+<a id={id} href={href} class="pl-2 text-lg py-2 block">
+  {text}
+</a>
+{
+  subcontent.length > 0 && (
+    <ul class="pl-8 grid grid-cols-1 gap-2">
+      {subcontent.map(({ text, href, anchorId }) => (
+        <li class="list-disc text-base text-pretty">
+          <a id={anchorId} href={href}>
+            {text}
+          </a>
+        </li>
+      ))}
+    </ul>
+  )
+}
