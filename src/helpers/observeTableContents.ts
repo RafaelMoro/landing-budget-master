@@ -11,28 +11,31 @@ export function observeTableContents({ elements, tableContents, location }: Obse
   if (!elements) {
     throw new Error("No elements or element provided");
   }
+  // Get all content Ids including subcontents. This returns contentId and anchorId
+  const allContents = getContentIds({ tableContents });
 
   const isIntersecting = (entry: IntersectionObserverEntry) =>
     entry.isIntersecting;
 
   const activeAnchor = (entry: IntersectionObserverEntry) => {
     const element = entry.target as HTMLDivElement;
-    const id = element.id;
-    // Get all content Ids including subcontents. This returns contentId and anchorId
-    const allContents = getContentIds({ tableContents });
-    const content = allContents.find((content) => content.contentId === id);
-    const contentsNotIntersecting = allContents.filter((content) => content.contentId !== id);
+    const elementId = element.id;
+    const content = allContents.find((content) => content.contentId === elementId);
 
     if (!content) {
       console.warn('content not found for observable table of contents')
       return
     }
-    const anchor = document.querySelector(`#${content.anchorId}`) as HTMLAnchorElement;
-    const inactiveAnchors = contentsNotIntersecting.map((content) => document.querySelector(`#${content.anchorId}`) as HTMLAnchorElement);
-    inactiveAnchors.forEach((anchor) => {
+    const activeAnchor = document.querySelector(`#${content.anchorId}`) as HTMLAnchorElement;
+    if (!activeAnchor) {
+      console.warn(`Anchor not found for contentId: ${elementId}`);
+      return;
+    }
+    
+    document.querySelectorAll("a.text-blue-800").forEach((anchor) => {
       anchor.classList.remove("text-blue-800")
     });
-    anchor.classList.add("text-blue-800");
+    activeAnchor.classList.add("text-blue-800");
   }
 
   const observer = new IntersectionObserver(
