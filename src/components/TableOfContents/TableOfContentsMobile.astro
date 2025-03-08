@@ -1,0 +1,74 @@
+---
+import ListTreeIcon from "../icons/ListTreeIcon.astro";
+import ChevronDown from "../icons/ChevronDown.astro";
+---
+
+<details
+  open
+  class="border border-solid border-p-black rounded-md p-4 lg:hidden w-full"
+>
+  <summary class="text-xl font-semibold text-p-black flex flex-col gap-1">
+    <div class="flex justify-between gap-4 cursor-pointer mb-4">
+      <span class="inline-flex gap-2"><ListTreeIcon /> Tabla de contenido</span>
+      <ChevronDown />
+    </div>
+  </summary>
+  <nav class="pl-6 justify-self-start">
+    <slot />
+  </nav>
+</details>
+
+<script>
+  import { DESKTOP_WATCH_MEDIA } from "@constants";
+
+  const details = document.querySelector("details");
+  const summary = document.querySelector("summary");
+  const isDesktop = window.matchMedia(DESKTOP_WATCH_MEDIA).matches;
+
+  if (details && summary && !isDesktop) {
+    summary.addEventListener("click", (e) => {
+      if (details.hasAttribute("open")) {
+        // since it's not closed yet, it's open!
+        e.preventDefault(); // stop the default behavior, meaning - the hiding
+        details.classList.add("closing"); // add a class which applies the animation in CSS
+      }
+    });
+
+    // when the "close" animation is over
+    details.addEventListener("animationend", (e) => {
+      if (e.animationName === "close") {
+        details.removeAttribute("open"); // close the element
+        details.classList.remove("closing"); // remove the animation
+      }
+    });
+  }
+</script>
+
+<style is:global>
+  @keyframes open {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /* closing animation */
+  @keyframes close {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  details[open] summary ~ * {
+    animation: open 0.5s;
+  }
+
+  /* closing class */
+  details.closing summary ~ * {
+    animation: close 0.5s;
+  }
+</style>
