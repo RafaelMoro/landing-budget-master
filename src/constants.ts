@@ -1,6 +1,8 @@
 export const BUDGET_MASTER_APP_URL = 'https://app.budget-master.space'
 export const BUDGET_MASTER_LANDING_URL = 'https://budget-master.space'
 
+export const DESKTOP_WATCH_MEDIA = '(min-width: 1024px)'
+
 export const BUDGET_MASTER_LOGIN_ROUTE = `${BUDGET_MASTER_APP_URL}`
 export const BUDGET_MASTER_REGISTER_ROUTE = `${BUDGET_MASTER_APP_URL}/register`
 export const BUDGET_MASTER_DASHBOARD_ROUTE = `${BUDGET_MASTER_APP_URL}/dashboard`

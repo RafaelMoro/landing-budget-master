@@ -1,5 +1,12 @@
-<section
-  class:list={["max-w-[75ch] grid grid-cols-1 gap-7", Astro.props.class]}
->
+---
+export interface Props {
+  id?: string;
+  class?: string;
+}
+
+const { id, class: cssClass } = Astro.props;
+---
+
+<section id={id} class:list={["max-w-[75ch] grid grid-cols-1 gap-7", cssClass]}>
   <slot />
 </section>
