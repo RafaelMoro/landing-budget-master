@@ -22,6 +22,7 @@ import ContentMobile from "@components/TableOfContents/ContentMobile.astro";
 import BlogHeader from "@components/Blog/BlogHeader.astro";
 import BreadcrumbsBox from "@components/Blog/BreadcrumbsBox.astro";
 import BreadcrumbAnchor from "@components/Blog/BreadcrumbAnchor.astro";
+import TableOfContentsMobileTemplate from "@components/TableOfContents/TableOfContentsMobileTemplate.astro";
 
 const [
   introduction,
@@ -100,15 +101,9 @@ const [budgetMasterOption, fintonicOption, splitwiseOption] =
         Control de gastos en Excel: Guía completa con ejemplos y plantillas
       </h1>
 
-      <TableOfContentsMobile>
-        {
-          extendedTableContentsExpenseControl.map(
-            ({ href, text, subcontent }) => (
-              <ContentMobile text={text} href={href} subcontent={subcontent} />
-            )
-          )
-        }
-      </TableOfContentsMobile>
+      <TableOfContentsMobileTemplate
+        extendedTableContents={extendedTableContentsExpenseControl}
+      />
     </Section>
 
     <Section>
