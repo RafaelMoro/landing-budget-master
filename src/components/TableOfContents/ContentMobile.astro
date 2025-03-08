@@ -1,11 +1,27 @@
 ---
+import type { SubcontentExtended } from "@interface";
+
 export interface Props {
   text: string;
   href: string;
+  subcontent?: SubcontentExtended[];
 }
-const { text, href } = Astro.props;
+const { text, href, subcontent = [] } = Astro.props;
 ---
 
 <a href={href} class="text-lg list-item list-disc text-blue-800">
   {text}
 </a>
+{
+  subcontent.length > 0 && (
+    <ul class="pl-8 grid grid-cols-1 gap-2">
+      {subcontent.map(({ text, href, anchorId }) => (
+        <li class="list-disc text-base text-pretty text-blue-800">
+          <a id={anchorId} href={href}>
+            {text}
+          </a>
+        </li>
+      ))}
+    </ul>
+  )
+}
