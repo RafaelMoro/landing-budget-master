@@ -25,7 +25,7 @@ export const tableContentsBasic: BasicTableContents[] = [
       { contentId: 'cybersecurity-eng', text: 'Especialista en ciber seguridad', anchorId: 'title-cybersecurity-eng' },
       { contentId: 'operation-manager', text: 'Asociado o Director de operaciones', anchorId: 'title-operation-manager' },
       { contentId: 'cloud-eng', text: 'Ingeniero de soporte en la nube', anchorId: 'title-cloud-eng' },
-      { contentId: 'financial-associate', text: 'Asesor financieros', anchorId: 'title-financial-associate' },
+      { contentId: 'financial-associate', text: 'Asesor financiero', anchorId: 'title-financial-associate' },
       { contentId: 'data-eng', text: 'Ingeniero de Datos', anchorId: 'title-data-eng' },
       { contentId: 'project-manager', text: 'Gerente de proyectos', anchorId: 'title-project-manager' },
     ]
