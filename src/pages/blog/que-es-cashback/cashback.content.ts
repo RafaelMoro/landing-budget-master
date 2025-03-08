@@ -21,7 +21,7 @@ export const tableContentsBasic: BasicTableContents[] = [
   { contentId: "conclusion", anchorId: "title-conclusion", text: "Conclusión" },
 ];
 
-export const extendedTableContents = getExtendedTableContents({
+export const cashbackExtendedTableContents = getExtendedTableContents({
   tableContents: tableContentsBasic,
   route: BLOG_BEST_JOBS_PAID_MEXICO_ROUTE,
 });
