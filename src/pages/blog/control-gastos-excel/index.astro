@@ -20,6 +20,8 @@ import BlogWrapper from "@components/Blog/BlogWrapper.astro";
 import TableOfContentsMobile from "@components/TableOfContents/TableOfContentsMobile.astro";
 import ContentMobile from "@components/TableOfContents/ContentMobile.astro";
 import BlogHeader from "@components/Blog/BlogHeader.astro";
+import BreadcrumbsBox from "@components/Blog/BreadcrumbsBox.astro";
+import BreadcrumbAnchor from "@components/Blog/BreadcrumbAnchor.astro";
 
 const [
   introduction,
@@ -77,18 +79,16 @@ const [budgetMasterOption, fintonicOption, splitwiseOption] =
 >
   <BlogHeader />
 
-  <section class="max-w-7xl mx-auto mt-4 pl-3 lg:pl-0">
-    <article class="inline-flex gap-2">
-      <a class="text-gray-500 hover:underline" href={HOME_ROUTE}>Inicio</a>
-      <span>></span>
-      <a class="text-gray-500 hover:underline" href={BLOG_ROUTE}>Blog</a>
-      <span>></span>
-      <a href={BLOG_CONTROL_EXCEL_ROUTE} class="hover:underline"
-        >Control de gastos en Excel: <br class="md:hidden" /> Guía completa con ejemplos
-        y plantillas</a
-      >
-    </article>
-  </section>
+  <BreadcrumbsBox>
+    <BreadcrumbAnchor href={HOME_ROUTE}>Inicio</BreadcrumbAnchor>
+    <span>></span>
+    <BreadcrumbAnchor href={BLOG_ROUTE}>Blog</BreadcrumbAnchor>
+    <span>></span>
+    <BreadcrumbAnchor isCurrentPath href={BLOG_CONTROL_EXCEL_ROUTE}
+      >Control de gastos en Excel: <br class="md:hidden" /> Guía completa con ejemplos
+      y plantillas</BreadcrumbAnchor
+    >
+  </BreadcrumbsBox>
 
   <BlogWrapper extendedTableContents={extendedTableContentsExpenseControl}>
     <!-- Index -->
