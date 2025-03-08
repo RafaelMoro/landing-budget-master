@@ -23,6 +23,26 @@ import AnchorButton from "@components/AnchorButton.astro";
 import AptitudeBullet from "./AptitudeBullet.astro";
 import BlogWrapper from "@components/Blog/BlogWrapper.astro";
 import { bestPaidJobsExtendedTableContents } from "./bestPaidJobs.content";
+
+const [
+  bestWellPaidJobs,
+  howGetBestPaidJobs,
+  top10BestJobs,
+  faqBestJobs,
+  conclusion,
+] = bestPaidJobsExtendedTableContents;
+const [
+  directorKeyAccount,
+  salesRep,
+  machineLearningEng,
+  csm,
+  cybersecurityEng,
+  operationManager,
+  cloudEng,
+  financialAssociate,
+  dataEng,
+  projectManager,
+] = top10BestJobs?.subcontent ?? [];
 ---
 
 <script is:inline slot="schema" type="application/ld+json">
@@ -74,7 +94,7 @@ import { bestPaidJobsExtendedTableContents } from "./bestPaidJobs.content";
 
   <BlogWrapper extendedTableContents={bestPaidJobsExtendedTableContents}>
     <!-- Trabajos Bien Pagados en México: ¿Cuáles Son y Cómo Conseguirlos? -->
-    <Section class="mt-8">
+    <Section id={bestWellPaidJobs.contentId} class="mt-8">
       <h1
         transition:name="title-best-well-paid-jobs"
         class="text-4xl font-bold mb-5 text-center text-p-black"
@@ -115,7 +135,7 @@ import { bestPaidJobsExtendedTableContents } from "./bestPaidJobs.content";
     </Section>
 
     <!-- ¿Cómo Conseguir un Trabajo Bien Pagado en México? -->
-    <Section>
+    <Section id={howGetBestPaidJobs.contentId}>
       <h2 class="text-3xl font-bold mb-5 text-center text-p-black">
         ¿Cómo Conseguir un Trabajo Bien Pagado en México?
       </h2>
@@ -186,13 +206,13 @@ import { bestPaidJobsExtendedTableContents } from "./bestPaidJobs.content";
     </Section>
 
     <!-- Los 10 Trabajos Mejor Pagados en México en 2025 -->
-    <Section>
+    <Section id={top10BestJobs.contentId}>
       <h3 class="text-3xl font-bold mb-5 text-center text-p-black">
         Los 10 Trabajos Mejor Pagados en México en 2025
       </h3>
 
       <div class="grid grid-cols-1 gap-28">
-        <article class="flex flex-col gap-5">
+        <article id={directorKeyAccount.contentId} class="flex flex-col gap-5">
           <h4 class="text-2xl font-bold text-p-black list-decimal">
             Director de cuentas clave
           </h4>
@@ -233,7 +253,7 @@ import { bestPaidJobsExtendedTableContents } from "./bestPaidJobs.content";
           />
         </article>
 
-        <article class="flex flex-col gap-5">
+        <article id={salesRep.contentId} class="flex flex-col gap-5">
           <h4 class="text-2xl font-bold text-p-black list-decimal">
             Representante de desarrollo de ventas
           </h4>
@@ -282,7 +302,7 @@ import { bestPaidJobsExtendedTableContents } from "./bestPaidJobs.content";
           />
         </article>
 
-        <article class="flex flex-col gap-5">
+        <article id={machineLearningEng.contentId} class="flex flex-col gap-5">
           <h4 class="text-2xl font-bold text-p-black list-decimal">
             Ingeniero de Machine learning
           </h4>
@@ -335,7 +355,7 @@ import { bestPaidJobsExtendedTableContents } from "./bestPaidJobs.content";
           />
         </article>
 
-        <article class="flex flex-col gap-5">
+        <article id={csm.contentId} class="flex flex-col gap-5">
           <h4 class="text-2xl font-bold text-p-black list-decimal">
             Relación con clientes o CSM
           </h4>
@@ -383,7 +403,7 @@ import { bestPaidJobsExtendedTableContents } from "./bestPaidJobs.content";
           />
         </article>
 
-        <article class="flex flex-col gap-5">
+        <article id={cybersecurityEng.contentId} class="flex flex-col gap-5">
           <h4 class="text-2xl font-bold text-p-black list-decimal">
             Especialista en ciber seguridad
           </h4>
@@ -432,7 +452,7 @@ import { bestPaidJobsExtendedTableContents } from "./bestPaidJobs.content";
           />
         </article>
 
-        <article class="flex flex-col gap-5">
+        <article id={operationManager.contentId} class="flex flex-col gap-5">
           <h4 class="text-2xl font-bold text-p-black list-decimal">
             Asociado o Director de operaciones
           </h4>
@@ -481,7 +501,7 @@ import { bestPaidJobsExtendedTableContents } from "./bestPaidJobs.content";
           />
         </article>
 
-        <article class="flex flex-col gap-5">
+        <article id={cloudEng.contentId} class="flex flex-col gap-5">
           <h4 class="text-2xl font-bold text-p-black list-decimal">
             Ingeniero de soporte en la nube
           </h4>
@@ -529,7 +549,7 @@ import { bestPaidJobsExtendedTableContents } from "./bestPaidJobs.content";
           />
         </article>
 
-        <article class="flex flex-col gap-5">
+        <article id={financialAssociate.contentId} class="flex flex-col gap-5">
           <h4 class="text-2xl font-bold text-p-black list-decimal">
             Asesor financiero
           </h4>
@@ -578,7 +598,7 @@ import { bestPaidJobsExtendedTableContents } from "./bestPaidJobs.content";
           />
         </article>
 
-        <article class="flex flex-col gap-5">
+        <article id={dataEng.contentId} class="flex flex-col gap-5">
           <h4 class="text-2xl font-bold text-p-black list-decimal">
             Ingeniero de Datos
           </h4>
@@ -626,7 +646,7 @@ import { bestPaidJobsExtendedTableContents } from "./bestPaidJobs.content";
           />
         </article>
 
-        <article class="flex flex-col gap-5">
+        <article id={projectManager.contentId} class="flex flex-col gap-5">
           <h4 class="text-2xl font-bold text-p-black list-decimal">
             Gerente de proyectos
           </h4>
@@ -677,8 +697,8 @@ import { bestPaidJobsExtendedTableContents } from "./bestPaidJobs.content";
       </div>
     </Section>
 
-    <!-- Los 10 Trabajos Mejor Pagados en México en 2025 -->
-    <Section>
+    <!-- FAQ sobre Trabajos bien pagados -->
+    <Section id={faqBestJobs.contentId}>
       <h4 class="text-3xl font-bold mb-5 text-center text-p-black">
         Preguntas Frecuentes sobre Trabajos Bien Pagados
       </h4>
@@ -724,7 +744,7 @@ import { bestPaidJobsExtendedTableContents } from "./bestPaidJobs.content";
       </article>
     </Section>
 
-    <Section class="mb-12">
+    <Section id={conclusion.contentId} class="mb-12">
       <h4 class="text-3xl font-bold mb-5 text-center text-p-black">
         Encuentra el Trabajo Bien Pagado que se Adapte a Ti
       </h4>
