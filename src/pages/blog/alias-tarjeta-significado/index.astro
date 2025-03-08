@@ -19,6 +19,7 @@ import Header from "@templates/Header/Header.astro";
 import TableOfContentsMobile from "@components/TableOfContents/TableOfContentsMobile.astro";
 import ContentMobile from "@components/TableOfContents/ContentMobile.astro";
 import BlogWrapper from "@components/Blog/BlogWrapper.astro";
+import BlogHeader from "@components/Blog/BlogHeader.astro";
 
 const [cardAlias, securityBenefits, aliasExamples, commonErrors, conclusion] =
   extendedTableContents;
@@ -60,11 +61,7 @@ const [cardAlias, securityBenefits, aliasExamples, commonErrors, conclusion] =
   ogDescription="Descubre qué es el alias de la tarjeta, para qué sirve y cómo configurarlo fácilmente. Conoce su significado con ejemplos. ¡Aprende más aquí!"
   hrefCanonical={BLOG_ALIAS_CARD_ART_COMPLETE_ROUTE}
 >
-  <div class="bg-dark-blue">
-    <div class="max-w-7xl mx-auto">
-      <Header isBlog />
-    </div>
-  </div>
+  <BlogHeader />
 
   <div class="max-w-7xl mx-auto mt-4 pl-3 lg:pl-0">
     <article class="inline-flex gap-2">

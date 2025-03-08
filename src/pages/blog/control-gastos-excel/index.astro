@@ -19,6 +19,7 @@ import { Image } from "astro:assets";
 import BlogWrapper from "@components/Blog/BlogWrapper.astro";
 import TableOfContentsMobile from "@components/TableOfContents/TableOfContentsMobile.astro";
 import ContentMobile from "@components/TableOfContents/ContentMobile.astro";
+import BlogHeader from "@components/Blog/BlogHeader.astro";
 
 const [
   introduction,
@@ -74,11 +75,7 @@ const [budgetMasterOption, fintonicOption, splitwiseOption] =
   ogDescription="Aprende cómo hacer un control de gastos en Excel fácil y rápido. Usa las plantillas para gestionar tus finanzas personales. ¡Descárgala ahora!"
   hrefCanonical={BLOG_CONTROL_EXCEL_COMPLETE_ROUTE}
 >
-  <div class="bg-dark-blue">
-    <div class="max-w-7xl mx-auto">
-      <Header isBlog />
-    </div>
-  </div>
+  <BlogHeader />
 
   <section class="max-w-7xl mx-auto mt-4 pl-3 lg:pl-0">
     <article class="inline-flex gap-2">
