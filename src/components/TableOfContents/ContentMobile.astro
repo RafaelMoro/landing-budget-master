@@ -17,7 +17,7 @@ const { text, href, subcontent = [] } = Astro.props;
     <ul class="pl-8 grid grid-cols-1 gap-2">
       {subcontent.map(({ text, href, anchorId }) => (
         <li class="list-disc text-base text-pretty text-blue-800">
-          <a id={anchorId} href={href}>
+          <a href={href} class="text-blue-800">
             {text}
           </a>
         </li>
