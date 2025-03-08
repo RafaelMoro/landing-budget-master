@@ -1,4 +1,4 @@
-import { BLOG_BEST_JOBS_PAID_MEXICO_ROUTE } from "@constants";
+import { BLOG_CASHBACK_ROUTE } from "@constants";
 import { getExtendedTableContents } from "@helpers/tableContents.helper";
 import type { BasicTableContents } from "@interface";
 
@@ -23,5 +23,5 @@ export const tableContentsBasic: BasicTableContents[] = [
 
 export const cashbackExtendedTableContents = getExtendedTableContents({
   tableContents: tableContentsBasic,
-  route: BLOG_BEST_JOBS_PAID_MEXICO_ROUTE,
+  route: BLOG_CASHBACK_ROUTE,
 });
