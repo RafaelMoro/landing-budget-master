@@ -22,6 +22,7 @@ import BlogWrapper from "@components/Blog/BlogWrapper.astro";
 import BlogHeader from "@components/Blog/BlogHeader.astro";
 import BreadcrumbsBox from "@components/Blog/BreadcrumbsBox.astro";
 import BreadcrumbAnchor from "@components/Blog/BreadcrumbAnchor.astro";
+import TableOfContentsMobileTemplate from "@components/TableOfContents/TableOfContentsMobileTemplate.astro";
 
 const [cardAlias, securityBenefits, aliasExamples, commonErrors, conclusion] =
   extendedTableContents;
@@ -85,13 +86,9 @@ const [cardAlias, securityBenefits, aliasExamples, commonErrors, conclusion] =
         Alias de la Tarjeta: Qué Es, Para Qué Sirve y Cómo Usarlo
       </h1>
 
-      <TableOfContentsMobile>
-        {
-          extendedTableContents.map(({ href, text }) => (
-            <ContentMobile text={text} href={href} />
-          ))
-        }
-      </TableOfContentsMobile>
+      <TableOfContentsMobileTemplate
+        extendedTableContents={extendedTableContents}
+      />
 
       <Image
         src={ALIAS_TARJETA_IMG}
