@@ -1,0 +1,18 @@
+---
+import type { ExtendedTableContents } from "@interface";
+import TableOfContentsMobile from "./TableOfContentsMobile.astro";
+import ContentMobile from "./ContentMobile.astro";
+
+export interface Props {
+  extendedTableContents: ExtendedTableContents[];
+}
+const { extendedTableContents } = Astro.props;
+---
+
+<TableOfContentsMobile>
+  {
+    extendedTableContents.map(({ href, text, subcontent }) => (
+      <ContentMobile text={text} href={href} subcontent={subcontent} />
+    ))
+  }
+</TableOfContentsMobile>
