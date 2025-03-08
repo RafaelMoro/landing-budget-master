@@ -21,6 +21,8 @@ import ListItemBullet from "@components/Blog/ListItemBullet.astro";
 import MarketTendencyTable from "./MarketTendencyTable.astro";
 import AnchorButton from "@components/AnchorButton.astro";
 import AptitudeBullet from "./AptitudeBullet.astro";
+import BlogWrapper from "@components/Blog/BlogWrapper.astro";
+import { bestPaidJobsExtendedTableContents } from "./bestPaidJobs.content";
 ---
 
 <script is:inline slot="schema" type="application/ld+json">
@@ -70,9 +72,7 @@ import AptitudeBullet from "./AptitudeBullet.astro";
     >
   </BreadcrumbsBox>
 
-  <main
-    class="flex flex-col items-center gap-16 max-w-7xl mx-auto px-3 md:px-0"
-  >
+  <BlogWrapper extendedTableContents={bestPaidJobsExtendedTableContents}>
     <!-- Trabajos Bien Pagados en México: ¿Cuáles Son y Cómo Conseguirlos? -->
     <Section class="mt-8">
       <h1
@@ -758,6 +758,35 @@ import AptitudeBullet from "./AptitudeBullet.astro";
         />
       </div>
     </Section>
-  </main>
+  </BlogWrapper>
   <Footer />
 </Layout>
+
+<script>
+  import { observeTableContents } from "@helpers/observeTableContents";
+  import { bestPaidJobsExtendedTableContents } from "./bestPaidJobs.content";
+  import {
+    BLOG_ALIAS_CARD_ARTICLE_ROUTE,
+    DESKTOP_WATCH_MEDIA,
+  } from "@constants";
+  import { getContentsIds } from "@helpers/tableContents.helper";
+
+  document.addEventListener("astro:page-load", () => {
+    const isDesktop = window.matchMedia(DESKTOP_WATCH_MEDIA).matches;
+    if (isDesktop) {
+      const $contents = getContentsIds({
+        tableContents: bestPaidJobsExtendedTableContents,
+      });
+      const [firstContent] = $contents;
+
+      // If the first element exist, then observe the elements
+      if (firstContent) {
+        observeTableContents({
+          elements: $contents,
+          tableContents: bestPaidJobsExtendedTableContents,
+          location: BLOG_ALIAS_CARD_ARTICLE_ROUTE,
+        });
+      }
+    }
+  });
+</script>
