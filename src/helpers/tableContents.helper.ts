@@ -25,6 +25,20 @@ export const getExtendedTableContents = ({ tableContents, route }: GetExtendedTa
   );
 }
 
+export const getContentsIds = ({ tableContents }: { tableContents: ExtendedTableContents[]}): (Element | null)[] => {
+  return tableContents.flatMap((content) => {
+    if (
+      content.subcontent !== undefined &&
+      content.subcontent?.length > 0
+    ) {
+      return content.subcontent.map((subcontent) => {
+        return document.querySelector(`#${subcontent.contentId}`) ?? null;
+      });
+    }
+    return document.querySelector(`#${content.contentId}`) ?? null;
+  });
+}
+
 export const getContentIds = ({ tableContents }: { tableContents: ExtendedTableContents[] }) => {
   return tableContents.flatMap((content) => {
     if (content.subcontent !== undefined && content.subcontent.length > 0 ) {
