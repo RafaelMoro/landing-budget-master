@@ -255,23 +255,14 @@ const [cardAlias, securityBenefits, aliasExamples, commonErrors, conclusion] =
     BLOG_ALIAS_CARD_ARTICLE_ROUTE,
     DESKTOP_WATCH_MEDIA,
   } from "@constants";
+  import { getContentsIds } from "@helpers/tableContents.helper";
 
   document.addEventListener("astro:page-load", () => {
     const isDesktop = window.matchMedia(DESKTOP_WATCH_MEDIA).matches;
     if (isDesktop) {
-      const $contents: (Element | null)[] = extendedTableContents.flatMap(
-        (content) => {
-          if (
-            content.subcontent !== undefined &&
-            content.subcontent?.length > 0
-          ) {
-            return content.subcontent.map((subcontent) => {
-              return document.querySelector(`#${subcontent.contentId}`) ?? null;
-            });
-          }
-          return document.querySelector(`#${content.contentId}`) ?? null;
-        }
-      );
+      const $contents = getContentsIds({
+        tableContents: extendedTableContents,
+      });
       const [firstContent] = $contents;
 
       // If the first element exist, then observe the elements
