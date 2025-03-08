@@ -354,3 +354,28 @@ import AnchorButton from "@components/AnchorButton.astro";
   </main>
   <Footer />
 </Layout>
+<script>
+  import { observeTableContents } from "@helpers/observeTableContents";
+  import { cashbackExtendedTableContents } from "./cashback.content";
+  import { BLOG_CASHBACK_ROUTE, DESKTOP_WATCH_MEDIA } from "@constants";
+  import { getContentsIds } from "@helpers/tableContents.helper";
+
+  document.addEventListener("astro:page-load", () => {
+    const isDesktop = window.matchMedia(DESKTOP_WATCH_MEDIA).matches;
+    if (isDesktop) {
+      const $contents = getContentsIds({
+        tableContents: cashbackExtendedTableContents,
+      });
+      const [firstContent] = $contents;
+
+      // If the first element exist, then observe the elements
+      if (firstContent) {
+        observeTableContents({
+          elements: $contents,
+          tableContents: cashbackExtendedTableContents,
+          location: BLOG_CASHBACK_ROUTE,
+        });
+      }
+    }
+  });
+</script>
