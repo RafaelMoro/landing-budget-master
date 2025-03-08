@@ -23,6 +23,7 @@ import AnchorButton from "@components/AnchorButton.astro";
 import AptitudeBullet from "./AptitudeBullet.astro";
 import BlogWrapper from "@components/Blog/BlogWrapper.astro";
 import { bestPaidJobsExtendedTableContents } from "./bestPaidJobs.content";
+import TableOfContentsMobileTemplate from "@components/TableOfContents/TableOfContentsMobileTemplate.astro";
 
 const [
   bestWellPaidJobs,
@@ -101,6 +102,9 @@ const [
       >
         Trabajos Bien Pagados en México: ¿Cuáles Son y Cómo Conseguirlos?
       </h1>
+      <TableOfContentsMobileTemplate
+        extendedTableContents={bestPaidJobsExtendedTableContents}
+      />
       <Image
         src={WELL_PAID_JOBS_IMG}
         transition:name="img-best-well-paid-jobs"
