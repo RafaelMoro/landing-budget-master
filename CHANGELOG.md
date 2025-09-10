@@ -1,3 +1,9 @@
+## v1.6.1 (2025-09-10)
+
+### Pull Requests
+[#53](https://github.com/RafaelMoro/landing-budget-master/pull/53) | Update url to the new web app
+
+
 ## v1.6.0 (2025-03-08)
 
 ### Pull Requests

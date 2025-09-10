@@ -1,7 +1,7 @@
 ---
 import AnchorButton from "@components/AnchorButton.astro";
 import Header from "./Header/Header.astro";
-import { BUDGET_MASTER_DASHBOARD_ROUTE } from "@constants";
+import { BUDGET_MASTER_LOGIN_ROUTE } from "@constants";
 ---
 
 <div class="bg">
@@ -11,10 +11,7 @@ import { BUDGET_MASTER_DASHBOARD_ROUTE } from "@constants";
       <h1 class="text-3xl font-bold mb-5 text-center text-p-white">
         ¡Toma control de tus finanzas ahora con Budget Master!
       </h1>
-      <AnchorButton
-        text="Probar ahora"
-        hrefSrc={BUDGET_MASTER_DASHBOARD_ROUTE}
-      />
+      <AnchorButton text="Probar ahora" hrefSrc={BUDGET_MASTER_LOGIN_ROUTE} />
     </article>
   </section>
 </div>
