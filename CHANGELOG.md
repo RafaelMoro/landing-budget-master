@@ -1,3 +1,9 @@
+## v1.6.2 (2025-09-12)
+
+### Pull Requests
+[#55](https://github.com/RafaelMoro/landing-budget-master/pull/55) | Add facebook domain verification meta tag
+
+
 ## v1.6.1 (2025-09-10)
 
 ### Pull Requests
